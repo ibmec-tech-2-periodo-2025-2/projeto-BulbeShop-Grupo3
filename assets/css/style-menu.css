@@ -4,6 +4,34 @@
     box-sizing: border-box;
 }
 
-header{
+body{
+    width: 100vw;
     display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    width: 100vw;
+    display: flex;
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 8px;
+    align-items: center;
+}
+
+.botao-menu{
+    display: flex;
+    gap: 15px;
+}
+
+#pesquisa{
+    border-radius: 5px;
+    border: blue solid 1px;
+    width: 80vw;
+    height: 30px;
+    padding-left: 10px;
 }
