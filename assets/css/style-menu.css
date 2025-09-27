@@ -73,7 +73,6 @@ footer{
 }
 
 .card-produto{
-    border: 1px solid greenyellow;
     height: 40vh;
     width: 20vh;
     display: flex;
