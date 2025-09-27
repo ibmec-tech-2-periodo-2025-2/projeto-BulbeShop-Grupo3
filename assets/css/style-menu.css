@@ -16,7 +16,7 @@ body{
 header{
     width: 100vw;
     display: flex;
-    background-color: blue;
+    background-color: darkblue;
     color: rgb(255, 255, 255);
     justify-content: space-between;
     padding: 8px;
@@ -30,14 +30,14 @@ header{
 
 #pesquisa{
     border-radius: 5px;
-    border: blue solid 1px;
+    border: darkblue solid 1px;
     width: 90vw;
     height: 40px;
     padding-left: 10px;
 }
 
 .banner{
-    border: 1px solid blue;
+    border: 1px solid darkblue;
     border-radius: 5px;
     height: 250px;
     width: 90vw;
@@ -48,4 +48,11 @@ header{
     width: 100%;
     height: 100%;
     object-fit: fill;
+}
+
+.categorias-titulo{
+    color: darkblue;
+    border-bottom: 1px solid lightgray;
+    width: 100vw;
+    padding-left: 5vw;
 }
