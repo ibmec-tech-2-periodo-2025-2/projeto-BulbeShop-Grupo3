@@ -73,7 +73,6 @@ footer{
 }
 
 .card-produto{
-    height: 40vh;
     width: 20vh;
     display: flex;
     flex-direction: column;
