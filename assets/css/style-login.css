@@ -34,7 +34,8 @@ body{
 form{
     display: flex;
     flex-direction: column;
-    gap:15px
+    gap:15px;
+    align-items: center;
 }
 
 form input{
@@ -43,4 +44,29 @@ form input{
     width: 70vw;
     height: 30px;
     padding-left: 10px;
+}
+
+form button{
+    width: 60vw;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid darkblue;
+}
+
+.login{
+    background-color: darkblue;
+    color: white;
+}
+
+.login-google{
+    color: darkblue;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-google img{
+    height: 50%;
 }
