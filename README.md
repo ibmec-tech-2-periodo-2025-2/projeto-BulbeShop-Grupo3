@@ -8,8 +8,24 @@
 
 ---
 
-Links importantes:
-    Link para escopo dos wireframes no figjam: https://www.figma.com/board/1oMvNRvl3fBAHC6mUISX4b/Simula%C3%A7%C3%A3o-esqueleto-bot%C3%B5es?node-id=0-1&p=f&t=DottqyjA4NUShpjo-0
+## Links Importantes
+
+- **Wireframes no Figma:** [Simulação esqueleto botões](https://www.figma.com/board/1oMvNRvl3fBAHC6mUISX4b/Simula%C3%A7%C3%A3o-esqueleto-bot%C3%B5es?node-id=0-1&p=f&t=DottqyjA4NUShpjo-0)
+
+---
+
+## Legenda de Classificação
+
+### Níveis de Necessidade:
+- **Necessário**: Itens fundamentais para o funcionamento básico do e-commerce
+- **Desejável**: Funcionalidades que melhoram a experiência mas não são críticas
+
+### Níveis de Complexidade (Escala Fibonacci 1-3-5-8-13):
+- **1**: Tarefas muito simples (criar repo, estrutura de pastas)
+- **3**: Tarefas simples (páginas estáticas básicas, configurações)
+- **5**: Tarefas de complexidade média (páginas com mais elementos, scripts básicos)
+- **8**: Tarefas complexas (protótipos completos, JavaScript avançado, validações)
+- **13**: Tarefas muito complexas (CSS responsivo completo, testes E2E)
 
 ---
 
@@ -20,20 +36,54 @@ Links importantes:
 ### Épico 1: Repositório e Documentação
 
 - **Tarefa 1.1:** Criar o repositório no GitHub
+  - **Necessidade:** Necessário
+  - **Complexidade:** 1
+
 - **Tarefa 1.2:** Definir e criar a estrutura de pastas do projeto (/assets, /css, /js, /pages)
+  - **Necessidade:** Necessário
+  - **Complexidade:** 1
+
 - **Tarefa 1.3:** Escrever o README.md com descrição, integrantes e link para o Figma
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 1.4:** Criar o documento de Requisitos Funcionais
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
 
 ### Épico 2: Páginas Estáticas e Protótipo de Baixa Fidelidade
 
 - **Tarefa 2.1:** Criar o protótipo de baixa fidelidade no Figma para todas as telas
+  - **Necessidade:** Necessário
+  - **Complexidade:** 8
+
 - **Tarefa 2.2:** Criar a página login.html com formulário estático
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 2.3:** Criar a página index.html (Home) com uma grade de produtos mockados
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
+
 - **Tarefa 2.4:** Criar a página catalogo com imagens e dados mockados
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
+
 - **Tarefa 2.5:** Criar a página produto (Detalhes do Produto) com dados mockados
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
+
 - **Tarefa 2.6:** Criar a página do carrinho (carrinho) estática
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 2.7:** Criar as páginas do fluxo de checkout: checkout-endereco, checkout-pagamento.html e confirmacao.html
+  - **Necessidade:** Necessário
+  - **Complexidade:** 8
+
 - **Tarefa 2.8:** Implementar a navegação estática (sem JS) entre todas as páginas usando links `<a>`
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
 
 ---
 
@@ -44,21 +94,48 @@ Links importantes:
 ### Épico 3: Design de Alta Fidelidade e Implementação Visual
 
 - **Tarefa 3.1:** Evoluir os protótipos do Figma de baixa para alta fidelidade
+  - **Necessidade:** Necessário
+  - **Complexidade:** 8
+
 - **Tarefa 3.2:** Refinar todo o CSS para corresponder ao design de alta fidelidade, garantindo a responsividade
+  - **Necessidade:** Necessário
+  - **Complexidade:** 13
+
 - **Tarefa 3.3:** Criar estilos globais e variáveis CSS (:root) para cores, fontes e espaçamentos
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
 
 ### Épico 4: Carregamento Dinâmico de Conteúdo
 
 - **Tarefa 4.1:** Criar o arquivo products.json com a estrutura de dados dos produtos
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 4.2:** Desenvolver o script JS para buscar (fetch) os dados do products.json e renderizar os produtos na Home
+  - **Necessidade:** Necessário
+  - **Complexidade:** 8
+
 - **Tarefa 4.3:** Fazer a página produto.html carregar e exibir os dados do item selecionado
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
 
 ### Épico 5: Desenvolvimento de Scripts (Interatividade Inicial)
 
 - **Tarefa 5.1:** Implementar a funcionalidade de busca por nome na Home page
+  - **Necessidade:** Desejável
+  - **Complexidade:** 5
+
 - **Tarefa 5.2:** Implementar a lógica de adicionar/remover itens do carrinho usando localStorage
+  - **Necessidade:** Necessário
+  - **Complexidade:** 8
+
 - **Tarefa 5.3:** Fazer a página carrinho.html exibir os produtos que estão no localStorage
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
+
 - **Tarefa 5.4:** Implementar a lógica de favoritar/desfavoritar itens, salvando no localStorage
+  - **Necessidade:** Desejável
+  - **Complexidade:** 5
 
 ---
 
@@ -69,21 +146,48 @@ Links importantes:
 ### Épico 6: Lógica do Checkout Funcional
 
 - **Tarefa 6.1:** Carregar dinamicamente os itens do carrinho na página de checkout
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
+
 - **Tarefa 6.2:** Implementar a função que calcula o subtotal e o total do pedido
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 6.3:** Implementar a lógica de cálculo de frete e desconto condicional para pagamento com Pix
+  - **Necessidade:** Desejável
+  - **Complexidade:** 8
+
 - **Tarefa 6.4:** Implementar a validação dos formulários de endereço e pagamento
+  - **Necessidade:** Necessário
+  - **Complexidade:** 8
 
 ### Épico 7: Geração de Pedido (Simulado)
 
 - **Tarefa 7.1:** Criar uma função que gera um código de pedido aleatório após a compra
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 7.2:** Exibir o código do pedido na página de confirmação
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 7.3:** Limpar o carrinho do localStorage após a finalização da compra
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
 
 ### Épico 8: Integração de Bibliotecas JS
 
 - **Tarefa 8.1:** Pesquisar e escolher uma biblioteca para máscaras de input (ex: para CEP, CPF, cartão de crédito)
+  - **Necessidade:** Desejável
+  - **Complexidade:** 3
+
 - **Tarefa 8.2:** Integrar a biblioteca escolhida e aplicá-la nos formulários do checkout
+  - **Necessidade:** Desejável
+  - **Complexidade:** 5
+
 - **Tarefa 8.3:** Realizar ajustes pontuais de design necessários após a integração
+  - **Necessidade:** Desejável
+  - **Complexidade:** 3
 
 ---
 
@@ -94,21 +198,48 @@ Links importantes:
 ### Épico 9: Testes e Qualidade
 
 - **Tarefa 9.1:** Configurar o ambiente de testes com Jest para testes unitários
+  - **Necessidade:** Desejável
+  - **Complexidade:** 5
+
 - **Tarefa 9.2:** Escrever testes unitários para funções críticas (ex: cálculo de total, aplicação de desconto)
+  - **Necessidade:** Desejável
+  - **Complexidade:** 8
+
 - **Tarefa 9.3:** Configurar o ambiente de testes com Cypress para testes end-to-end (E2E)
+  - **Necessidade:** Desejável
+  - **Complexidade:** 8
+
 - **Tarefa 9.4:** Escrever um teste E2E que simule a jornada principal do usuário (da Home à confirmação do pedido)
+  - **Necessidade:** Desejável
+  - **Complexidade:** 13
 
 ### Épico 10: Publicação (Deploy)
 
 - **Tarefa 10.1:** Configurar o repositório para fazer o deploy via GitHub Pages
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 10.2:** Publicar a versão final do site e garantir que esteja acessível publicamente
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
+
 - **Tarefa 10.3:** Atualizar o README.md com o link para o projeto publicado
+  - **Necessidade:** Necessário
+  - **Complexidade:** 1
 
 ### Épico 11: Elaboração da Apresentação Final
 
 - **Tarefa 11.1:** Criar a estrutura e o conteúdo dos slides para a apresentação
+  - **Necessidade:** Necessário
+  - **Complexidade:** 5
+
 - **Tarefa 11.2:** Gravar um vídeo ou GIFs demonstrando as principais funcionalidades
+  - **Necessidade:** Desejável
+  - **Complexidade:** 5
+
 - **Tarefa 11.3:** Ensaiar a apresentação final
+  - **Necessidade:** Necessário
+  - **Complexidade:** 3
 
 ---
 
