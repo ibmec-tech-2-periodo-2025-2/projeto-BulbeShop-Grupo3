@@ -68,22 +68,27 @@
 - **Tarefa 2.4:** Criar a página catalogo com imagens e dados mockados
   - **Necessidade:** Necessário
   - **Complexidade:** 5
+  - **Responsável:** Igor Conrado
 
 - **Tarefa 2.5:** Criar a página produto (Detalhes do Produto) com dados mockados
   - **Necessidade:** Necessário
   - **Complexidade:** 5
+  - **Responsável:** Tiago Lage
 
 - **Tarefa 2.6:** Criar a página do carrinho (carrinho) estática
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Felipe Cota
 
 - **Tarefa 2.7:** Criar as páginas do fluxo de checkout: checkout-endereco, checkout-pagamento.html e confirmacao.html
   - **Necessidade:** Necessário
   - **Complexidade:** 8
+  - **Responsável:** Marcelo Reis
 
 - **Tarefa 2.8:** Implementar a navegação estática (sem JS) entre todas as páginas usando links `<a>`
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Tiago Lage
 
 ---
 
@@ -96,46 +101,56 @@
 - **Tarefa 3.1:** Evoluir os protótipos do Figma de baixa para alta fidelidade
   - **Necessidade:** Necessário
   - **Complexidade:** 8
+  - **Responsável:** Augusto Gama
 
 - **Tarefa 3.2:** Refinar todo o CSS para corresponder ao design de alta fidelidade, garantindo a responsividade
   - **Necessidade:** Necessário
   - **Complexidade:** 13
+  - **Responsável:** Tiago Lage
 
 - **Tarefa 3.3:** Criar estilos globais e variáveis CSS (:root) para cores, fontes e espaçamentos
   - **Necessidade:** Necessário
   - **Complexidade:** 5
+  - **Responsável:** Augusto Gama
 
 ### Épico 4: Carregamento Dinâmico de Conteúdo
 
 - **Tarefa 4.1:** Criar o arquivo products.json com a estrutura de dados dos produtos
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Felipe Cota
 
 - **Tarefa 4.2:** Desenvolver o script JS para buscar (fetch) os dados do products.json e renderizar os produtos na Home
   - **Necessidade:** Necessário
   - **Complexidade:** 8
+  - **Responsável:** Felipe Cota
 
 - **Tarefa 4.3:** Fazer a página produto.html carregar e exibir os dados do item selecionado
   - **Necessidade:** Necessário
   - **Complexidade:** 5
+  - **Responsável:** Marcelo Reis
 
 ### Épico 5: Desenvolvimento de Scripts (Interatividade Inicial)
 
 - **Tarefa 5.1:** Implementar a funcionalidade de busca por nome na Home page
   - **Necessidade:** Desejável
   - **Complexidade:** 5
+  - **Responsável:** Igor Conrado
 
 - **Tarefa 5.2:** Implementar a lógica de adicionar/remover itens do carrinho usando localStorage
   - **Necessidade:** Necessário
   - **Complexidade:** 8
+  - **Responsável:** Felipe Cota
 
 - **Tarefa 5.3:** Fazer a página carrinho.html exibir os produtos que estão no localStorage
   - **Necessidade:** Necessário
   - **Complexidade:** 5
+  - **Responsável:** Felipe Cota
 
 - **Tarefa 5.4:** Implementar a lógica de favoritar/desfavoritar itens, salvando no localStorage
   - **Necessidade:** Desejável
   - **Complexidade:** 5
+  - **Responsável:** Joshua Azze
 
 ---
 
@@ -148,46 +163,56 @@
 - **Tarefa 6.1:** Carregar dinamicamente os itens do carrinho na página de checkout
   - **Necessidade:** Necessário
   - **Complexidade:** 5
+  - **Responsável:** Marcelo Reis
 
 - **Tarefa 6.2:** Implementar a função que calcula o subtotal e o total do pedido
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Igor Conrado
 
 - **Tarefa 6.3:** Implementar a lógica de cálculo de frete e desconto condicional para pagamento com Pix
   - **Necessidade:** Desejável
   - **Complexidade:** 8
+  - **Responsável:** Felipe Cota
 
 - **Tarefa 6.4:** Implementar a validação dos formulários de endereço e pagamento
   - **Necessidade:** Necessário
   - **Complexidade:** 8
+  - **Responsável:** Tiago Lage
 
 ### Épico 7: Geração de Pedido (Simulado)
 
 - **Tarefa 7.1:** Criar uma função que gera um código de pedido aleatório após a compra
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Joshua Azze
 
 - **Tarefa 7.2:** Exibir o código do pedido na página de confirmação
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Augusto Gama
 
 - **Tarefa 7.3:** Limpar o carrinho do localStorage após a finalização da compra
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Igor Conrado
 
 ### Épico 8: Integração de Bibliotecas JS
 
 - **Tarefa 8.1:** Pesquisar e escolher uma biblioteca para máscaras de input (ex: para CEP, CPF, cartão de crédito)
   - **Necessidade:** Desejável
   - **Complexidade:** 3
+  - **Responsável:** Augusto Gama
 
 - **Tarefa 8.2:** Integrar a biblioteca escolhida e aplicá-la nos formulários do checkout
   - **Necessidade:** Desejável
   - **Complexidade:** 5
+  - **Responsável:** Tiago Lage
 
 - **Tarefa 8.3:** Realizar ajustes pontuais de design necessários após a integração
   - **Necessidade:** Desejável
   - **Complexidade:** 3
+  - **Responsável:** Augusto Gama
 
 ---
 
@@ -200,46 +225,56 @@
 - **Tarefa 9.1:** Configurar o ambiente de testes com Jest para testes unitários
   - **Necessidade:** Desejável
   - **Complexidade:** 5
+  - **Responsável:** Marcelo Reis
 
 - **Tarefa 9.2:** Escrever testes unitários para funções críticas (ex: cálculo de total, aplicação de desconto)
   - **Necessidade:** Desejável
   - **Complexidade:** 8
+  - **Responsável:** Igor Conrado
 
 - **Tarefa 9.3:** Configurar o ambiente de testes com Cypress para testes end-to-end (E2E)
   - **Necessidade:** Desejável
   - **Complexidade:** 8
+  - **Responsável:** Joshua Azze
 
 - **Tarefa 9.4:** Escrever um teste E2E que simule a jornada principal do usuário (da Home à confirmação do pedido)
   - **Necessidade:** Desejável
   - **Complexidade:** 13
+  - **Responsável:** Joshua Azze
 
 ### Épico 10: Publicação (Deploy)
 
 - **Tarefa 10.1:** Configurar o repositório para fazer o deploy via GitHub Pages
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Tiago Lage
 
 - **Tarefa 10.2:** Publicar a versão final do site e garantir que esteja acessível publicamente
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Marcelo Reis
 
 - **Tarefa 10.3:** Atualizar o README.md com o link para o projeto publicado
   - **Necessidade:** Necessário
   - **Complexidade:** 1
+  - **Responsável:** Tiago Lage
 
 ### Épico 11: Elaboração da Apresentação Final
 
 - **Tarefa 11.1:** Criar a estrutura e o conteúdo dos slides para a apresentação
   - **Necessidade:** Necessário
   - **Complexidade:** 5
+  - **Responsável:** Igor Conrado
 
 - **Tarefa 11.2:** Gravar um vídeo ou GIFs demonstrando as principais funcionalidades
   - **Necessidade:** Desejável
   - **Complexidade:** 5
+  - **Responsável:** Joshua Azze
 
 - **Tarefa 11.3:** Ensaiar a apresentação final
   - **Necessidade:** Necessário
   - **Complexidade:** 3
+  - **Responsável:** Augusto Gama
 
 ---
 
