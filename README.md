@@ -11,6 +11,7 @@
 ## Links Importantes
 
 - **Wireframes no Figma:** [Simulação esqueleto botões](https://www.figma.com/board/1oMvNRvl3fBAHC6mUISX4b/Simula%C3%A7%C3%A3o-esqueleto-bot%C3%B5es?node-id=0-1&p=f&t=DottqyjA4NUShpjo-0)
+- **Figma:** [Protótipos de alta fidelidade](https://www.figma.com/design/kJGDPHBRBg0gTtf6l3i2Am/BulbeShop---Grupo-3?node-id=43-1258&t=qjePoHydz2E7xvIi-0)
 
 ---
 
