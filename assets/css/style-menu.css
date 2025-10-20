@@ -53,8 +53,8 @@ main{
     align-items: center;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: #F8F8FF;
-    border: solid green 1px;
+    background-color: #F8F8FF; /*Remover e trocar por variavel*/
+    border: solid rgb(92, 150, 92) 1px;
     gap: 15px;
 }
 
@@ -78,7 +78,7 @@ main{
 } */
 
 .subtitulos-titulo{
-    color: #08068D;
+    color: #08068D; /*Remover e trocar por variavel*/
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -86,7 +86,7 @@ main{
     letter-spacing: -0.6px;
     width: 100vw;
     padding-left: 15px;
-    font-family: 'Poppins';
+    font-family: 'Poppins'; /*Remover e trocar por variavel*/
 }
 
 .categorias-produtos{
