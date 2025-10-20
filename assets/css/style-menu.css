@@ -55,6 +55,7 @@ main{
     border-top-right-radius: 20px;
     background-color: #F8F8FF;
     border: solid green 1px;
+    gap: 15px;
 }
 
 .banner{
@@ -77,10 +78,15 @@ main{
 } */
 
 .subtitulos-titulo{
-    color: darkblue;
-    border-bottom: 1px solid lightgray;
+    color: #08068D;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px; /* 146.667% */
+    letter-spacing: -0.6px;
     width: 100vw;
-    padding-left: 5vw;
+    padding-left: 15px;
+    font-family: 'Poppins';
 }
 
 .categorias-produtos{
