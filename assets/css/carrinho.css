@@ -1,0 +1,32 @@
+/* --- Configurações Globais e Importação da Fonte --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+
+:root {
+    --cor-principal: #08068D;
+    --cor-secundaria: #0762C7;
+    --cor-fundo: #F8F8FF;
+    --cor-fundo-card: #FFFFFF;
+    --cor-borda-card: #E6F1FE;
+    --cor-texto-titulo: #29333D;
+    --cor-texto-corpo: #3E4D5B;
+    --cor-texto-suave: #536679;
+    --cor-texto-placeholder: #A4B3C1;
+    --cor-texto-nav-inativa: #C2CCD6;
+    --cor-texto-branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #E0E0E0; /* Cor de fundo para fora do container */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; /* Ocupa a altura total */
+    overflow: hidden; /* Impede a rolagem da página inteira */
+}
