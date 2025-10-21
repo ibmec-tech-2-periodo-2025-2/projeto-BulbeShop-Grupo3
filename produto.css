@@ -16,3 +16,49 @@ body {
     margin: 0 auto;
     background: #08068D;
 }
+
+.header {
+    position: absolute;
+    width: 393px;
+    height: 146px;
+    left: 0;
+    top: 0;
+}
+
+.navbar-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 22px;
+    width: 393px;
+    height: 93px;
+    background: #08068D;
+}
+
+.menu-sanduiche {
+    width: 28px;
+    height: 38px;
+    font-size: 32px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.foto-perfil {
+    width: 30px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 200px;
+    background-image: url('profile.jpg');
+    background-size: cover;
+}
