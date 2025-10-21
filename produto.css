@@ -234,3 +234,63 @@ body {
     color: #536679;
     margin-bottom: 24px;
 }
+
+.preco-antigo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.de,
+.por {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: #3E4D5B;
+}
+
+.valor-antigo {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #3E4D5B;
+}
+
+.desconto {
+    display: inline-block;
+    background: #E9FBF2;
+    border-radius: 8px;
+    padding: 4px 12px;
+    margin-bottom: 8px;
+}
+
+.percentual {
+    font-weight: 400;
+    font-size: 14px;
+    color: #18814D;
+}
+
+.preco {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    margin-bottom: 24px;
+}
+
+.rs {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    color: #08068D;
+}
+
+.valor {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #08068D;
+}
