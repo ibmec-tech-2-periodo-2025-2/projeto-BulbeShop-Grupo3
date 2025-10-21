@@ -8,3 +8,11 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #F8F8FF;
 }
+
+.produto {
+    position: relative;
+    width: 393px;
+    height: 1222px;
+    margin: 0 auto;
+    background: #08068D;
+}
