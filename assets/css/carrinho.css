@@ -30,3 +30,61 @@ body {
     height: 100vh; /* Ocupa a altura total */
     overflow: hidden; /* Impede a rolagem da página inteira */
 }
+
+/* --- Container Principal (Simula o Celular) --- */
+.mobile-container {
+    width: 393px;
+    height: 100vh; /* Ocupa 100% da altura da viewport */
+    background-color: var(--cor-principal);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* Impede que algo vaze */
+}
+
+/* --- 1. Header (Fixo) --- */
+.header {
+    background-color: var(--cor-principal);
+    padding: 22px 12px;
+    color: var(--cor-texto-branco);
+    flex-shrink: 0; /* Impede que o header encolha */
+}
+
+/* --- 2. Conteúdo Principal (Rolável) --- */
+.content-body {
+    background-color: var(--cor-fundo);
+    border-radius: 16px 16px 0 0;
+    padding: 24px 20px;
+    flex-grow: 1; /* Faz o conteúdo ocupar o espaço restante */
+    overflow-y: auto; /* ADICIONA A ROLAGEM INTERNA */
+
+    /* Para espaçar os cards: */
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Adiciona 16px de espaço entre cada item (título e cards) */
+}
+
+/* --- 3. Botões (Fixo) --- */
+.botoes-flutuantes {
+    flex-shrink: 0; 
+    width: 100%;
+    background-color: var(--cor-fundo); 
+    padding: 16px 24px; 
+    display: flex;
+    gap: 16px;
+    border-top: 1px solid #E0E0E0; 
+}
+
+/* --- 4. Footer (Fixo) --- */
+.footer-nav {
+    flex-shrink: 0; 
+    width: 100%;
+    height: 80px;
+    background: var(--cor-fundo-card);
+    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
