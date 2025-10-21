@@ -250,10 +250,6 @@ body {
     min-width: 0; /* Evita que o flexbox transborde */
 }
 
-.item-detalhes {
-    /* Não precisa mais de min-width */
-}
-
 .item-titulo {
     font-style: italic;
     font-weight: 600; /* Mais forte */
