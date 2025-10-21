@@ -56,6 +56,7 @@ main{
     border-top-right-radius: 20px;
     background-color: #F8F8FF; /*Remover e trocar por variavel*/
     gap: 15px;
+    padding-bottom: 10px;
 }
 
 .banner{
@@ -149,6 +150,9 @@ main{
 .card-caixa-texto{
     border-top: 1px solid #D1D9E0; /*mudar para variável*/
     padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap:2px
 }
 
 .card-caixa-texto h3 {
@@ -165,5 +169,12 @@ main{
 .card-caixa-texto h2 {
     color: #08068D;
     font-size: 30px;
+}
+
+.card-caixa-texto img{
+    width: 116px;
+    height: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
