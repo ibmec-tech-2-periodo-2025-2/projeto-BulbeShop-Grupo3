@@ -184,3 +184,26 @@ body {
 .nav-item.active {
     color: var(--cor-principal); /* Muda a cor do texto */
 }
+
+
+/* --- Estilos dos Botões de Ação --- */
+.btn-subtotal, .btn-pagar {
+    flex: 1; 
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--cor-texto-branco);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-subtotal {
+    background-color: var(--cor-secundaria);
+}
+
+.btn-pagar {
+    background-color: var(--cor-principal);
+}
