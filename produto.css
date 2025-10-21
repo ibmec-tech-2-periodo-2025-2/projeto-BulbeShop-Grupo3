@@ -294,3 +294,28 @@ body {
     letter-spacing: -0.02em;
     color: #08068D;
 }
+
+.input-quantidade {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.input-quantidade label {
+    font-weight: 400;
+    font-size: 14px;
+    color: #536679;
+}
+
+.select-quantidade {
+    width: 100%;
+    padding: 12px;
+    background: #FFFFFF;
+    border: 1px solid #D1D9E0;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-size: 14px;
+    color: #A4B3C1;
+    cursor: pointer;
+}
