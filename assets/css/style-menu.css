@@ -144,7 +144,7 @@ main{
     height:133px ;
     width: 133px;
     border-radius: 8px;
-    border: solid 2px #E6F1FE ;
+    border: solid 2px #E6F1FE ; /*Remover e trocar por variavel*/
 }
 
 .card-caixa-texto{
@@ -156,18 +156,18 @@ main{
 }
 
 .card-caixa-texto h3 {
-    color: #3E4D5B;
+    color: #3E4D5B; /*Remover e trocar por variavel*/
     font-size: medium;
 }
 
 .card-caixa-texto p{
-    color: #3E4D5B;
+    color: #3E4D5B; /*Remover e trocar por variavel*/
     font-size: 12px;
     font-style: italic;
 }
 
 .card-caixa-texto h2 {
-    color: #08068D;
+    color: #08068D; /*Remover e trocar por variavel*/
     font-size: 30px;
 }
 
