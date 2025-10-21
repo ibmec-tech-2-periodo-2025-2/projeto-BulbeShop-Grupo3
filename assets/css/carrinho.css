@@ -88,3 +88,63 @@ body {
     align-items: center;
     padding: 0 20px;
 }
+
+/* --- Estilos do Header --- */
+.navbar-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px; 
+}
+
+.nav-icon {
+    cursor: pointer;
+    width: 28px; /* Tamanho da sua imagem de menu */
+    height: 24px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.foto-de-perfil {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-texto-branco);
+    object-fit: cover;
+}
+
+.barra-de-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-texto-branco);
+    border: 0.5px solid var(--cor-texto-placeholder);
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin-top: 18px; 
+}
+
+.barra-de-pesquisa input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--cor-texto-corpo);
+}
+
+.barra-de-pesquisa input::placeholder {
+    color: var(--cor-texto-placeholder);
+    font-style: italic;
+}
+
+.search-icon {
+    flex-shrink: 0;
+    width: 21px; /* Tamanho da sua imagem de pesquisa */
+    height: 21px;
+}
