@@ -62,3 +62,34 @@ body {
     background-image: url('profile.jpg');
     background-size: cover;
 }
+
+.barra-pesquisa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 12px;
+    position: absolute;
+    width: 374px;
+    height: 37px;
+    left: 9px;
+    top: 94px;
+    background: #FFFFFF;
+    border: 0.5px solid #A4B3C1;
+    border-radius: 20px;
+}
+
+.place-holder {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 13px;
+    color: #A4B3C1;
+}
+
+.pesquisa-icone {
+    font-size: 18px;
+    color: #C2CCD6;
+}
