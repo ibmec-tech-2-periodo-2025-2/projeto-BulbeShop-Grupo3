@@ -140,3 +140,88 @@ body {
     margin-top: 16px;
     margin-bottom: 24px;
 }
+
+.imagens-produto {
+    position: relative;
+    width: 345px;
+    margin: 0 auto 24px;
+}
+
+.imagem-grande {
+    position: relative;
+    width: 345px;
+    height: 345px;
+    background: #FFFFFF;
+    border: 2px solid #E6F1FE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.produto-img {
+    width: 90%;
+    height: 90%;
+    background-image: url('lampada.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.chevron-left,
+.chevron-right {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    font-size: 32px;
+    color: #C2CCD6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chevron-left {
+    left: 10px;
+}
+
+.chevron-right {
+    right: 10px;
+}
+
+.seletor-fotos {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #CEE4FD;
+    border-radius: 50%;
+}
+
+.dot.active {
+    background: #0762C7;
+}
+
+.fotos-pequenas {
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+}
+
+.imagem-pequena {
+    width: 65px;
+    height: 65px;
+    background: #FFFFFF;
+    background-image: url('lampada.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #E6F1FE;
+    border-radius: 8px;
+}
