@@ -207,3 +207,145 @@ body {
 .btn-pagar {
     background-color: var(--cor-principal);
 }
+
+/* --- Estilos do Conteúdo Principal --- */
+.titulo-pagina {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: var(--cor-principal);
+}
+
+/* --- Card do Carrinho (NOVA ESTRUTURA) --- */
+.card-carrinho {
+    background: var(--cor-fundo-card);
+    border: 4px solid var(--cor-borda-card);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-wrap: nowrap; /* Garante que fique em uma linha */
+    gap: 12px;
+    flex-shrink: 0; 
+}
+
+.item-imagem-wrapper {
+    width: 80px; /* Largura da imagem bem reduzida */
+    flex-shrink: 0;
+}
+
+.item-imagem {
+    width: 100%;
+    border: 2px solid var(--cor-borda-card);
+    border-radius: 8px;
+    display: block;
+}
+
+/* Nova coluna para agrupar textos e controles */
+.item-info-coluna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o espaço */
+    flex-grow: 1;
+    min-width: 0; /* Evita que o flexbox transborde */
+}
+
+.item-detalhes {
+    /* Não precisa mais de min-width */
+}
+
+.item-titulo {
+    font-style: italic;
+    font-weight: 600; /* Mais forte */
+    font-size: 15px; 
+    color: var(--cor-texto-titulo);
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adiciona '...' se o texto for muito longo */
+}
+
+.item-descricao {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px; 
+    line-height: 16px;
+    color: var(--cor-texto-suave);
+    margin: 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 6px; 
+    margin: 4px 0; 
+}
+
+.estrelas {
+    font-size: 14px; 
+    color: var(--cor-texto-nav-inativa); 
+    letter-spacing: 2px;
+}
+
+.item-num-avaliacao {
+    font-weight: 400;
+    font-size: 11px; 
+    color: var(--cor-texto-suave);
+}
+
+/* Bloco de Preço */
+.item-preco {
+    margin: 4px 0;
+}
+
+.item-preco .preco-antigo {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px; 
+    color: var(--cor-texto-suave);
+    text-decoration: line-through;
+}
+
+.item-preco .preco-atual {
+    display: block; 
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px; /* Reduzido */
+    line-height: 24px; /* Reduzido */
+    color: var(--cor-principal);
+}
+
+
+/* --- Controle de Quantidade (NOVA ESTRUTURA) --- */
+.item-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-top: 4px; /* Margem pequena */
+}
+
+.btn-qtd {
+    width: 28px; 
+    height: 28px; 
+    border: 2px solid var(--cor-borda-card);
+    border-radius: 6px; 
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-principal);
+    font-size: 20px; 
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.qtd-display {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 18px; 
+    color: var(--cor-principal);
+}
