@@ -225,3 +225,12 @@ body {
     border: 2px solid #E6F1FE;
     border-radius: 8px;
 }
+
+.descricao {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    color: #536679;
+    margin-bottom: 24px;
+}
