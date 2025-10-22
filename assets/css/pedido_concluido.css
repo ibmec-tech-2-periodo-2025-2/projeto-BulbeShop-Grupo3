@@ -1,0 +1,11 @@
+/* --- Variáveis de Cor --- */
+:root {
+    --cor-primaria-azul: #08068D; /* Azul escuro do header/botão/footer ativo */
+    --cor-sucesso-verde: #2ecc71; /* Verde do ícone de check */
+    --cor-fundo-branco: #ffffff;
+    --cor-fundo-app: #f4f5f7;    /* Cinza bem claro para o fundo do body */
+    --cor-texto-principal: #333333;
+    --cor-texto-inativo: #999999; /* Cinza para textos/ícones inativos */
+    --cor-texto-branco: #ffffff;
+    --cor-borda-leve: #eeeeee;
+}
