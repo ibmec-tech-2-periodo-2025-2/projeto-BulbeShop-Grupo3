@@ -118,6 +118,18 @@ body {
     font-weight: 400;
 }
 
+input[type="text"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    border: 1px solid var(--cor-borda-leve);
+    border-radius: 6px;
+    background-color: var(--cor-fundo-branco);
+}
+
 .footer-app {
     display: flex;
     justify-content: space-around;
