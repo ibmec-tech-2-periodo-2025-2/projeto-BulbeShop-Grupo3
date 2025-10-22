@@ -113,6 +113,10 @@ body {
     margin-bottom: 6px;
 }
 
+.icone-interroga {
+    color: var(--cor-texto-inativo);
+    font-weight: 400;
+}
 
 .footer-app {
     display: flex;
