@@ -30,7 +30,6 @@ body {
 .header-app {
     background-color: var(--cor-primaria-azul);
     padding: 20px;
-    padding-top: env(safe-area-inset-top);
 }
 
 .barra-topo {
@@ -53,8 +52,6 @@ body {
 .avatar .icon {
     height: 40px;
     width: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--cor-texto-branco);
     object-fit: cover;
 }
 
@@ -147,4 +144,31 @@ body {
 
 .volta:hover {
     background-color: #1a007c;
+}
+
+.footer-app {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-top: 1px solid var(--cor-borda-leve);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--cor-texto-inativo);
+}
+
+.nav-item .icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}
+
+.nav-item.active {
+    color: var(--cor-primaria-azul);
 }
