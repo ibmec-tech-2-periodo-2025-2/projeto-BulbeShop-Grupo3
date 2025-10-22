@@ -140,6 +140,20 @@ select {
     margin-bottom: 0;
 }
 
+.botao-concluir {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--cor-texto-branco);
+    background-color: var(--cor-primaria-azul);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    transition: background-color 0.2s ease;
+}
+
 .footer-app {
     display: flex;
     justify-content: space-around;
