@@ -106,3 +106,130 @@ Relatório de encerramento da sprint 1:
         Tarefas não finalizadas da sprint 1.
 
         ---
+
+Daily 3 (08/10/2025):
+    - Tiago Lage:
+        - O que fez: Começou a fazer tela de Menu no Figma.
+        - O que vai fazer: Terminar a tela de Menu no Figma.
+        - Bloqueios: Ter que aprender a usar o Figma.
+    
+    - Felipe Cota:
+        - O que fez: Começou a fazer tela de Carrinho no Figma.
+        - O que vai fazer: Terminar a tela de Carrinho no Figma.
+        - Bloqueios: Ter que aprender a usar o Figma.
+
+    - Joshua Azze
+        - O que fez: Começou a fazer tela de Checkout no Figma.
+        - O que vai fazer: Terminar a tela de Checkout no Figma.
+        - Bloqueios: Ter que aprender a usar o Figma.
+    
+    - Igor Conrado
+        - O que fez: Começou a fazer tela de Catálogo - Categorias no Figma.
+        - O que vai fazer: Terminar a tela de Catálogo - Categorias no Figma.
+        - Bloqueios: Ter que aprender a usar o Figma.
+
+    - Marcelo Reis
+        - O que fez: Começou a fazer tela de Produto no Figma.
+        - O que vai fazer: Terminar a tela de Produto no Figma.
+        - Bloqueios: Ter que aprender a usar o Figma.
+    
+    - Augusto Gama
+        - O que fez: Ajudou a finalizar a prototipação de alta fidelidade de todas as telas no Figma.
+        - O que vai fazer: Ajustar imagens no Figma.
+        - Bloqueios: Ter que aprender a usar o Figma.
+
+Daily 4 (15/10/2025):
+
+    - Tiago Lage:
+        - O que fez: Terminar a tela de Menu no Figma.
+        - O que vai fazer: Iniciar tela de Menu em HTML e CSS.
+        - Bloqueios: Nenhum.
+    
+    - Felipe Cota:
+        - O que fez: Terminar a tela de Menu no Figma.
+        - O que vai fazer: Iniciar tela de Menu em HTML e CSS.
+        - Bloqueios: Nenhum.
+
+    - Joshua Azze
+        - O que fez: Terminar a tela de Checkout no Figma.
+        - O que vai fazer: Iniciar tela de Pedido Concluido em HTML e CSS.
+        - Bloqueios: Nenhum.
+    
+    - Igor Conrado
+        - O que fez: Terminar a tela de Catálogos no Figma.
+        - O que vai fazer: Iniciar tela de Catálogo em HTML e CSS.
+        - Bloqueios: Nenhum.
+
+    - Marcelo Reis
+        - O que fez: Terminar a tela de Produto no Figma.
+        - O que vai fazer: Iniciar tela de Produto em HTML e CSS.
+        - Bloqueios: Nenhum.
+
+    - Augusto Gama
+        - O que fez: Terminar as telas no Figma.
+        - O que vai fazer: Iniciar tela de Checkout em HTML e CSS.
+        - Bloqueios: Nenhum.
+
+Daily 5 (18/10/2025):
+
+    - Tiago Lage:
+        - O que fez: Iniciar tela de Menu em HTML e CSS.
+        - O que vai fazer: Terminar tela de Menu em HTML e CSS.
+        - Bloqueios: Nenhum.
+    
+    - Felipe Cota:
+        - O que fez: Iniciar tela de Carrinho em HTML e CSS.
+        - O que vai fazer: Terminar tela de Carrinho em HTML e CSS.
+        - Bloqueios: Nenhum.
+
+    - Joshua Azze
+        - O que fez: Iniciar tela de Pedido Concluído em HTML e CSS.
+        - O que vai fazer: Terminar tela de Pedido Concluído em HTML e CSS.
+        - Bloqueios: Nenhum.
+    
+    - Igor Conrado
+        - O que fez: Iniciar telas de Catálogos em HTML e CSS.
+        - O que vai fazer: Terminar telas de Catálogos em HTML e CSS.
+        - Bloqueios: Nenhum.
+
+    - Marcelo Reis
+        - O que fez: Iniciar tela de Produto em HTML e CSS.
+        - O que vai fazer: Terminar tela de Produto em HTML e CSS.
+        - Bloqueios: Nenhum.
+
+    - Augusto Gama
+        - O que fez: Iniciar tela de Checkout em HTML e CSS.
+        - O que vai fazer: Terminar tela de Checkout em HTML e CSS.
+        - Bloqueios: Nenhum.
+
+Daily 6 (21/10/2025):
+
+    - Tiago Lage:
+        - O que fez: Terminar tela de Menu em HTML e CSS.
+        - O que vai fazer: Iniciar implementação JS. 
+        - Bloqueios: Aprender a implementação em JS.
+    
+    - Felipe Cota:
+        - O que fez: Terminar tela de Carrinho em HTML e CSS.
+        - O que vai fazer: Iniciar implementação JS. 
+        - Bloqueios: Aprender a implementação em JS.
+
+    - Joshua Azze
+        - O que fez: Terminar tela de Pedido Concluído em HTML e CSS.
+        - O que vai fazer: Iniciar implementação JS. 
+        - Bloqueios: Aprender a implementação em JS.
+    
+    - Igor Conrado
+        - O que fez: Terminar telas de Catálogo em HTML e CSS.
+        - O que vai fazer: Iniciar implementação JS. 
+        - Bloqueios: Aprender a implementação em JS.
+
+    - Marcelo Reis
+        - O que fez: Terminar tela de Produto em HTML e CSS.
+        - O que vai fazer: Iniciar implementação JS. 
+        - Bloqueios: Aprender a implementação em JS.
+
+    - Augusto Gama
+        - O que fez: Terminar tela de Checkout em HTML e CSS.
+        - O que vai fazer: Iniciar implementação JS. 
+        - Bloqueios: Aprender a implementação em JS.

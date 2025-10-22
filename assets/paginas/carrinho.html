@@ -7,27 +7,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/carrinho.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
 </head>
 <body>
 
     <div class="mobile-container">
 
-        <header class="header">
-            <div class="navbar-superior">
-                
-                <img src="./assets/icons/menu.png" alt="Menu" class="nav-icon">
-                
-                <span class="logo">bulbe shop</span>
-                
-                <img src="https://i.imgur.com/gB8hYyE.png" alt="Foto de perfil" class="foto-de-perfil">
-            </div>
-            
-            <div class="barra-de-pesquisa">
-                <input type="text" placeholder="Pesquisar...">
-                <img src="./assets/icons/search.png" alt="Pesquisar" class="search-icon">
-            </div>
-        </header>
+       <header class="cabecalho">
+        <nav class="topbar" aria-label="principal">
+          <button class="botao botao-menu" aria-label="Abrir menu">
+            <img class="img-ico-28" src="../img/header_img/menu_sanduiche.png" alt="">
+          </button>
+          <a class="logo-link" href="#" aria-label="Bulbe Shop">
+            <figure class="figura-logo">
+              <img class="img-logo" src="../img/header_img/logo.png" alt="Logotipo Bulbe Shop">
+            </figure>
+          </a>
+          <a class="perfil" href="#" aria-label="Perfil">
+            <figure class="figura-avatar">
+              <img class="img-avatar-32" src="../img/header_img/perfil.png" alt="Foto do usuário">
+            </figure>
+          </a>
+        </nav>
+
+        <form class="busca" role="search" aria-label="Pesquisar produtos">
+          <input class="campo-busca" type="search" name="q" placeholder="Pesquisar..." autocomplete="off" aria-label="Pesquisar">
+          <button class="botao botao-busca" type="submit" aria-label="Buscar">
+            <img class="img-ico-20" src="../img/header_img/lupa.png" alt="">
+          </button>
+        </form>
+      </header>
 
         <main class="content-body">
             <h1 class="titulo-pagina">Carrinho</h1>
@@ -127,23 +136,28 @@
             <button class="btn-pagar">Pagar com PIX</button>
         </div>
 
-        <footer class="footer-nav">
-            <a href="#" class="nav-item">
-                <img src="./assets/icons/home-inactive.png" alt="Home" class="icon-inactive">
-                <img src="./assets/icons/home-active.png" alt="Home" class="icon-active">
-                <span>Home</span>
-            </a>
-            <a href="#" class="nav-item">
-                <img src="./assets/icons/catalog-inactive.png" alt="Catálogo" class="icon-inactive">
-                <img src="./assets/icons/catalog-active.png" alt="Catálogo" class="icon-active">
-                <span>Catálogo</span>
-            </a>
-            <a href="#" class="nav-item active">
-                <img src="./assets/icons/cart-inactive.png" alt="Carrinho" class="icon-inactive">
-                <img src="./assets/icons/cart-active.png" alt="Carrinho" class="icon-active">
-                <span>Carrinho</span>
-            </a>
-        </footer>
+        <footer class="rodape">
+        <nav class="navbar-inferior" aria-label="Navegação inferior">
+          <a class="item-nav" href="#" aria-current="false">
+            <figure class="figura-icone-nav">
+              <img class="img-ico-24" src="../img/footer_img/home.png" alt="Início">
+            </figure>
+            <span>Home</span>
+          </a>
+          <a class="item-nav ativo" href="#" aria-current="page">
+            <figure class="figura-icone-nav">
+              <img class="img-ico-24" src="../img/footer_img/catalogo.png" alt="Catálogo">
+            </figure>
+            <span>Catálogo</span>
+          </a>
+          <a class="item-nav" href="#" aria-current="false">
+            <figure class="figura-icone-nav">
+              <img class="img-ico-24" src="../img/footer_img/carrinho.png" alt="Carrinho">
+            </figure>
+            <span>Carrinho</span>
+          </a>
+        </nav>
+      </footer>
 
     </div> </body>
 </html>
