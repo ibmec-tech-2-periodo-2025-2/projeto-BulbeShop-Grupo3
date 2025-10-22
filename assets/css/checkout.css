@@ -7,6 +7,21 @@
     --cor-texto-inativo: #999999; /* Cinza para textos/ícones inativos */
     --cor-texto-branco: #ffffff;
     --cor-borda-leve: #eeeeee;
+    --font-primary: 'Poppins', -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--cor-fundo-app);
+    color: var(--cor-texto-principal);
+    padding-top: 130px;
+    padding-bottom: 70px;
 }
 
 
