@@ -17,11 +17,19 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--cor-fundo-app);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo-branco);
     min-height: 100vh;
-    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
+
+.header-app {
+    background-color: var(--cor-primaria-azul);
+    padding: 20px;
+    padding-top: env(safe-area-inset-top);
+}
+
