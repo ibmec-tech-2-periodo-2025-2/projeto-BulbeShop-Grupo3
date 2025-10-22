@@ -154,6 +154,10 @@ select {
     transition: background-color 0.2s ease;
 }
 
+.botao-concluir:hover {
+    background-color: #06046b;
+}
+
 .footer-app {
     display: flex;
     justify-content: space-around;
