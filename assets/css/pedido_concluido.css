@@ -99,3 +99,33 @@ body {
     color: var(--cor-primaria-azul);
     margin-bottom: 20px;
 }
+
+.sucesso-icone {
+    width: 150px;
+    height: 150px;
+    border: 10px solid var(--cor-sucesso-verde);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sucesso-icone::before {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 80px;
+    border-style: solid;
+    border-color: var(--cor-sucesso-verde);
+    border-width: 0 10px 10px 0;
+    transform: rotate(45deg);
+    margin-top: -15px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: var(--cor-texto-principal);
+    margin-bottom: 40px;
+}
