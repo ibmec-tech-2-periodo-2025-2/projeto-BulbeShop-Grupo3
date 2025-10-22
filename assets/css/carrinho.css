@@ -1,19 +1,4 @@
-/* --- Configurações Globais e Importação da Fonte --- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
-
-:root {
-    --cor-principal: #08068D;
-    --cor-secundaria: #0762C7;
-    --cor-fundo: #F8F8FF;
-    --cor-fundo-card: #FFFFFF;
-    --cor-borda-card: #E6F1FE;
-    --cor-texto-titulo: #29333D;
-    --cor-texto-corpo: #3E4D5B;
-    --cor-texto-suave: #536679;
-    --cor-texto-placeholder: #A4B3C1;
-    --cor-texto-nav-inativa: #C2CCD6;
-    --cor-texto-branco: #FFFFFF;
-}
+@import url('./common.css');
 
 * {
     margin: 0;
@@ -43,13 +28,6 @@ body {
     overflow: hidden; /* Impede que algo vaze */
 }
 
-/* --- 1. Header (Fixo) --- */
-.header {
-    background-color: var(--cor-principal);
-    padding: 22px 12px;
-    color: var(--cor-texto-branco);
-    flex-shrink: 0; /* Impede que o header encolha */
-}
 
 /* --- 2. Conteúdo Principal (Rolável) --- */
 .content-body {
@@ -76,114 +54,6 @@ body {
     border-top: 1px solid #E0E0E0; 
 }
 
-/* --- 4. Footer (Fixo) --- */
-.footer-nav {
-    flex-shrink: 0; 
-    width: 100%;
-    height: 80px;
-    background: var(--cor-fundo-card);
-    box-shadow: -2px -2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 20px;
-}
-
-/* --- Estilos do Header --- */
-.navbar-superior {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px; 
-}
-
-.nav-icon {
-    cursor: pointer;
-    width: 28px; /* Tamanho da sua imagem de menu */
-    height: 24px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.foto-de-perfil {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid var(--cor-texto-branco);
-    object-fit: cover;
-}
-
-.barra-de-pesquisa {
-    display: flex;
-    align-items: center;
-    background-color: var(--cor-texto-branco);
-    border: 0.5px solid var(--cor-texto-placeholder);
-    border-radius: 20px;
-    padding: 8px 12px;
-    margin-top: 18px; 
-}
-
-.barra-de-pesquisa input {
-    flex-grow: 1;
-    border: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    font-size: 13px;
-    color: var(--cor-texto-corpo);
-}
-
-.barra-de-pesquisa input::placeholder {
-    color: var(--cor-texto-placeholder);
-    font-style: italic;
-}
-
-.search-icon {
-    flex-shrink: 0;
-    width: 21px; /* Tamanho da sua imagem de pesquisa */
-    height: 21px;
-}
-
-/* --- Estilos do Footer Nav --- */
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: var(--cor-texto-nav-inativa);
-}
-
-.nav-item img {
-    width: 24px; /* Tamanho padrão dos ícones de navegação */
-    height: 24px;
-}
-
-/* Lógica para trocar ícones ativos/inativos */
-.nav-item .icon-active {
-    display: none; /* Esconde o ícone ativo por padrão */
-}
-.nav-item .icon-inactive {
-    display: block; /* Mostra o ícone inativo por padrão */
-}
-
-.nav-item.active .icon-active {
-    display: block; /* Mostra o ícone ativo quando o link for .active */
-}
-.nav-item.active .icon-inactive {
-    display: none; /* Esconde o ícone inativo quando o link for .active */
-}
-
-.nav-item.active {
-    color: var(--cor-principal); /* Muda a cor do texto */
-}
 
 
 /* --- Estilos dos Botões de Ação --- */
