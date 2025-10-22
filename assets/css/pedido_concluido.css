@@ -45,3 +45,41 @@ body {
     width: auto;
     cursor: pointer;
 }
+
+.logo .icon {
+    height: 28px;
+}
+
+.avatar .icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--cor-texto-branco);
+    object-fit: cover;
+}
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-fundo-branco);
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.barra-pesquisa input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+    color: var(--cor-texto-principal);
+    background: none;
+}
+
+.barra-pesquisa input::placeholder {
+    color: var(--cor-texto-inativo);
+}
+
+.barra-pesquisa .icon {
+    height: 20px;
+    width: 20px;
+}
