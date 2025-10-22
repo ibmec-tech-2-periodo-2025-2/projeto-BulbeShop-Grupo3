@@ -1,4 +1,5 @@
 Daily 1 (23/09/2025):
+
     - Tiago Lage:
         - O que fez: Começou a elaborar HTMLs e CSSs baseados no figjam.
         - O que vai fazer: Finalizar HTMLs e CSSs, além de deixar mais claro no figjam o fluxo principal do app.
@@ -30,6 +31,7 @@ Daily 1 (23/09/2025):
         - Bloqueios: Nenhum.
 
 Daily 2 (28/09/2025):
+
     - Tiago Lage:
         - O que fez: Finalizou 2 protótipos iniciais (wireframe de login e wireframe de home).
         - O que vai fazer: Criar mais telas e refinar todo o CSS para corresponder ao design de alta fidelidade, garantindo a responsividade.
@@ -61,6 +63,7 @@ Daily 2 (28/09/2025):
         - Bloqueios: Não conseguiu evoluir muito pois ainda não tinhamos recebido o guia visual da Bulbe.
 
 Relatório de encerramento da sprint 1:
+
     - O que foi feito:
         - **Tarefa 1.1:** Criar o repositório no GitHub
         - **Tarefa 1.2:** Definir e criar a estrutura de pastas do projeto (/assets, /css, /js, /pages)
@@ -106,8 +109,9 @@ Relatório de encerramento da sprint 1:
         Tarefas não finalizadas da sprint 1.
 
         ---
-
+Sprint 2: 
 Daily 3 (08/10/2025):
+
     - Tiago Lage:
         - O que fez: Começou a fazer tela de Menu no Figma.
         - O que vai fazer: Terminar a tela de Menu no Figma.
