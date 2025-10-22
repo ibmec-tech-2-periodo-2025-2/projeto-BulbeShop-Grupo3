@@ -5,78 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style-menu.css">
     <title>Bulbe Shop Menu</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/menu.css">
 </head>
 <body>
-    <header>
-        <h1>Bulbe Shop</h1>
-        <div class="botao-menu">
-            <img src="./assets/img/icon-carrinho.png" alt="carrinho-de-compra">
-            <img src="./assets/img/icon-usuario.png" alt="icone-usuario">
-        </div>
+    <header class="cabecalho">
+      <nav class="topbar" aria-label="principal">
+        <button class="botao botao-menu" aria-label="Abrir menu">
+          <img src="./assets/img/header_img/menu_sanduiche.png" alt="" width="28" height="28">
+        </button>
+        <a class="logo-link" href="#" aria-label="Bulbe Shop">
+          <figure class="figura-logo">
+            <img src="./assets/img/header_img/logo.png" alt="Logotipo Bulbe Shop" width="160" height="28">
+          </figure>
+        </a>
+        <a class="perfil" href="#" aria-label="Perfil">
+          <figure class="figura-avatar">
+            <img src="./assets/img/header_img/perfil.png" alt="Foto do usuário" width="32" height="32">
+          </figure>
+        </a>
+      </nav>
+
+      <form class="busca" role="search" aria-label="Pesquisar produtos">
+        <input class="campo-busca" type="search" name="q" placeholder="Pesquisar..." autocomplete="off" aria-label="Pesquisar">
+        <button class="botao botao-busca" type="submit" aria-label="Buscar">
+          <img src="/assets/img/header_img/lupa.png" alt="" width="20" height="20">
+        </button>
+      </form>
     </header>
 
-    <form action="GET">
-        <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar">
-    </form>
-
-    <section class="banner"><img src="./assets/img/banner-provisorio.png" alt="banner-provisorio"></section>
-    
-    <section class="selecao-categoria">
-        <div class="subtitulos-titulo"><h2>Categorias</h2></div>
-        <section class="carrossel-selecao-categoria">
-            <div class="imagem-categoria"><img src="./assets/img/categoria-provisoria.png" alt="imagem-categoria"></div>
-            <div class="imagem-categoria"><img src="./assets/img/categoria-provisoria.png" alt="imagem-categoria"></div>
-            <div class="imagem-categoria"><img src="./assets/img/categoria-provisoria.png" alt="imagem-categoria"></div>
+    <main class="corpo-da-pagina">
+        <section class="banner">
+            <img class="banner-fundo" src="./assets/img/banner-alta-fidelidade.png" alt="banner-alta-fidelidade">
         </section>
-    </section>
+        
+        <section class="selecao-categoria">
+            <div id="titulo-categoria" class="subtitulos-titulo"><h2>Categorias</h2></div>
+            <section class="carrossel-selecao-categoria">
+                <div class="imagem-categoria"><img src="./assets/img/categoria-videogame.png" alt="categoria-videogame"></div>
+                <div class="imagem-categoria"><img src="./assets/img/categoria-lampadas.png" alt="categoria-lampada"></div>
+                <div class="imagem-categoria"><img src="./assets/img/categoria-videogame.png" alt="categoria-videogame"></div>
+                <div class="imagem-categoria"><img src="./assets/img/categoria-lampadas.png" alt="categoria-lampada"></div>
+                <div class="imagem-categoria"><img src="./assets/img/categoria-videogame.png" alt="categoria-videogame"></div>
+                <div class="imagem-categoria"><img src="./assets/img/categoria-lampadas.png" alt="categoria-lampada"></div>
+            </section>
+        </section>
+    
+        <section>
+            <div id="titulo-produtos-em-destaque" class="subtitulos-titulo"><h2>Produtos em Destaque</h2></div>
+        </section>
+        <section  class="produtos-em-destaque"> 
+            <div class="card-produto">
+                <div class="card-caixa-imagem">
+                    <img src="./assets/img/imagem-produto-destaque.png" alt="produtos-em-destaque">
+                </div>
+                <div class="card-caixa-texto">
+                    <h3>Lâmpada de Led</h3>
+                    <p>LÂMPADA LED ALTA POTÊNCIA LUZ BRANCA (6500K) 20W</p>
+                    <img src="./assets/img/avaliacao.png" alt="avaliacao">
+                    <h3>De <s>R$ 150,00</s> por</h3>
+                    <h2>R$ 100,00</h2>
+                </div>
+            </div>
+    
+            <div class="card-produto">
+                <div class="card-caixa-imagem">
+                    <img src="./assets/img/imagem-produto-destaque.png" alt="produtos-em-destaque">
+                </div>
+                <div class="card-caixa-texto">
+                    <h3>Lâmpada de Led</h3>
+                    <p>LÂMPADA LED ALTA POTÊNCIA LUZ BRANCA (6500K) 20W</p>
+                    <img src="./assets/img/avaliacao.png" alt="avaliacao">
+                    <h3>De <s>R$ 150,00</s> por</h3>
+                    <h2>R$ 100,00</h2>
+                </div>
+            </div>
+    
+            <div class="card-produto">
+                <div class="card-caixa-imagem">
+                    <img src="./assets/img/imagem-produto-destaque.png" alt="produtos-em-destaque">
+                </div>
+                <div class="card-caixa-texto">
+                    <h3>Lâmpada de Led</h3>
+                    <p>LÂMPADA LED ALTA POTÊNCIA LUZ BRANCA (6500K) 20W</p>
+                    <img src="./assets/img/avaliacao.png" alt="avaliacao">
+                    <h3>De <s>R$ 150,00</s> por</h3>
+                    <h2>R$ 100,00</h2>
+                </div>
+            </div>
+    
+            <div class="card-produto">
+                <div class="card-caixa-imagem">
+                    <img src="./assets/img/imagem-produto-destaque.png" alt="produtos-em-destaque">
+                </div>
+                <div class="card-caixa-texto">
+                    <h3>Lâmpada de Led</h3>
+                    <p>LÂMPADA LED ALTA POTÊNCIA LUZ BRANCA (6500K) 20W</p>
+                    <img src="./assets/img/avaliacao.png" alt="avaliacao">
+                    <h3>De <s>R$ 150,00</s> por</h3>
+                    <h2>R$ 100,00</h2>
+                </div>
+            </div>
+    
+            <div class="card-produto">
+                <div class="card-caixa-imagem">
+                    <img src="./assets/img/imagem-produto-destaque.png" alt="produtos-em-destaque">
+                </div>
+                <div class="card-caixa-texto">
+                    <h3>Lâmpada de Led</h3>
+                    <p>LÂMPADA LED ALTA POTÊNCIA LUZ BRANCA (6500K) 20W</p>
+                    <img src="./assets/img/avaliacao.png" alt="avaliacao">
+                    <h3>De <s>R$ 150,00</s> por</h3>
+                    <h2>R$ 100,00</h2>
+                </div>
+            </div>
+    
+            <div class="card-produto">
+                <div class="card-caixa-imagem">
+                    <img src="./assets/img/imagem-produto-destaque.png" alt="produtos-em-destaque">
+                </div>
+                <div class="card-caixa-texto">
+                    <h3>Lâmpada de Led</h3>
+                    <p>LÂMPADA LED ALTA POTÊNCIA LUZ BRANCA (6500K) 20W</p>
+                    <img src="./assets/img/avaliacao.png" alt="avaliacao">
+                    <h3>De <s>R$ 150,00</s> por</h3>
+                    <h2>R$ 100,00</h2>
+                </div>
+            </div>
+    
+        </section>
+    </main>
 
-    <section class="tecnologia">
-        <div class="subtitulos-titulo"><h2>Tecnologia</h2></div>
-    </section>
-    <section class="categorias-produtos"> 
-        <div class="card-produto">
-            <img src="./assets/img/celular-stock.png" alt="celular-stock">
-            <h3>Celular Genérico</h3>
-            <p>Descrição genérica</p>
-            <h3>R$ 19,99 </h3>
-        </div>
-
-        <div class="card-produto">
-            <img src="./assets/img/celular-stock.png" alt="celular-stock">
-            <h3>Celular Genérico</h3>
-            <p>Descrição genérica</p>
-            <h3>R$ 19,99 </h3>
-        </div>
-
-        <div class="card-produto">            
-            <img src="./assets/img/celular-stock.png" alt="celular-stock">
-            <h3>Celular Genérico</h3>
-            <p>Descrição genérica</p>
-            <h3>R$ 19,99 </h3>
-        </div>
-
-        <div class="card-produto">
-            <img src="./assets/img/celular-stock.png" alt="celular-stock">
-            <h3>Celular Genérico</h3>
-            <p>Descrição genérica</p>
-            <h3>R$ 19,99 </h3>
-        </div>
-
-        <div class="card-produto">
-            <img src="./assets/img/celular-stock.png" alt="celular-stock">
-            <h3>Celular Genérico</h3>
-            <p>Descrição genérica</p>
-            <h3>R$ 19,99 </h3>
-        </div>
-
-        <div class="card-produto">
-            <img src="./assets/img/celular-stock.png" alt="celular-stock">
-            <h3>Celular Genérico</h3>
-            <p>Descrição genérica</p>
-            <h3>R$ 19,99 </h3>
-        </div>
-
-    </section>
-    <footer>© Texto provisório para o footer</footer>
+    <footer class="rodape">
+      <nav class="navbar-inferior" aria-label="Navegação inferior">
+        <a class="item-nav" href="#" aria-current="false">
+          <figure class="figura-icone-nav">
+            <img src="/assets/img/footer_img/home.png" alt="Início" width="24" height="24" loading="lazy">
+          </figure>
+          <span>Home</span>
+        </a>
+        <a class="item-nav ativo" href="#" aria-current="page">
+          <figure class="figura-icone-nav">
+            <img src="/assets/img/footer_img/catalogo.png" alt="Catálogo" width="24" height="24" loading="lazy">
+          </figure>
+          <span>Catálogo</span>
+        </a>
+        <a class="item-nav" href="#" aria-current="false">
+          <figure class="figura-icone-nav">
+            <img src="/assets/img/footer_img/carrinho.png" alt="Carrinho" width="24" height="24" loading="lazy">
+          </figure>
+          <span>Carrinho</span>
+        </a>
+      </nav>
+    </footer>
 </body>
 </html>
