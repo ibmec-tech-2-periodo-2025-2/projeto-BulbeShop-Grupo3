@@ -101,6 +101,19 @@ body {
     margin-bottom: 16px;
 }
 
+.grupo-forms {
+    margin-bottom: 16px;
+}
+
+.grupo-forms label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    margin-bottom: 6px;
+}
+
+
 .footer-app {
     display: flex;
     justify-content: space-around;
