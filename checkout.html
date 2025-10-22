@@ -27,88 +27,100 @@
         </div>
     </header>
     <div class="checkout-container">
-        <form class="checkout-form">
+        <form class="form-checkout">
             <section class="form-section">
                 <h2>Forma de Pagamento</h2>
-                <div class="form-group">
-                    <label for="payment-method">
+                <div class="grupo-forms">
+                    <label for="metodo-pagamento">
                         Selecione a forma de pagamento 
-                        <span class="tooltip-icon">(?)</span>
+                        <span class="icone-interroga">(?)</span>
                     </label>
-                    <select id="payment-method" name="payment-method">
-                        <option value="credit-card" selected>Cartão de crédito</option>
+                    <select id="metodo-pagamento" name="metodo-pagamento">
+                        <option value="cartao-credito" selected>Cartão de crédito</option>
                         <option value="pix">Pix</option>
                         <option value="boleto">Boleto</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="card-number">
+                <div class="grupo-forms">
+                    <label for="nmr-cartao">
                         Número do Cartão 
-                        <span class="tooltip-icon">(?)</span>
+                        <span class="icone-interroga">(?)</span>
                     </label>
-                    <input type="text" id="card-number" name="card-number" placeholder="0000 0000 0000 0000">
+                    <input type="text" id="nmr-cartao" name="nmr-cartao" placeholder="0000 0000 0000 0000">
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="expiry-date">
+                <div class="row-de-forms">
+                    <div class="grupo-forms">
+                        <label for="vencimento-cartao">
                             Data de Validade 
-                            <span class="tooltip-icon">(?)</span>
+                            <span class="icone-interroga">(?)</span>
                         </label>
-                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA">
+                        <input type="text" id="vencimento-cartao" name="vencimento-cartao" placeholder="MM/AA">
                     </div>
-                    <div class="form-group">
-                        <label for="security-code">
+                    <div class="grupo-forms">
+                        <label for="cod-seg">
                             Código de Segurança 
-                            <span class="tooltip-icon">(?)</span>
+                            <span class="icone-interroga">(?)</span>
                         </label>
-                        <input type="text" id="security-code" name="security-code" placeholder="CVC">
+                        <input type="text" id="cod-seg" name="cod-seg" placeholder="CVC">
                     </div>
                 </div>
             </section>
             <section class="form-section">
                 <h2>Dados de Cobrança</h2>
-                
-                <div class="form-group">
-                    <label for="billing-name">Nome Completo <span class="tooltip-icon">(?)</span></label>
-                    <input type="text" id="billing-name" name="billing-name">
+            
+                <div class="grupo-forms">
+                    <label for="nome-cobr">Nome Completo <span class="icone-interroga">(?)</span></label>
+                    <input type="text" id="nome-cobr" name="nome-cobr">
                 </div>
-
-                <div class="form-group">
-                    <label for="billing-city">Cidade <span class="tooltip-icon">(?)</span></label>
-                    <input type="text" id="billing-city" name="billing-city">
+                <div class="grupo-forms">
+                    <label for="cidade-cobr">Cidade <span class="icone-interroga">(?)</span></label>
+                    <input type="text" id="cidade-cobr" name="cidade-cobr">
                 </div>
-                <div class="form-group">
-                    <label for="billing-address">Endereço <span class="tooltip-icon">(?)</span></label>
-                    <input type="text" id="billing-address" name="billing-address">
+                <div class="grupo-forms">
+                    <label for="end-cobr">Endereço <span class="icone-interroga">(?)</span></label>
+                    <input type="text" id="end-cobr" name="end-cobr">
                 </div>
-
-                <div class="form-group">
-                    <label for="billing-cep">Código Postal (CEP) <span class="tooltip-icon">(?)</span></label>
-                    <input type="text" id="billing-cep" name="billing-cep">
+                <div class="grupo-forms">
+                    <label for="cep-cobr">Código Postal (CEP) <span class="icone-interroga">(?)</span></label>
+                    <input type="text" id="cep-cobr" name="cep-cobr">
                 </div>
-
-                <div class="form-group">
-                    <label for="billing-phone">Telefone <span class="tooltip-icon">(?)</span></label>
-                    <input type="tel" id="billing-phone" name="billing-phone">
+                <div class="grupo-forms">
+                    <label for="tel-cobr">Telefone <span class="icone-interroga">(?)</span></label>
+                    <input type="tel" id="tel-cobr" name="tel-cobr">
                 </div>
-
-                <div class="form-group">
-                    <label for="billing-country">País <span class="tooltip-icon">(?)</span></label>
-                    <input type="text" id="billing-country" name="billing-country">
+                <div class="grupo-forms">
+                    <label for="pais-cobr">País <span class="icone-interroga">(?)</span></label>
+                    <input type="text" id="pais-cobr" name="pais-cobr">
                 </div>
             </section>
             <section class="form-section">
                 <h2>Entrega</h2>
-                
-                <div class="form-group">
-                    <label for="shipping-name">Nome Completo <span class="tooltip-icon">(?)</span></label>
-                    <input type="text" id="shipping-name" name="shipping-name">
+            
+                <div class="grupo-forms">
+                    <label for="nome-entr">Nome Completo <span class="icone-interroga">(?)</span></label>
+                    <input type="text" id="nome-entr" name="nome-entr">
                 </div>
-
-                <div class="form-group">
-                    <label for="shipping-city">Cidade <span class="tooltip-icon">(?)</span></label>
-                    <input type="text" id="shipping-city" name="shipping-city">
+                <div class="grupo-forms">
+                    <label for="cidade-entr">Cidade <span class="icone-interroga">(?)</span></label>
+                    <input type="text" id="cidade-entr" name="cidade-entr">
                 </div>
+                <div class="form-group">
+                    <label for="shipping-address">Endereço <span class="tooltip-icon">(?)</span></label>
+                    <input type="text" id="shipping-address" name="shipping-address">
+                </div>
+                <div class="form-group">
+                    <label for="shipping-cep">Código Postal (CEP) <span class="tooltip-icon">(?)</span></label>
+                    <input type="text" id="shipping-cep" name="shipping-cep">
+                </div>
+                <div class="form-group">
+                    <label for="shipping-phone">Telefone <span class="tooltip-icon">(?)</span></label>
+                    <input type="tel" id="shipping-phone" name="shipping-phone">
+                </div>
+                <div class="form-group">
+                    <label for="shipping-country">País <span class="tooltip-icon">(?)</span></label>
+                    <input type="text" id="shipping-country" name="shipping-country">
+                </div>
+            </section>
     </div>
     <footer class="footer-app">
         <a href="#" class="nav-item">
