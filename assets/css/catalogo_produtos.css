@@ -52,13 +52,12 @@ body{
   padding-bottom:env(safe-area-inset-bottom);
 }
 
- .cabecalho{padding:var(--space-3);padding-bottom:0;padding-top:calc(var(--space-3) + env(safe-area-inset-top))}
+.cabecalho{padding:var(--space-3);padding-bottom:0;padding-top:calc(var(--space-3) + env(safe-area-inset-top))}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3);color:var(--branco)}
 .botao{appearance:none;border:0;background:transparent;padding:var(--space-1);border-radius:999px}
 .logo-link{display:inline-flex;align-items:center;justify-content:center}
 .perfil{display:inline-flex;align-items:center;justify-content:center}
 
-/* Icon and image sizing to match Figma */
 .img-ico-28{width:28px;height:28px}
 .img-ico-24{width:24px;height:24px}
 .img-ico-20{width:20px;height:20px}
@@ -84,7 +83,6 @@ body{
   display:inline-flex;align-items:center;gap:.5rem;height:40px;border-radius:999px;
   padding:0 14px;border:1px solid var(--cinza-200);background:rgba(255,255,255,.7);
   color:#9FB5D8;font-weight:600;font-size:var(--fs-chip);
-  /* Ensure the chip grows to fit full text and icon */
   white-space:nowrap;width:max-content;flex:0 0 auto;max-width:none
 }
 .chip .chip-texto{display:inline-block}
@@ -103,7 +101,6 @@ body{
 }
 
 .produto-media{display:grid;place-items:center}
-/* Product photo sizing to mirror card visuals */
 .img-foto{width:114px;height:114px;object-fit:contain;border-radius:14px;background:#EEF3FA;border:1px solid var(--borda)}
 
 .produto-info{display:grid;gap:.4rem}

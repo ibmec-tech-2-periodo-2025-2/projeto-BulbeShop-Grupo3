@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lâmpada de Led - Bulbe Shop</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="produto.css">
+    <link rel="stylesheet" href="../css/produto.css">
 </head>
 <body>
     <div class="produto">
-        <header class="header">
-            <div class="navbar-superior">
-                <div class="menu-sanduiche">☰</div>
-                <div class="logo">
-                    <span class="bulbe-text">bulbe</span>
-                    <span class="shop-text">Shop</span>
-                </div>
-                <div class="foto-perfil"></div>
-            </div>
-            <div class="barra-pesquisa">
-                <input type="text" placeholder="Pesquisar..." class="place-holder">
-                <span class="pesquisa-icone">🔍</span>
-            </div>
-        </header>
+        <header class="cabecalho">
+        <nav class="topbar" aria-label="principal">
+          <button class="botao botao-menu" aria-label="Abrir menu">
+            <img class="img-ico-28" src="../img/header_img/menu_sanduiche.png" alt="">
+          </button>
+          <a class="logo-link" href="#" aria-label="Bulbe Shop">
+            <figure class="figura-logo">
+              <img class="img-logo" src="../img/header_img/logo.png" alt="Logotipo Bulbe Shop">
+            </figure>
+          </a>
+          <a class="perfil" href="#" aria-label="Perfil">
+            <figure class="figura-avatar">
+              <img class="img-avatar-32" src="../img/header_img/perfil.png" alt="Foto do usuário">
+            </figure>
+          </a>
+        </nav>
+
+        <form class="busca" role="search" aria-label="Pesquisar produtos">
+          <input class="campo-busca" type="search" name="q" placeholder="Pesquisar..." autocomplete="off" aria-label="Pesquisar">
+          <button class="botao botao-busca" type="submit" aria-label="Buscar">
+            <img class="img-ico-20" src="../img/header_img/lupa.png" alt="">
+          </button>
+        </form>
+      </header>
 
         <div class="body">
             <h1 class="titulo">Lâmpada de Led</h1>
@@ -93,22 +103,28 @@
             <button class="cta-compra">Comprar agora</button>
         </div>
 
-        <footer class="footer">
-            <div class="botoes-navbar">
-                <div class="nav-item">
-                    <div class="nav-icon home-icon">🏠</div>
-                    <span class="nav-text">Home</span>
-                </div>
-                <div class="nav-item active">
-                    <div class="nav-icon catalogo-icon">📋</div>
-                    <span class="nav-text">Catálogo</span>
-                </div>
-                <div class="nav-item">
-                    <div class="nav-icon carrinho-icon">🛒</div>
-                    <span class="nav-text">Carrinho</span>
-                </div>
-            </div>
-        </footer>
+        <footer class="rodape">
+        <nav class="navbar-inferior" aria-label="Navegação inferior">
+          <a class="item-nav" href="#" aria-current="false">
+            <figure class="figura-icone-nav">
+              <img class="img-ico-24" src="../img/footer_img/home.png" alt="Início">
+            </figure>
+            <span>Home</span>
+          </a>
+          <a class="item-nav ativo" href="#" aria-current="page">
+            <figure class="figura-icone-nav">
+              <img class="img-ico-24" src="../img/footer_img/catalogo.png" alt="Catálogo">
+            </figure>
+            <span>Catálogo</span>
+          </a>
+          <a class="item-nav" href="#" aria-current="false">
+            <figure class="figura-icone-nav">
+              <img class="img-ico-24" src="../img/footer_img/carrinho.png" alt="Carrinho">
+            </figure>
+            <span>Carrinho</span>
+          </a>
+        </nav>
+      </footer>
     </div>
 </body>
 </html>
