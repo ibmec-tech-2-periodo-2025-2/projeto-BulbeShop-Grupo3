@@ -129,3 +129,22 @@ body {
     color: var(--cor-texto-principal);
     margin-bottom: 40px;
 }
+
+.volta {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: var(--cor-primaria-azul);
+    color: var(--cor-texto-branco);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.volta:hover {
+    background-color: #1a007c;
+}
