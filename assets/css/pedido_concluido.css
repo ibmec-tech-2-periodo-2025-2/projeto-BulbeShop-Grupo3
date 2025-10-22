@@ -33,3 +33,15 @@ body {
     padding-top: env(safe-area-inset-top);
 }
 
+.barra-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.barra-topo .icon {
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+}
