@@ -30,3 +30,23 @@ function displayProduct(product) {
         img.alt = product.name;
     });
 }
+
+const quantityInput = document.getElementById('quantity-input');
+const decreaseBtn = document.getElementById('decrease-btn');
+const increaseBtn = document.getElementById('increase-btn');
+const addToCartBtn = document.getElementById('add-to-cart-btn');
+const buyNowBtn = document.getElementById('buy-now-btn');
+
+decreaseBtn.addEventListener('click', () => {
+    const currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+    }
+});
+
+increaseBtn.addEventListener('click', () => {
+    const currentValue = parseInt(quantityInput.value);
+    if (currentValue < 99) {
+        quantityInput.value = currentValue + 1;
+    }
+});
