@@ -130,3 +130,34 @@
     line-height: 24px;
     color: #536679;
 }
+
+.price-section {
+    margin-bottom: 24px;
+}
+
+.price-initial {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.price-label-de,
+.price-label-por {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #3E4D5B;
+}
+
+.price-value-old {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration-line: line-through;
+    color: #3E4D5B;
+}
