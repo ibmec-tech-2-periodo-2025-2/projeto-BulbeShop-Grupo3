@@ -16,7 +16,7 @@
             <button class="back-btn" id="back-btn" aria-label="Voltar" onclick="history.back()">←</button>
             <a href="index.html"><img src="images/header_img/logo.png" alt="Bulbe Shop" class="logo"></a>
             <div class="profile-photo">
-                <img src="images/header_img/perfil.png" alt="Perfil" style="width: 100%; height: 100%; border-radius: 200px;">
+                <img src="images/header_img/perfil.png" alt="Perfil" style="width: 200%; height: 200%; border-radius: 200px;">
             </div>
         </nav>
         <div class="search-bar">
@@ -38,48 +38,28 @@
                     </label>
                     <div class="payment-options">
                         <label class="payment-option">
-                            <input type="radio" name="payment-method" value="credit-card" id="payment-credit" checked>
+                            <input type="radio" name="payment-method" value="credit-card" checked>
                             <span>Cartão de crédito</span>
                         </label>
                         <label class="payment-option">
-                            <input type="radio" name="payment-method" value="pix" id="payment-pix">
+                            <input type="radio" name="payment-method" value="pix">
                             <span>PIX</span>
                         </label>
                         <label class="payment-option">
-                            <input type="radio" name="payment-method" value="boleto" id="payment-boleto">
+                            <input type="radio" name="payment-method" value="boleto">
                             <span>Boleto</span>
                         </label>
-                        <div class="form-group">
-                        <label for="card-name" class="form-label">
-                            Nome no Cartão
-                            <span class="help-icon">?</span>
-                        </label>
-                        <input type="text" id="card-name" required autocomplete="cc-name" class="form-input" placeholder="Nome como está no cartão">
                     </div>
                 </div>
-                    <div class="form-group">
-                        <label for="card-name" class="form-label">
-                            Nome no Cartão
-                            <span class="help-icon">?</span>
-                        </label>
-                        <input type="text" id="card-name" required autocomplete="cc-name" class="form-input" placeholder="Nome como está no cartão">
-                    </div>
-                </div>
+
                 <div id="card-fields">
                     <div class="form-group">
                         <label for="card-number" class="form-label">
                             Número do Cartão
                             <span class="help-icon">?</span>
                         </label>
-                        <input type="text" id="card-number" required autocomplete="cc-number" class="form-input" placeholder="0000 0000 0000 0000">
-                        <div class="form-group">
-                        <label for="card-name" class="form-label">
-                            Nome no Cartão
-                            <span class="help-icon">?</span>
-                        </label>
-                        <input type="text" id="card-name" required autocomplete="cc-name" class="form-input" placeholder="Nome como está no cartão">
+                        <input type="text" id="card-number" class="form-input" placeholder="0000 0000 0000 0000">
                     </div>
-                </div>
 
                     <div class="form-row">
                         <div class="form-group">
@@ -87,46 +67,27 @@
                                 Data de validade
                                 <span class="help-icon">?</span>
                             </label>
-                            <input type="text" id="card-expiry" required autocomplete="cc-exp" class="form-input" placeholder="MM/AA">
-                            <div class="form-group">
-                        <label for="card-name" class="form-label">
-                            Nome no Cartão
-                            <span class="help-icon">?</span>
-                        </label>
-                        <input type="text" id="card-name" required autocomplete="cc-name" class="form-input" placeholder="Nome como está no cartão">
-                    </div>
-                </div>
+                            <input type="text" id="card-expiry" class="form-input" placeholder="MM/AA">
+                        </div>
                         
                         <div class="form-group">
                             <label for="card-cvv" class="form-label">
                                 Código de Segurança
                                 <span class="help-icon">?</span>
                             </label>
-                            <input type="text" id="card-cvv" required maxlength="3" autocomplete="cc-csc" class="form-input" placeholder="123">
-                            <div class="form-group">
-                        <label for="card-name" class="form-label">
-                            Nome no Cartão
-                            <span class="help-icon">?</span>
-                        </label>
-                        <input type="text" id="card-name" required autocomplete="cc-name" class="form-input" placeholder="Nome como está no cartão">
+                            <input type="text" id="card-cvv" class="form-input" placeholder="123">
+                        </div>
                     </div>
-                </div>
-                        <div class="form-group">
-                        <label for="card-name" class="form-label">
-                            Nome no Cartão
-                            <span class="help-icon">?</span>
-                        </label>
-                        <input type="text" id="card-name" required autocomplete="cc-name" class="form-input" placeholder="Nome como está no cartão">
-                    </div>
-                </div>
+
                     <div class="form-group">
                         <label for="card-name" class="form-label">
                             Nome no Cartão
                             <span class="help-icon">?</span>
                         </label>
-                        <input type="text" id="card-name" required autocomplete="cc-name" class="form-input" placeholder="Nome como está no cartão">
+                        <input type="text" id="card-name" class="form-input" placeholder="Nome como está no cartão">
                     </div>
                 </div>
+
                 <div id="pix-fields" style="display: none;">
                     <div class="form-group">
                         <label for="pix-cpf" class="form-label">
@@ -146,101 +107,11 @@
                         <p class="boleto-note">Prazo de vencimento: 3 dias úteis</p>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="billing-name" class="form-label">
-                        Nome completo
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="billing-name" class="form-input" placeholder="Nome completo" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="billing-cep" class="form-label">
-                        Código Postal (CEP)
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="billing-cep" class="form-input" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}" required>
-                </div>
-                <div class="form-group">
-                    <label for="billing-city" class="form-label">
-                        Cidade
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="billing-city" class="form-input" placeholder="Cidade" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="billing-address" class="form-label">
-                        Endereço
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="billing-address" class="form-input" placeholder="Logradouro" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="billing-number" class="form-label">
-                        Número
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="billing-number" class="form-input" placeholder="XXX" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="billing-phone" class="form-label">
-                        Telefone
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="tel" id="billing-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
-                </div>
-                <div class="form-group">
-                    <label for="delivery-name" class="form-label">
-                        Nome completo
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-name" class="form-input" placeholder="Nome completo" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-cep" class="form-label">
-                        Código Postal (CEP)
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-cep" class="form-input" placeholder="XXXXX-XXX" pattern="[0-9]{5}-[0-9]{3}" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-city" class="form-label">
-                        Cidade
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-city" class="form-input" placeholder="Cidade" required>
-                </div>
-                <div class="form-group">
-                    <label for="delivery-address" class="form-label">
-                        Endereço
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-address" class="form-input" placeholder="Logradouro" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-number" class="form-label">
-                        Número
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-number" class="form-input" placeholder="XXX" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-phone" class="form-label">
-                        Telefone
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="tel" id="delivery-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
-                </div>
             </section>
+
             <section class="form-section">
                 <h2 class="section-title">Dados de cobrança</h2>
+                
                 <div class="form-group">
                     <label for="billing-name" class="form-label">
                         Nome completo
@@ -254,8 +125,10 @@
                         Código Postal (CEP)
                         <span class="help-icon">?</span>
                     </label>
-                    <input type="text" id="billing-cep" class="form-input" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}" required>
+                    <span class="error-message" id="billing-cep-error"></span>
+                    <input type="text" id="billing-cep" class="form-input" placeholder="00000-000" required>
                 </div>
+
                 <div class="form-group">
                     <label for="billing-city" class="form-label">
                         Cidade
@@ -285,57 +158,13 @@
                         Telefone
                         <span class="help-icon">?</span>
                     </label>
-                    <input type="tel" id="billing-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
-                </div>
-                <div class="form-group">
-                    <label for="delivery-name" class="form-label">
-                        Nome completo
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-name" class="form-input" placeholder="Nome completo" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-cep" class="form-label">
-                        Código Postal (CEP)
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-cep" class="form-input" placeholder="XXXXX-XXX" pattern="[0-9]{5}-[0-9]{3}" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-city" class="form-label">
-                        Cidade
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-city" class="form-input" placeholder="Cidade" required>
-                </div>
-                <div class="form-group">
-                    <label for="delivery-address" class="form-label">
-                        Endereço
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-address" class="form-input" placeholder="Logradouro" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-number" class="form-label">
-                        Número
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="text" id="delivery-number" class="form-input" placeholder="XXX" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="delivery-phone" class="form-label">
-                        Telefone
-                        <span class="help-icon">?</span>
-                    </label>
-                    <input type="tel" id="delivery-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
+                    <input type="tel" id="billing-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" required>
                 </div>
             </section>
+
             <section class="form-section">
                 <h2 class="section-title">Entrega</h2>
+                
                 <div class="form-group">
                     <label for="delivery-name" class="form-label">
                         Nome completo
@@ -349,7 +178,7 @@
                         Código Postal (CEP)
                         <span class="help-icon">?</span>
                     </label>
-                    <input type="text" id="delivery-cep" class="form-input" placeholder="XXXXX-XXX" pattern="[0-9]{5}-[0-9]{3}" required>
+                    <input type="text" id="delivery-cep" class="form-input" placeholder="XXXXX-XXX" required>
                 </div>
 
                 <div class="form-group">
@@ -359,6 +188,7 @@
                     </label>
                     <input type="text" id="delivery-city" class="form-input" placeholder="Cidade" required>
                 </div>
+
                 <div class="form-group">
                     <label for="delivery-address" class="form-label">
                         Endereço
@@ -380,14 +210,16 @@
                         Telefone
                         <span class="help-icon">?</span>
                     </label>
-                    <input type="tel" id="delivery-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required>
+                    <input type="tel" id="delivery-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" required>
                 </div>
             </section>
+
             <button type="submit" class="btn btn-primary submit-btn" id="submit-order-btn">
                 Concluir Pedido
             </button>
         </form>
     </main>
+
     <script src="js/cart-utils.js"></script>
     <script src="js/checkout.js"></script>
 </body>
