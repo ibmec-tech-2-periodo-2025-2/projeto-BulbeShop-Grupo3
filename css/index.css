@@ -94,3 +94,11 @@
         cursor: pointer;
 
 }
+.discount-tag {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #E9FBF2;
+    border-radius: 8px;
+    padding: 2px 8px;
+}
