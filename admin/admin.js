@@ -40,3 +40,50 @@ function displayProducts() {
         productsList.appendChild(row);
     });
 }
+
+let currentImagePath = '';
+
+function editProduct(id) {
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+    
+    editingId = id;
+    currentImagePath = product.image;
+    
+    document.getElementById('product-id').value = product.id;
+    document.getElementById('product-name').value = product.name;
+    document.getElementById('product-description').value = product.description;
+    document.getElementById('product-category').value = product.category;
+    document.getElementById('product-price').value = product.price;
+    document.getElementById('product-old-price').value = product.oldPrice;
+    document.getElementById('product-discount').value = product.discount;
+    document.getElementById('product-rating').value = product.rating;
+    document.getElementById('product-rating-count').value = product.ratingCount;
+    
+    const currentImageEl = document.getElementById('current-image');
+    currentImageEl.textContent = `Imagem atual: ${product.image}`;
+    currentImageEl.style.display = 'block';
+    
+    previewImg.src = '../' + product.image;
+    imagePreview.style.display = 'block';
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+async function deleteProduct(id) {
+    if (!confirm('Tem certeza que deseja excluir este produto?')) return;
+    
+    products = products.filter(p => p.id !== id);
+    await saveProducts();
+    displayProducts();
+}
+
+function clearForm() {
+    form.reset();
+    editingId = null;
+    currentImagePath = '';
+    document.getElementById('product-id').value = '';
+    document.getElementById('current-image').style.display = 'none';
+    imagePreview.style.display = 'none';
+    previewImg.src = '';
+}
