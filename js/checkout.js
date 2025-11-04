@@ -73,3 +73,53 @@ function generateOrderCode() {
     }
     return code;
 }
+
+function validateForm() {
+    const requiredFields = checkoutForm.querySelectorAll('[required]');
+    let isValid = true;
+    
+    requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+            field.style.borderColor = 'red';
+            isValid = false;
+        } else {
+            field.style.borderColor = '';
+        }
+    });
+    
+    const paymentMethod = document.querySelector('input[name="payment-method"]:checked');
+    if (!paymentMethod) {
+        alert('Por favor, selecione um método de pagamento');
+        return false;
+    }
+    
+    if (paymentMethod.value === 'credit-card') {
+        const cardNumber = document.getElementById('card-number');
+        const cardName = document.getElementById('card-name');
+        const cardExpiry = document.getElementById('card-expiry');
+        const cardCvv = document.getElementById('card-cvv');
+        
+        if (!cardNumber.value || !cardName.value || !cardExpiry.value || !cardCvv.value) {
+            alert('Por favor, preencha todos os dados do cartão');
+            return false;
+        }
+    }
+    
+    const billingCep = document.getElementById('billing-cep');
+    if (billingCep && billingCep.value && billingCep.value.replace(/\D/g, '').length !== 8) {
+        alert('CEP de cobrança inválido');
+        return false;
+    }
+    
+    const deliveryCep = document.getElementById('delivery-cep');
+    if (deliveryCep && deliveryCep.value && deliveryCep.value.replace(/\D/g, '').length !== 8) {
+        alert('CEP de entrega inválido');
+        return false;
+    }
+    
+    if (!isValid) {
+        alert('Por favor, preencha todos os campos obrigatórios');
+    }
+    
+    return isValid;
+}
