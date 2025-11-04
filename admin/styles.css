@@ -96,3 +96,40 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 16px;
 }
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #08068D;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #06056b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(8, 6, 141, 0.3);
+}
+
+.btn-secondary {
+    background: #e0e0e0;
+    color: #29333D;
+}
+
+.btn-secondary:hover {
+    background: #d0d0d0;
+}
