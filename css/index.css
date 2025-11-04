@@ -144,7 +144,6 @@
     color: #536679;
 }
 
-
 .price-initial {
     display: flex;
     align-items: center;
@@ -179,7 +178,6 @@
     margin-top: auto;
 }
 
-
 .price-currency {
     font-family: 'Poppins';
     font-weight: 600;
@@ -188,8 +186,6 @@
     text-align: right;
     color: #08068D;
 }
-
-
 
 .price-value {
     font-family: 'Poppins';
