@@ -161,3 +161,29 @@
     text-decoration-line: line-through;
     color: #3E4D5B;
 }
+
+.price-final {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.price-currency {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+    color: #08068D;
+}
+
+.price-value {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #08068D;
+}
