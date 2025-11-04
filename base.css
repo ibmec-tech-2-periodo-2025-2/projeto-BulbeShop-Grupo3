@@ -12,3 +12,21 @@ body {
     margin: 0 auto;
     min-height: 100vh;
 }
+
+.site-header {
+    width: 100%;
+    max-width: 393px;
+    height: 146px;
+    background: #08068D;
+    position: relative;
+}
+
+.navbar-superior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 22px;
+    gap: 45px;
+    width: 100%;
+    height: 93px;
+}
