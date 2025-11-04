@@ -29,5 +29,26 @@ const CartService = {
         }
         
         this.setCart(cart);
+    },
+    
+    updateItemQuantity(itemId, quantity) {
+        if (quantity < 1 || quantity > 99) return false;
+        
+        const cart = this.getCart();
+        const item = cart.find(i => i.id === itemId);
+        
+        if (item) {
+            item.quantity = quantity;
+            this.setCart(cart);
+            return true;
+        }
+        
+        return false;
+    },
+    
+    removeItem(itemId) {
+        let cart = this.getCart();
+        cart = cart.filter(item => item.id !== itemId);
+        this.setCart(cart);
     }
 };
