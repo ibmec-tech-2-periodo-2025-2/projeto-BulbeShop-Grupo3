@@ -1,0 +1,17 @@
+.cart-page-title {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #08068D;
+    margin-bottom: 10px;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 180px;
+}
