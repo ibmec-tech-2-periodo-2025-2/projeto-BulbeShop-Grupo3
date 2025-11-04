@@ -101,3 +101,12 @@ body {
     width: 21px;
     height: 21px;
 }
+
+.container {
+    width: 100%;
+    max-width: 393px;
+    background: #F8F8FF;
+    border-radius: 20px 20px 0 0;
+    padding: 16px 20px;
+    min-height: calc(100vh - 146px - 80px);
+}
