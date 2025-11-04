@@ -162,3 +162,28 @@ body {
 .nav-item.active .nav-label {
     color: #08068D;
 }
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 16px;
+    gap: 10px;
+    border-radius: 6px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: #08068D;
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    background: #0762C7;
+    color: #FFFFFF;
+}
