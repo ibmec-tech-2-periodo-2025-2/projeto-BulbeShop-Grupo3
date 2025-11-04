@@ -64,3 +64,17 @@ buyNowBtn.addEventListener('click', () => {
         window.location.href = 'cart.html';
     }
 });
+
+document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+    thumb.addEventListener('click', () => {
+        document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.indicator').forEach(i => i.classList.remove('active'));
+        
+        thumb.classList.add('active');
+        document.querySelectorAll('.indicator')[index].classList.add('active');
+        
+        document.getElementById('main-image').src = thumb.querySelector('img').src;
+    });
+});
+
+loadProductDetail();
