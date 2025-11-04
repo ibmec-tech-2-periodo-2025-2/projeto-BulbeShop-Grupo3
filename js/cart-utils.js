@@ -50,5 +50,19 @@ const CartService = {
         let cart = this.getCart();
         cart = cart.filter(item => item.id !== itemId);
         this.setCart(cart);
+    },
+    
+    clearCart() {
+        localStorage.removeItem(this.STORAGE_KEY);
+    },
+    
+    getTotal() {
+        const cart = this.getCart();
+        return cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    },
+    
+    getItemCount() {
+        const cart = this.getCart();
+        return cart.reduce((sum, item) => sum + item.quantity, 0);
     }
 };
