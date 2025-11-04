@@ -50,3 +50,17 @@ increaseBtn.addEventListener('click', () => {
         quantityInput.value = currentValue + 1;
     }
 });
+
+addToCartBtn.addEventListener('click', () => {
+    if (currentProduct) {
+        CartService.addItem(currentProduct, parseInt(quantityInput.value));
+        alert('Produto adicionado ao carrinho!');
+    }
+});
+
+buyNowBtn.addEventListener('click', () => {
+    if (currentProduct) {
+        CartService.addItem(currentProduct, parseInt(quantityInput.value));
+        window.location.href = 'cart.html';
+    }
+});
