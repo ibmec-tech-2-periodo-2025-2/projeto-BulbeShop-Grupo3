@@ -42,3 +42,34 @@ paymentMethods.forEach(method => {
         }
     });
 });
+
+const checkoutForm = document.getElementById('checkout-form');
+
+checkoutForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    if (validateForm()) {
+        const orderCode = generateOrderCode();
+        localStorage.setItem('orderCode', orderCode);
+        
+        const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+        const { total } = calculateTotal();
+        const finalAmount = paymentMethod === 'pix' ? calculatePixDiscount() : total;
+        
+        localStorage.setItem('orderAmount', finalAmount.toFixed(2));
+        localStorage.setItem('orderPayment', paymentMethod);
+        
+        CartService.clearCart();
+        
+        window.location.href = 'confirmation.html';
+    }
+});
+
+function generateOrderCode() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let code = '';
+    for (let i = 0; i < 10; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+}
