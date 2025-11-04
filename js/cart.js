@@ -106,3 +106,45 @@ function removeItem(itemId) {
     CartService.removeItem(itemId);
     loadCart();
 }
+
+function updateItemPrice(itemId, unitPrice, quantity) {
+    const cart = CartService.getCart();
+    const item = cart.find(i => i.id === itemId);
+    
+    if (!item) return;
+    
+    const priceElement = document.querySelector(`[data-item-id="${itemId}"]`);
+    if (priceElement) {
+        priceElement.textContent = (unitPrice * quantity).toFixed(2);
+    }
+    
+    const oldPriceElement = document.querySelector(`[data-old-price-id="${itemId}"]`);
+    if (oldPriceElement) {
+        oldPriceElement.textContent = `R$${(item.oldPrice * quantity).toFixed(2)}`;
+    }
+    
+    const quantityInput = document.getElementById(`quantity-${itemId}`);
+    if (quantityInput) {
+        quantityInput.value = quantity;
+    }
+}
+
+function updateSubtotal() {
+    const subtotal = CartService.getTotal();
+    
+    const subtotalBtn = document.getElementById('subtotal-btn');
+    if (subtotalBtn) {
+        subtotalBtn.textContent = `Subtotal R$: ${subtotal.toFixed(2)}`;
+    }
+}
+
+document.getElementById('checkout-btn').addEventListener('click', () => {
+    const cart = CartService.getCart();
+    if (cart.length > 0) {
+        window.location.href = 'checkout.html';
+    } else {
+        alert('Seu carrinho está vazio!');
+    }
+});
+
+loadCart();
