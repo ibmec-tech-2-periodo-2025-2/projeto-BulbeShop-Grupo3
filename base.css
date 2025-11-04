@@ -30,3 +30,29 @@ body {
     width: 100%;
     height: 93px;
 }
+
+.menu-btn,
+.back-btn {
+    width: 28px;
+    height: 28px;
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    color: #FFFFFF;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn img,
+.back-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo {
+    width: 159.54px;
+    height: 27.6px;
+}
