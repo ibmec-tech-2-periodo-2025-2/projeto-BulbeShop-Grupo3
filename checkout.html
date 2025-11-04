@@ -127,6 +127,25 @@
                         <input type="text" id="card-name" class="form-input" placeholder="Nome como está no cartão">
                     </div>
                 </div>
+                <div id="pix-fields" style="display: none;">
+                    <div class="form-group">
+                        <label for="pix-cpf" class="form-label">
+                            CPF
+                            <span class="help-icon">?</span>
+                        </label>
+                        <input type="text" id="pix-cpf" class="form-input" placeholder="000.000.000-00" maxlength="14">
+                    </div>
+                    <div class="pix-info">
+                        <p>Após confirmar o pedido, você receberá o QR Code PIX para pagamento.</p>
+                    </div>
+                </div>
+
+                <div id="boleto-fields" style="display: none;">
+                    <div class="boleto-info">
+                        <p>O boleto será gerado após a confirmação do pedido.</p>
+                        <p class="boleto-note">Prazo de vencimento: 3 dias úteis</p>
+                    </div>
+                </div>
             </section>
         </form>
     </main>
