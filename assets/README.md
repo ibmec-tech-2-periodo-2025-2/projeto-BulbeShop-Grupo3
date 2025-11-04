@@ -1,1 +1,0 @@
-Pasta dedicada para organização das outras pastas
