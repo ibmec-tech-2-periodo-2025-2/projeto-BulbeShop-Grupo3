@@ -135,3 +135,69 @@ form.addEventListener('submit', async (e) => {
 });
 
 cancelBtn.addEventListener('click', clearForm);
+
+imageInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        
+        reader.onload = (event) => {
+            previewImg.src = event.target.result;
+            imagePreview.style.display = 'block';
+        };
+        
+        reader.readAsDataURL(file);
+    } else {
+        imagePreview.style.display = 'none';
+        previewImg.src = '';
+    }
+});
+
+async function uploadImage(file) {
+    try {
+        const formData = new FormData();
+        formData.append('image', file);
+        
+        const response = await fetch('/api/upload', {
+            method: 'POST',
+            body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            return result.path;
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error('Erro ao fazer upload da imagem:', error);
+        return null;
+    }
+}
+
+async function saveProducts() {
+    try {
+        const response = await fetch('/api/products', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(products)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+            alert('Produtos salvos com sucesso!');
+        } else {
+            alert('Erro ao salvar produtos.');
+        }
+    } catch (error) {
+        console.error('Erro ao salvar produtos:', error);
+        alert('Erro ao salvar produtos. Certifique-se de que o servidor está rodando.');
+    }
+}
+
+loadProducts();
