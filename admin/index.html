@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gerenciar Produtos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Painel Administrativo - Bulbe Shop</h1>
+            <p>Gerenciar Produtos</p>
+        </header>
+
+        <div class="admin-content">
+            <section class="product-form-section">
+                <h2>Adicionar/Editar Produto</h2>
+                <form id="product-form">
+                    <input type="hidden" id="product-id">
+                    
+                    <div class="form-group">
+                        <label for="product-name">Nome do Produto</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-description">Descrição</label>
+                        <textarea id="product-description" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-category">Categoria</label>
+                        <select id="product-category" required>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="Games">Games</option>
+                            <option value="Iluminação">Iluminação</option>
+                            <option value="Casa">Casa</option>
+                            <option value="Música">Música</option>
+                            <option value="Vídeo">Vídeo</option>
+                        </select>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
