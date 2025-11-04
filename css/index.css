@@ -101,4 +101,9 @@
     background: #E9FBF2;
     border-radius: 8px;
     padding: 2px 8px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #18814D;
 }
