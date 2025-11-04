@@ -224,3 +224,35 @@
     min-width: 120px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
+
+.quantity-btn {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #08068D;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+.quantity-input {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #08068D;
+    border: none;
+    width: 40px;
+    -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
