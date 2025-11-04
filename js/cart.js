@@ -64,3 +64,45 @@ function createCartItem(item) {
     
     return article;
 }
+
+function decreaseQuantity(itemId) {
+    const cart = CartService.getCart();
+    const item = cart.find(i => i.id === itemId);
+    
+    if (item) {
+        if (item.quantity === 1) {
+            removeItem(itemId);
+        } else {
+            CartService.updateItemQuantity(itemId, item.quantity - 1);
+            updateItemPrice(itemId, item.price, item.quantity - 1);
+            updateSubtotal();
+        }
+    }
+}
+
+function increaseQuantity(itemId) {
+    const cart = CartService.getCart();
+    const item = cart.find(i => i.id === itemId);
+    
+    if (item && item.quantity < 99) {
+        CartService.updateItemQuantity(itemId, item.quantity + 1);
+        updateItemPrice(itemId, item.price, item.quantity + 1);
+        updateSubtotal();
+    }
+}
+
+function updateQuantity(itemId, newQuantity) {
+    if (CartService.updateItemQuantity(itemId, newQuantity)) {
+        const cart = CartService.getCart();
+        const item = cart.find(i => i.id === itemId);
+        if (item) {
+            updateItemPrice(itemId, item.price, item.quantity);
+            updateSubtotal();
+        }
+    }
+}
+
+function removeItem(itemId) {
+    CartService.removeItem(itemId);
+    loadCart();
+}
