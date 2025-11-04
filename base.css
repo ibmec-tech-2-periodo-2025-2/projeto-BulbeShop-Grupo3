@@ -187,3 +187,20 @@ body {
     background: #0762C7;
     color: #FFFFFF;
 }
+
+.page-title {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 140%;
+    color: #08068D;
+}
+
+.section-title {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #536679;
+    margin-bottom: 10px;
+}
