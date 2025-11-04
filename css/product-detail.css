@@ -111,3 +111,22 @@
     color: #08068D;
     margin-bottom: 16px;
 }
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.product-rating img {
+    height: 14px;
+}
+
+.rating-count {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #536679;
+}
