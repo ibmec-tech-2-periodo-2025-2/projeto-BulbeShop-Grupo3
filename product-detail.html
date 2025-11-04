@@ -81,6 +81,28 @@
                 perfeita para ambientes que necessitam de claridade. Com tecnologia LED de última 
                 geração, proporciona economia de energia e longa durabilidade.
             </p>
+
+            <div class="quantity-section">
+                <label for="quantity-input" class="quantity-label">Quantidade:</label>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" id="decrease-btn" aria-label="Diminuir quantidade">-</button>
+                    <input type="number" id="quantity-input" class="quantity-input" value="1" min="1" max="99">
+                    <button class="quantity-btn" id="increase-btn" aria-label="Aumentar quantidade">+</button>
+                </div>
+                <div class="product-rating-inline">
+                    <img src="images/avaliacao.png" alt="5 estrelas">
+                    <span class="rating-count">(451)</span>
+                </div>
+            </div>
+
+            <button class="btn btn-secondary btn-add-cart" id="add-to-cart-btn">
+                <span>Adicionar ao</span>
+                <img src="images/icon-carrinho.png" alt="carrinho" class="cart-icon-btn">
+            </button>
+
+            <button class="btn btn-primary btn-buy-now" id="buy-now-btn">
+                Pagar com PIX
+            </button>
         </section>
     </main>
 </body>
