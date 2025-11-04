@@ -97,3 +97,17 @@
     height: 100%;
     object-fit: cover;
 }
+
+.product-info {
+    padding-bottom: 100px;
+}
+
+.product-title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    color: #08068D;
+    margin-bottom: 16px;
+}
