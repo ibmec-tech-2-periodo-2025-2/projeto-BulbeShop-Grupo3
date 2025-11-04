@@ -49,3 +49,24 @@ function createProductCard(product) {
     
     return article;
 }
+
+function searchProducts(products, query) {
+    if (!query) return products;
+    
+    const searchTerm = query.toLowerCase().trim();
+    
+    return products.filter(product => {
+        const name = product.name.toLowerCase();
+        const description = product.description.toLowerCase();
+        const category = product.category.toLowerCase();
+        
+        return name.includes(searchTerm) || 
+               description.includes(searchTerm) || 
+               category.includes(searchTerm);
+    });
+}
+
+function getURLParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
