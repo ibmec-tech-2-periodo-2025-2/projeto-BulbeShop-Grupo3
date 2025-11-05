@@ -33,3 +33,12 @@
     width: 100%;
     height: 100%;
 }
+
+.delivery-info {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #3E4D5B;
+}
