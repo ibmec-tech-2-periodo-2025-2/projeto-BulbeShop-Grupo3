@@ -34,7 +34,7 @@
 .products-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 20px;
     padding-bottom: 120px;
 }
 
