@@ -23,3 +23,8 @@
     letter-spacing: 0.02em;
     color: #08068D;
 }
+
+.success-icon-container {
+    width: 135px;
+    height: 135px;
+}
