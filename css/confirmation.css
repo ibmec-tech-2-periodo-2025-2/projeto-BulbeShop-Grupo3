@@ -48,7 +48,7 @@
     height: 44px;
     padding: 16px 10px;
     text-decoration: none;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
