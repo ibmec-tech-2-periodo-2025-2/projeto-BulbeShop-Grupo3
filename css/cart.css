@@ -345,3 +345,82 @@
     border-radius: 8px;
     display: block;
 }
+
+.cart-recommendations .product-title {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #29333D;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.cart-recommendations .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 14px;
+    margin-bottom: 6px;
+}
+
+.cart-recommendations .product-rating img {
+    height: 14px;
+}
+
+.cart-recommendations .rating-count {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #536679;
+}
+
+.cart-recommendations .price-initial {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cart-recommendations .price-label-de,
+.cart-recommendations .price-label-por {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #3E4D5B;
+}
+
+.cart-recommendations .price-value-old {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration-line: line-through;
+    color: #3E4D5B;
+}
+
+.cart-recommendations .price-final {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.cart-recommendations .price-currency {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #08068D;
+}
+
+.cart-recommendations .price-value {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #08068D;
+}
