@@ -320,3 +320,18 @@
 .carousel-btn.next {
     right: -4px;
 }
+
+/* Card de produto recomendado - base */
+.cart-recommendations .product-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 160px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+}
+
+.cart-recommendations .product-card:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
+}
