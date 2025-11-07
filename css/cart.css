@@ -268,3 +268,52 @@
     color: #FFFFFF;
     cursor: pointer;
 }
+
+/* Recomendações no carrinho - estilos base */
+.cart-recommendations {
+    margin-top: 16px;
+}
+
+.recommendations-title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #08068D;
+    margin: 4px 0 8px;
+}
+
+.recommendations-carousel {
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 8px 0;
+    scroll-behavior: smooth;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    border: none;
+    background: #08068D;
+    color: #FFFFFF;
+    font-family: 'Poppins';
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.carousel-btn.prev {
+    left: -4px;
+}
+
+.carousel-btn.next {
+    right: -4px;
+}
