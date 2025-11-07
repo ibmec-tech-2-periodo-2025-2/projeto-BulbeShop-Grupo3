@@ -176,3 +176,16 @@ async function fetchAllProducts() {
         return [];
     }
 }
+
+function getRecommendedCandidates(allProducts) {
+    const cartIds = new Set(getCartProductIds());
+    const categories = new Set(getCartCategories(allProducts));
+    
+    if (categories.size === 0) return [];
+    
+    return allProducts.filter(product => {
+        const inSameCategory = product.category && categories.has(product.category);
+        const notInCart = !cartIds.has(product.id);
+        return inSameCategory && notInCart;
+    });
+}
