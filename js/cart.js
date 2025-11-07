@@ -148,3 +148,21 @@ document.getElementById('checkout-btn').addEventListener('click', () => {
 });
 
 loadCart();
+
+/* Helpers de recomendações */
+function getCartProductIds() {
+    return CartService.getCart().map(item => item.id);
+}
+
+function getCartCategories(allProducts) {
+    const ids = new Set(getCartProductIds());
+    const categoriesSet = new Set();
+    
+    allProducts.forEach(product => {
+        if (ids.has(product.id) && product.category) {
+            categoriesSet.add(product.category);
+        }
+    });
+    
+    return Array.from(categoriesSet);
+}
