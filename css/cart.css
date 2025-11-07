@@ -296,8 +296,15 @@
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     scroll-padding: 8px;
+    /* Oculta barra em Firefox/IE */
+    -ms-overflow-style: none; /* IE e Edge legacy */
+    scrollbar-width: none;    /* Firefox */
 }
 
+.carousel-track::-webkit-scrollbar {
+    /* Oculta barra em navegadores WebKit */
+    height: 0;
+}
 .carousel-btn {
     position: absolute;
     top: 50%;
