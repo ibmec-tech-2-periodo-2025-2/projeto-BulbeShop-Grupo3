@@ -353,6 +353,27 @@
     display: block;
 }
 
+.cart-recommendations .product-card {
+    /* Responsivo base já definido em min-width: 160px */
+}
+
+@media (min-width: 480px) {
+    .cart-recommendations .product-card {
+        min-width: 180px;
+    }
+    .cart-recommendations .product-image {
+        height: 160px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cart-recommendations .product-card {
+        min-width: 200px;
+    }
+    .cart-recommendations .product-image {
+        height: 180px;
+    }
+}
 .cart-recommendations .product-title {
     font-family: 'Poppins';
     font-weight: 500;
