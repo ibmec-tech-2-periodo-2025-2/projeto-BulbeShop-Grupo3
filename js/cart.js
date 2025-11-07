@@ -166,3 +166,13 @@ function getCartCategories(allProducts) {
     
     return Array.from(categoriesSet);
 }
+
+async function fetchAllProducts() {
+    try {
+        const products = await ProductService.fetchProducts();
+        return Array.isArray(products) ? products : [];
+    } catch (error) {
+        console.error('Erro ao buscar produtos para recomendações:', error);
+        return [];
+    }
+}
