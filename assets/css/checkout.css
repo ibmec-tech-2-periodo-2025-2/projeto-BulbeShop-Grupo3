@@ -206,6 +206,7 @@ select {
 .row-cupom{
     display: flex;
     gap: 8px;
+    justify-content: space-between;
 }
 
 #ok-cupom{
