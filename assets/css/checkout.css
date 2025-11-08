@@ -209,9 +209,14 @@ select {
 }
 
 #ok-cupom{
-    background-color: var(--cor-primaria-azul);
+    font-size: 1.125rem;
+    font-weight: 700;
     color: var(--cor-texto-branco);
-    border-radius: 6px;
+    background-color: var(--cor-primaria-azul);
     border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    transition: background-color 0.2s ease;
     width: 64px;
 }
