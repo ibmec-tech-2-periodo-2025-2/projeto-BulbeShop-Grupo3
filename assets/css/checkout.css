@@ -198,3 +198,7 @@ select {
 .nav-item.active {
     color: var(--cor-primaria-azul);
 }
+
+#cupom-desconto{
+    width: 278px
+}
