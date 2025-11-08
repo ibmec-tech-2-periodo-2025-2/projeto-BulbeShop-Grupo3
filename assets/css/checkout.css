@@ -202,3 +202,18 @@ select {
 #cupom-desconto{
     width: 278px
 }
+
+.row-cupom{
+    display: flex;
+    gap: 8px;
+}
+
+#ok-cupom{
+    background-color: var(--cor-primaria-azul);
+    color: var(--cor-texto-branco);
+    border-radius: 6px;
+    border: none;
+    width: 64px;
+    
+
+}
