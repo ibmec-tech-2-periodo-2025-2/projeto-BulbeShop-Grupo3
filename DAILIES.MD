@@ -1,4 +1,5 @@
-Daily 1 (23/09/2025):
+#Daily 1 (23/09/2025):
+
     - Tiago Lage:
         - O que fez: Começou a elaborar HTMLs e CSSs baseados no figjam.
         - O que vai fazer: Finalizar HTMLs e CSSs, além de deixar mais claro no figjam o fluxo principal do app.
@@ -29,7 +30,8 @@ Daily 1 (23/09/2025):
         - O que vai fazer: começar a evoluir os protótipos do Figma para alta fidelidade.
         - Bloqueios: Nenhum.
 
-Daily 2 (28/09/2025):
+#Daily 2 (28/09/2025):
+
     - Tiago Lage:
         - O que fez: Finalizou 2 protótipos iniciais (wireframe de login e wireframe de home).
         - O que vai fazer: Criar mais telas e refinar todo o CSS para corresponder ao design de alta fidelidade, garantindo a responsividade.
@@ -60,8 +62,9 @@ Daily 2 (28/09/2025):
         - O que vai fazer: ajudar a refinar todo o CSS para corresponder ao novo design e criar os estilos globais e variáveis do projeto.
         - Bloqueios: Não conseguiu evoluir muito pois ainda não tinhamos recebido o guia visual da Bulbe.
 
-Relatório de encerramento da sprint 1:
-    - O que foi feito:
+#Relatório de encerramento da sprint 1:
+
+    ##O que foi feito:
         - **Tarefa 1.1:** Criar o repositório no GitHub
         - **Tarefa 1.2:** Definir e criar a estrutura de pastas do projeto (/assets, /css, /js, /pages)
         - **Tarefa 1.3:** Escrever o README.md com descrição, integrantes e link para o Figma
@@ -70,31 +73,31 @@ Relatório de encerramento da sprint 1:
         - **Tarefa 2.2:** Criar a página login.html com formulário estático
         - **Tarefa 2.3:** Criar a página index.html (Home) com uma grade de produtos mockados
 
-    - O que ficou pendente:
+    ##O que ficou pendente:
         - **Tarefa 2.4:** Criar a página catalogo com imagens e dados mockados
         - **Tarefa 2.5:** Criar a página produto (Detalhes do Produto) com dados mockados
         - **Tarefa 2.6:** Criar a página do carrinho (carrinho) estática
         - **Tarefa 2.7:** Criar as páginas do fluxo de checkout: checkout-endereco, checkout-pagamento.html e confirmacao.html
         - **Tarefa 2.8:** Implementar a navegação estática (sem JS) entre todas as páginas usando links `<a>`
 
-    - Planejamento sprint 2:
-        ## Sprint 2: Redesign / Desenvolvimento
+    ##Planejamento sprint 2:
+        ### Sprint 2: Redesign / Desenvolvimento
 
         **Objetivo:** Evoluir o design para alta fidelidade, implementar o visual completo com HTML e CSS, e iniciar o desenvolvimento dos scripts para funcionalidades dinâmicas.
 
-        ### Épico 3: Design de Alta Fidelidade e Implementação Visual
+        #### Épico 3: Design de Alta Fidelidade e Implementação Visual
 
         - **Tarefa 3.1:** Evoluir os protótipos do Figma de baixa para alta fidelidade
         - **Tarefa 3.2:** Refinar todo o CSS para corresponder ao design de alta fidelidade, garantindo a responsividade
         - **Tarefa 3.3:** Criar estilos globais e variáveis CSS (:root) para cores, fontes e espaçamentos
 
-        ### Épico 4: Carregamento Dinâmico de Conteúdo
+        #### Épico 4: Carregamento Dinâmico de Conteúdo
 
         - **Tarefa 4.1:** Criar o arquivo products.json com a estrutura de dados dos produtos
         - **Tarefa 4.2:** Desenvolver o script JS para buscar (fetch) os dados do products.json e renderizar os produtos na Home
         - **Tarefa 4.3:** Fazer a página produto.html carregar e exibir os dados do item selecionado
 
-        ### Épico 5: Desenvolvimento de Scripts (Interatividade Inicial)
+        #### Épico 5: Desenvolvimento de Scripts (Interatividade Inicial)
 
         - **Tarefa 5.1:** Implementar a funcionalidade de busca por nome na Home page
         - **Tarefa 5.2:** Implementar a lógica de adicionar/remover itens do carrinho usando localStorage
@@ -107,7 +110,8 @@ Relatório de encerramento da sprint 1:
 
         ---
 
-Daily 3 (08/10/2025):
+#Daily 3 (08/10/2025):
+
     - Tiago Lage:
         - O que fez: Começou a fazer tela de Menu no Figma.
         - O que vai fazer: Terminar a tela de Menu no Figma.
@@ -138,7 +142,7 @@ Daily 3 (08/10/2025):
         - O que vai fazer: Ajustar imagens no Figma.
         - Bloqueios: Ter que aprender a usar o Figma.
 
-Daily 4 (15/10/2025):
+#Daily 4 (15/10/2025):
 
     - Tiago Lage:
         - O que fez: Terminar a tela de Menu no Figma.
@@ -170,7 +174,7 @@ Daily 4 (15/10/2025):
         - O que vai fazer: Iniciar tela de Checkout em HTML e CSS.
         - Bloqueios: Nenhum.
 
-Daily 5 (18/10/2025):
+#Daily 5 (18/10/2025):
 
     - Tiago Lage:
         - O que fez: Iniciar tela de Menu em HTML e CSS.
@@ -202,7 +206,7 @@ Daily 5 (18/10/2025):
         - O que vai fazer: Terminar tela de Checkout em HTML e CSS.
         - Bloqueios: Nenhum.
 
-Daily 6 (21/10/2025):
+#Daily 6 (21/10/2025):
 
     - Tiago Lage:
         - O que fez: Terminar tela de Menu em HTML e CSS.
