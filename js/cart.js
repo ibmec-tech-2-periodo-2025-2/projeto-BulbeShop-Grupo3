@@ -214,3 +214,21 @@ function buildRecommendationCards(products) {
     if (!Array.isArray(products) || products.length === 0) return [];
     return products.map(product => createProductCard(product));
 }
+
+async function renderRecommendations() {
+    const section = document.getElementById('cart-recommendations');
+    const track = document.getElementById('recommendations-track');
+    if (!section || !track) return;
+    
+    const allProducts = await fetchAllProducts();
+    const candidates = getRecommendedCandidates(allProducts);
+    const limited = limitRecommendationsByCategory(candidates);
+    const cards = buildRecommendationCards(limited);
+    
+    track.innerHTML = '';
+    cards.forEach(card => track.appendChild(card));
+    
+    if (cards.length > 0) {
+        section.hidden = false;
+    }
+}
