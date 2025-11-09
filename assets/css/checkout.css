@@ -7,6 +7,8 @@
     --cor-texto-inativo: #999999; /* Cinza para textos/ícones inativos */
     --cor-texto-branco: #ffffff;
     --cor-borda-leve: #eeeeee;
+    --cor-verde-fundo: #E9FBF2;
+    --cor-verde-texto:#18814D;
     --font-primary: 'Poppins', -apple-system, sans-serif;
 }
 
@@ -207,6 +209,7 @@ select {
     display: flex;
     gap: 8px;
     justify-content: space-between;
+    position: relative;
 }
 
 #ok-cupom{
@@ -220,4 +223,22 @@ select {
     font-family: var(--font-primary);
     transition: background-color 0.2s ease;
     width: 64px;
+}
+
+.feedback-cupom{
+    position: absolute;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    top: 55px;
+    font-family: var(--font-primary);
+    font-size: 0.875rem;
+    font-weight: 300;
+    background-color: var(--cor-verde-fundo);
+}
+
+#feedback-positivo{
+    background-color: var(--cor-verde-fundo);
+    color:var(--cor-verde-texto);
+    display: inline;
 }
