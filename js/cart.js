@@ -78,6 +78,7 @@ function decreaseQuantity(itemId) {
             CartService.updateItemQuantity(itemId, item.quantity - 1);
             updateItemPrice(itemId, item.price, item.quantity - 1);
             updateSubtotal();
+            renderRecommendations();
         }
     }
 }
@@ -90,6 +91,7 @@ function increaseQuantity(itemId) {
         CartService.updateItemQuantity(itemId, item.quantity + 1);
         updateItemPrice(itemId, item.price, item.quantity + 1);
         updateSubtotal();
+        renderRecommendations();
     }
 }
 
