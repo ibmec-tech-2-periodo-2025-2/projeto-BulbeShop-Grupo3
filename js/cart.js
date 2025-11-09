@@ -209,3 +209,8 @@ function limitRecommendationsByCategory(candidates, limitPerCategory = 10) {
     
     return limited;
 }
+
+function buildRecommendationCards(products) {
+    if (!Array.isArray(products) || products.length === 0) return [];
+    return products.map(product => createProductCard(product));
+}
