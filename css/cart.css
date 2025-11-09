@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding-bottom: 180px;
+    padding-bottom: 12px;
 }
 
 .cart-item {
@@ -269,9 +269,15 @@
     cursor: pointer;
 }
 
+/* Espaço inferior global do conteúdo para não ficar coberto pelo footer fixo */
+.container {
+    padding-bottom: 180px;
+}
+
 /* Recomendações no carrinho - estilos base */
 .cart-recommendations {
     margin-top: 16px;
+    margin-bottom: 60px; /* garante espaço para o footer fixo */
 }
 
 .recommendations-title {
