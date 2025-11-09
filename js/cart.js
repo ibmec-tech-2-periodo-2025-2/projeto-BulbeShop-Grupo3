@@ -189,3 +189,23 @@ function getRecommendedCandidates(allProducts) {
         return inSameCategory && notInCart;
     });
 }
+
+function limitRecommendationsByCategory(candidates, limitPerCategory = 10) {
+    const uniqueIds = new Set();
+    const categoryCount = new Map();
+    const limited = [];
+    
+    for (const product of candidates) {
+        if (!product || !product.id || !product.category) continue;
+        if (uniqueIds.has(product.id)) continue;
+        
+        const count = categoryCount.get(product.category) || 0;
+        if (count >= limitPerCategory) continue;
+        
+        uniqueIds.add(product.id);
+        categoryCount.set(product.category, count + 1);
+        limited.push(product);
+    }
+    
+    return limited;
+}
