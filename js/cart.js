@@ -5,6 +5,7 @@ function loadCart() {
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p style="text-align: center; padding: 40px;">Seu carrinho está vazio</p>';
         updateSubtotal();
+        renderRecommendations();
         return;
     }
     
@@ -16,6 +17,7 @@ function loadCart() {
     });
     
     updateSubtotal();
+    renderRecommendations();
 }
 
 function createCartItem(item) {
