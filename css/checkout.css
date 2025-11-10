@@ -210,8 +210,10 @@ body{
     text-align: center;
     top: 55px;
     font-family: 'Poppins';
-    font-size: 0.875rem;
     font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
 }
 
 #feedback-positivo{
