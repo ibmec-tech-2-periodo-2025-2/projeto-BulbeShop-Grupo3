@@ -15,6 +15,6 @@ const cupons = [
 let desconto = 0;
 
 okCupomButton.addEventListener("click", () => {
-    const valorInputCupom = inputCupom.value;
+    const valorInputCupom = inputCupom.value.trim().toUpperCase();
     console.log(valorInputCupom);
 });
