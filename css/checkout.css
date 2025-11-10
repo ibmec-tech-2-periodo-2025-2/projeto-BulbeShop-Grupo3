@@ -174,3 +174,54 @@
     height: 44px;
     margin-top: 16px;
 }
+
+body{
+    background-color: #08068D; /* Preenche a quina de azul*/
+}
+
+.row-cupom{
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    position: relative;
+}
+
+#cupom-desconto{
+    width: 278px
+}
+
+#ok-cupom{
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #08068D;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Poppins';
+    transition: background-color 0.2s ease;
+    width: 64px;
+}
+
+.feedback-cupom{
+    position: absolute;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    top: 55px;
+    font-family: 'Poppins';
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+#feedback-positivo{
+    background-color: #E9FBF2;
+    color:#18814D;
+    display: none;
+}
+
+#feedback-negativo{
+    background-color: #FEE4E2;
+    color:#B42318;
+    display: inline;
+}
