@@ -40,15 +40,15 @@
                         <label class="payment-option">
                             <input type="radio" name="payment-method" value="credit-card" checked>
                             <span>Cartão de crédito</span>
-                        </labe>
+                        </label>
                         <label class="payment-option">
                             <input type="radio" name="payment-method" value="pix">
                             <span>PIX</span>
-                        </labe>
+                        </label>
                         <label class="payment-option">
                             <input type="radio" name="payment-method" value="boleto">
                             <span>Boleto</span>
-                        </labe>
+                        </label>
                     </div>
                 </div>
 
@@ -57,7 +57,7 @@
                         <label for="card-number" class="form-label">
                             Número do Cartão
                             <span class="help-icon" title="Ajuda">?</span>
-                        </labe>
+                        </label>
                         <input type="text" id="card-number" aria-invalid="false" class="form-input" placeholder="0000 0000 0000 0000" pattern="[0-9]{16}" maxlength="19">
                     </div>
 
@@ -66,7 +66,7 @@
                             <label for="card-expiry" class="form-label">
                                 Data de validade
                                 <span class="help-icon" title="Ajuda">?</span>
-                            </labe>
+                            </label>
                             <input type="text" id="card-expiry" class="form-input" placeholder="MM/AA">
                         </div>
                         
@@ -74,7 +74,7 @@
                             <label for="card-cvv" class="form-label">
                                 Código de Segurança
                                 <span class="help-icon" title="Ajuda">?</span>
-                            </labe>
+                            </label>
                             <input type="text" id="card-cvv" class="form-input" placeholder="123">
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                         <label for="pix-cpf" class="form-label">
                             CPF
                             <span class="help-icon" title="Ajuda">?</span>
-                        </labe>
+                        </label>
                         <input type="text" id="pix-cpf" class="form-input" placeholder="000.000.000-00" maxlength="14">
                     </div>
                     <div class="pix-info">
@@ -107,6 +107,14 @@
                         <p class="boleto-note">Prazo de vencimento: 3 dias úteis</p>
                     </div>
                 </div>
+
+                <div class="form-group">
+                            <label for="cupom-desconto" class="form-label">
+                                Cupom de Desconto
+                                <span class="help-icon" title="Ajuda">?</span>
+                            </label>
+                            <input type="text" id="cupom-desconto" class="form-input" placeholder="Cupom de Desconto">
+                        </div>
             </section>
 
             <section class="form-section">
@@ -116,7 +124,7 @@
                     <label for="billing-name" class="form-label">
                         Nome completo
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="billing-name" class="form-input" placeholder="Nome completo" required>
                 </div>
 
@@ -124,7 +132,7 @@
                     <label for="billing-cep" class="form-label">
                         Código Postal (CEP)
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <span class="error-message" id="billing-cep-error"></span>
                     <input type="text" id="billing-cep" class="form-input" placeholder="00000-000" required>
                 </div>
@@ -133,7 +141,7 @@
                     <label for="billing-city" class="form-label">
                         Cidade
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="billing-city" class="form-input" placeholder="Cidade" required>
                 </div>
 
@@ -141,7 +149,7 @@
                     <label for="billing-address" class="form-label">
                         Endereço
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="billing-address" class="form-input" placeholder="Logradouro" required>
                 </div>
 
@@ -149,7 +157,7 @@
                     <label for="billing-number" class="form-label">
                         Número
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="billing-complement" class="form-input" placeholder="XXX" required>
                 <div class="form-group">
                     <label for="billing-complement" class="form-label">
@@ -170,7 +178,7 @@
                     <label for="billing-phone" class="form-label">
                         Telefone
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="tel" id="billing-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" data-mask="phone" required>
                 </div>
             </section>
@@ -182,7 +190,7 @@
                     <label for="delivery-name" class="form-label">
                         Nome completo
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="delivery-name" class="form-input" placeholder="Nome completo" required>
                 </div>
 
@@ -190,7 +198,7 @@
                     <label for="delivery-cep" class="form-label">
                         Código Postal (CEP)
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="delivery-cep" class="form-input" placeholder="XXXXX-XXX" required>
                 </div>
 
@@ -198,7 +206,7 @@
                     <label for="delivery-city" class="form-label">
                         Cidade
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="delivery-city" class="form-input" placeholder="Cidade" required>
                 </div>
 
@@ -206,7 +214,7 @@
                     <label for="delivery-address" class="form-label">
                         Endereço
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="delivery-address" class="form-input" placeholder="Logradouro" required>
                 </div>
 
@@ -221,7 +229,7 @@
                     <label for="delivery-number" class="form-label">
                         Número
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="text" id="delivery-number" class="form-input" placeholder="XXX" required>
                 </div>
 
@@ -229,7 +237,7 @@
                     <label for="delivery-phone" class="form-label">
                         Telefone
                         <span class="help-icon" title="Ajuda">?</span>
-                    </labe>
+                    </label>
                     <input type="tel" id="delivery-phone" class="form-input" placeholder="(XX) XXXXX-XXXX" data-mask="phone" required>
                 </div>
             </section>
