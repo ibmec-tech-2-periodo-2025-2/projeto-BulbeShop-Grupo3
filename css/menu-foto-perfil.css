@@ -1,0 +1,53 @@
+/* Arquivo: css/menu-perfil.css */
+
+.profile-photo {
+    position: relative; /* Essencial para prender o menu */
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.dropdown-menu {
+    display: none; /* Oculto por padrão */
+    position: absolute;
+    top: 45px;    
+    right: -10px; 
+    background-color: #FFFFFF;
+    width: 160px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 10px 0;
+    flex-direction: column;
+    z-index: 2000;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #536679;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #F8F8FF;
+    color: #08068D;
+}
+
+.dropdown-menu .divider {
+    height: 1px;
+    background-color: #E5E5E5;
+    margin: 5px 0;
+}
+
+.dropdown-menu .logout {
+    color: #D32F2F;
+    font-weight: 500;
+}
