@@ -224,6 +224,13 @@ async function renderRecommendations() {
     const section = document.getElementById('cart-recommendations');
     const track = document.getElementById('recommendations-track');
     if (!section || !track) return;
+    const skeleton = document.getElementById('recommendations-skeleton');
+    const carousel = section.querySelector('.recommendations-carousel');
+    
+    // Mostrar skeleton durante o carregamento
+    section.hidden = false;
+    if (skeleton) skeleton.style.display = 'flex';
+    if (carousel) carousel.style.display = 'none';
     
     const allProducts = await fetchAllProducts();
     const candidates = getRecommendedCandidates(allProducts);
@@ -234,9 +241,12 @@ async function renderRecommendations() {
     cards.forEach(card => track.appendChild(card));
     
     if (cards.length > 0) {
+        if (skeleton) skeleton.style.display = 'none';
+        if (carousel) carousel.style.display = 'block';
         section.hidden = false;
         bindRecommendationCarousel();
     } else {
+        if (skeleton) skeleton.style.display = 'none';
         section.hidden = true;
     }
 }
