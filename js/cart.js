@@ -102,6 +102,7 @@ function updateQuantity(itemId, newQuantity) {
         if (item) {
             updateItemPrice(itemId, item.price, item.quantity);
             updateSubtotal();
+            renderRecommendations();
         }
     }
 }
