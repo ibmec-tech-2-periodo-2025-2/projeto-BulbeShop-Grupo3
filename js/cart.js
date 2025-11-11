@@ -160,12 +160,17 @@ function getCartProductIds() {
 }
 
 function getCartCategories(allProducts) {
-    const ids = new Set(getCartProductIds());
+    if (!Array.isArray(allProducts) || allProducts.length === 0) return [];
+    const cartIds = new Set(getCartProductIds());
+    if (cartIds.size === 0) return [];
     const categoriesSet = new Set();
     
     allProducts.forEach(product => {
-        if (ids.has(product.id) && product.category) {
-            categoriesSet.add(product.category);
+        if (!product || product.id == null) return;
+        if (!cartIds.has(product.id)) return;
+        const category = typeof product.category === 'string' ? product.category.trim() : null;
+        if (category) {
+            categoriesSet.add(category);
         }
     });
     
@@ -183,13 +188,16 @@ async function fetchAllProducts() {
 }
 
 function getRecommendedCandidates(allProducts) {
+    if (!Array.isArray(allProducts) || allProducts.length === 0) return [];
     const cartIds = new Set(getCartProductIds());
+    if (cartIds.size === 0) return [];
     const categories = new Set(getCartCategories(allProducts));
-    
     if (categories.size === 0) return [];
     
     return allProducts.filter(product => {
-        const inSameCategory = product.category && categories.has(product.category);
+        if (!product || product.id == null) return false;
+        const category = typeof product.category === 'string' ? product.category.trim() : null;
+        const inSameCategory = category && categories.has(category);
         const notInCart = !cartIds.has(product.id);
         return inSameCategory && notInCart;
     });
@@ -201,14 +209,16 @@ function limitRecommendationsByCategory(candidates, limitPerCategory = 10) {
     const limited = [];
     
     for (const product of candidates) {
-        if (!product || !product.id || !product.category) continue;
+        if (!product || !product.id) continue;
+        const category = typeof product.category === 'string' ? product.category.trim() : null;
+        if (!category) continue;
         if (uniqueIds.has(product.id)) continue;
         
-        const count = categoryCount.get(product.category) || 0;
+        const count = categoryCount.get(category) || 0;
         if (count >= limitPerCategory) continue;
         
         uniqueIds.add(product.id);
-        categoryCount.set(product.category, count + 1);
+        categoryCount.set(category, count + 1);
         limited.push(product);
     }
     
