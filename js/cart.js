@@ -247,6 +247,10 @@ function bindRecommendationCarousel() {
     const nextBtn = document.getElementById('recommendations-next');
     if (!track || !prevBtn || !nextBtn) return;
     
+    if (prevBtn.dataset.bound === 'true' && nextBtn.dataset.bound === 'true') {
+        return; // já vinculados
+    }
+    
     const getScrollAmount = () => Math.max(160, Math.floor(track.clientWidth * 0.8));
     
     prevBtn.addEventListener('click', () => {
@@ -256,4 +260,7 @@ function bindRecommendationCarousel() {
     nextBtn.addEventListener('click', () => {
         track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
     });
+    
+    prevBtn.dataset.bound = 'true';
+    nextBtn.dataset.bound = 'true';
 }
