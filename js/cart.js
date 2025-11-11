@@ -155,6 +155,8 @@ document.getElementById('checkout-btn').addEventListener('click', () => {
 loadCart();
 
 /* Helpers de recomendações */
+let lastRecommendationsSignature = '';
+
 function getCartProductIds() {
     return CartService.getCart().map(item => item.id);
 }
@@ -269,6 +271,21 @@ async function renderRecommendations() {
         const candidates = getRecommendedCandidates(allProducts);
         const limited = limitRecommendationsByCategory(candidates);
         const cards = buildRecommendationCards(limited);
+        const signature = limited.map(p => p.id).join(',');
+        
+        // Se não mudou, só garante UI e retorna
+        if (signature === lastRecommendationsSignature) {
+            if (skeleton) skeleton.style.display = 'none';
+            if (cards.length > 0 && carousel) {
+                carousel.style.display = 'block';
+                section.hidden = false;
+                bindRecommendationCarousel();
+            } else {
+                section.hidden = true;
+            }
+            return;
+        }
+        lastRecommendationsSignature = signature;
         
         track.innerHTML = '';
         cards.forEach(card => track.appendChild(card));
@@ -281,11 +298,13 @@ async function renderRecommendations() {
         } else {
             if (skeleton) skeleton.style.display = 'none';
             section.hidden = true;
+            lastRecommendationsSignature = '';
         }
     } catch (error) {
         console.error('Erro ao renderizar recomendações:', error);
         if (skeleton) skeleton.style.display = 'none';
         section.hidden = true;
+        lastRecommendationsSignature = '';
     }
 }
 
