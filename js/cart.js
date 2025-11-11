@@ -161,6 +161,34 @@ function getCartProductIds() {
     return CartService.getCart().map(item => item.id);
 }
 
+function computeRecommendationsSignature(products) {
+    if (!Array.isArray(products) || products.length === 0) return '';
+    return products.map(p => p.id).join(',');
+}
+
+function showSkeleton(section, skeleton, carousel) {
+    section.hidden = false;
+    if (skeleton) skeleton.style.display = 'flex';
+    if (carousel) carousel.style.display = 'none';
+}
+
+function showCarousel(section, skeleton, carousel) {
+    if (skeleton) skeleton.style.display = 'none';
+    if (carousel) carousel.style.display = 'block';
+    section.hidden = false;
+}
+
+function hideRecommendations(section, skeleton) {
+    if (skeleton) skeleton.style.display = 'none';
+    section.hidden = true;
+}
+
+function renderCards(target, cards) {
+    if (!target) return;
+    target.innerHTML = '';
+    cards.forEach(card => target.appendChild(card));
+}
+
 function getCartCategories(allProducts) {
     if (!Array.isArray(allProducts) || allProducts.length === 0) return [];
     const cartIds = new Set(getCartProductIds());
@@ -263,47 +291,38 @@ async function renderRecommendations() {
     const carousel = section.querySelector('.recommendations-carousel');
     
     // Mostrar skeleton durante o carregamento
-    section.hidden = false;
-    if (skeleton) skeleton.style.display = 'flex';
-    if (carousel) carousel.style.display = 'none';
+    showSkeleton(section, skeleton, carousel);
     try {
         const allProducts = await fetchAllProducts();
         const candidates = getRecommendedCandidates(allProducts);
         const limited = limitRecommendationsByCategory(candidates);
         const cards = buildRecommendationCards(limited);
-        const signature = limited.map(p => p.id).join(',');
+        const signature = computeRecommendationsSignature(limited);
         
         // Se não mudou, só garante UI e retorna
         if (signature === lastRecommendationsSignature) {
-            if (skeleton) skeleton.style.display = 'none';
             if (cards.length > 0 && carousel) {
-                carousel.style.display = 'block';
-                section.hidden = false;
+                showCarousel(section, skeleton, carousel);
                 bindRecommendationCarousel();
             } else {
-                section.hidden = true;
+                hideRecommendations(section, skeleton);
             }
             return;
         }
         lastRecommendationsSignature = signature;
         
-        track.innerHTML = '';
-        cards.forEach(card => track.appendChild(card));
+        renderCards(track, cards);
         
         if (cards.length > 0) {
-            if (skeleton) skeleton.style.display = 'none';
-            if (carousel) carousel.style.display = 'block';
-            section.hidden = false;
+            showCarousel(section, skeleton, carousel);
             bindRecommendationCarousel();
         } else {
-            if (skeleton) skeleton.style.display = 'none';
-            section.hidden = true;
+            hideRecommendations(section, skeleton);
             lastRecommendationsSignature = '';
         }
     } catch (error) {
         console.error('Erro ao renderizar recomendações:', error);
-        if (skeleton) skeleton.style.display = 'none';
-        section.hidden = true;
+        hideRecommendations(section, skeleton);
         lastRecommendationsSignature = '';
     }
 }
