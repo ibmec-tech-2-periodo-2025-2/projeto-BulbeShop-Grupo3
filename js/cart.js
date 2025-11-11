@@ -235,5 +235,7 @@ async function renderRecommendations() {
     
     if (cards.length > 0) {
         section.hidden = false;
+    } else {
+        section.hidden = true;
     }
 }
