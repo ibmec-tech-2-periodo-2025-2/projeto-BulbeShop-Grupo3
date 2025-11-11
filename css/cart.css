@@ -278,6 +278,7 @@
 .cart-recommendations {
     margin-top: 16px;
     margin-bottom: 60px; /* garante espaço para o footer fixo */
+    min-height: 280px; /* evita layout shift durante carregamento */
 }
 
 .recommendations-title {
