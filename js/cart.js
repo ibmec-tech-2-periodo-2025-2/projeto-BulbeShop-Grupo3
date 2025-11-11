@@ -231,21 +231,26 @@ async function renderRecommendations() {
     section.hidden = false;
     if (skeleton) skeleton.style.display = 'flex';
     if (carousel) carousel.style.display = 'none';
-    
-    const allProducts = await fetchAllProducts();
-    const candidates = getRecommendedCandidates(allProducts);
-    const limited = limitRecommendationsByCategory(candidates);
-    const cards = buildRecommendationCards(limited);
-    
-    track.innerHTML = '';
-    cards.forEach(card => track.appendChild(card));
-    
-    if (cards.length > 0) {
-        if (skeleton) skeleton.style.display = 'none';
-        if (carousel) carousel.style.display = 'block';
-        section.hidden = false;
-        bindRecommendationCarousel();
-    } else {
+    try {
+        const allProducts = await fetchAllProducts();
+        const candidates = getRecommendedCandidates(allProducts);
+        const limited = limitRecommendationsByCategory(candidates);
+        const cards = buildRecommendationCards(limited);
+        
+        track.innerHTML = '';
+        cards.forEach(card => track.appendChild(card));
+        
+        if (cards.length > 0) {
+            if (skeleton) skeleton.style.display = 'none';
+            if (carousel) carousel.style.display = 'block';
+            section.hidden = false;
+            bindRecommendationCarousel();
+        } else {
+            if (skeleton) skeleton.style.display = 'none';
+            section.hidden = true;
+        }
+    } catch (error) {
+        console.error('Erro ao renderizar recomendações:', error);
         if (skeleton) skeleton.style.display = 'none';
         section.hidden = true;
     }
