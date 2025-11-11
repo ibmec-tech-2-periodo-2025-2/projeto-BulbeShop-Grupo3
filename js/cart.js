@@ -217,7 +217,18 @@ function limitRecommendationsByCategory(candidates, limitPerCategory = 10) {
 
 function buildRecommendationCards(products) {
     if (!Array.isArray(products) || products.length === 0) return [];
-    return products.map(product => createProductCard(product));
+    return products.map(product => {
+        const card = createProductCard(product);
+        card.setAttribute('role', 'listitem');
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
+            }
+        });
+        return card;
+    });
 }
 
 async function renderRecommendations() {
