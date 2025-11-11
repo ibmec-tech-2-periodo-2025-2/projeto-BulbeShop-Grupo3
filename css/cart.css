@@ -325,6 +325,8 @@
     font-family: 'Poppins';
     font-weight: 600;
     cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .carousel-btn.prev {
@@ -340,14 +342,22 @@
     flex: 0 0 auto;
     scroll-snap-align: start;
     min-width: 180px;
+    max-width: 220px;
     background: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
     padding: 10px;
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
 }
 
 .cart-recommendations .product-card:hover {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+.cart-recommendations .product-card:focus-visible {
+    outline: 2px solid #08068D;
+    outline-offset: 2px;
 }
 
 .cart-recommendations .product-image {
