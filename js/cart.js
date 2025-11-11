@@ -235,7 +235,25 @@ async function renderRecommendations() {
     
     if (cards.length > 0) {
         section.hidden = false;
+        bindRecommendationCarousel();
     } else {
         section.hidden = true;
     }
+}
+
+function bindRecommendationCarousel() {
+    const track = document.getElementById('recommendations-track');
+    const prevBtn = document.getElementById('recommendations-prev');
+    const nextBtn = document.getElementById('recommendations-next');
+    if (!track || !prevBtn || !nextBtn) return;
+    
+    const getScrollAmount = () => Math.max(160, Math.floor(track.clientWidth * 0.8));
+    
+    prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+    });
 }
