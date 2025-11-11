@@ -12,9 +12,23 @@ const cupons = [
     { codigo: "BLACKFRIDAY", valor: 0.2 },
 ];
 
-let desconto = 0;
+let descontoCupom = 0;
 
 okCupomButton.addEventListener("click", () => {
     const valorInputCupom = inputCupom.value.trim().toUpperCase();
+
+    //  Procurar o input no banco de cupons
+    const cupomEncontrado = cupons.find((c) => c.codigo === valorInputCupom);
+
+    if (cupomEncontrado) {
+        descontoCupom = cupomEncontrado.valor;
+        feedbackPositivo.style.display = "inline";
+        feedbackNegativo.style.display = "none"
+    }else{
+        descontoCupom = 0;
+        feedbackNegativo.style.display="inline";
+        feedbackPositivo.style.display="none";
+    }
     console.log(valorInputCupom);
+    console.log(descontoCupom)
 });
