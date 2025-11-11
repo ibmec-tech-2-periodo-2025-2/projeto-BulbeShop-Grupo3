@@ -23,12 +23,16 @@ okCupomButton.addEventListener("click", () => {
     if (cupomEncontrado) {
         descontoCupom = cupomEncontrado.valor;
         feedbackPositivo.style.display = "inline";
-        feedbackNegativo.style.display = "none"
-    }else{
+        feedbackNegativo.style.display = "none";
+        localStorage.setItem("cupomCodigo", cupomEncontrado.codigo);
+        localStorage.setItem("descontoCupom", descontoCupom);
+    } else {
         descontoCupom = 0;
-        feedbackNegativo.style.display="inline";
-        feedbackPositivo.style.display="none";
+        feedbackNegativo.style.display = "inline";
+        feedbackPositivo.style.display = "none";
+        localStorage.removeItem("cupomCodigo");
+        localStorage.removeItem("descontoCupom");
     }
     console.log(valorInputCupom);
-    console.log(descontoCupom)
+    console.log(descontoCupom);
 });
