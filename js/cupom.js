@@ -33,6 +33,4 @@ okCupomButton.addEventListener("click", () => {
         localStorage.removeItem("cupomCodigo");
         localStorage.removeItem("descontoCupom");
     }
-    console.log(valorInputCupom);
-    console.log(descontoCupom);
 });
