@@ -17,8 +17,16 @@
                 <img src="images/header_img/menu_sanduiche.png" alt="Menu">
             </button>
             <a href="index.html"><img src="images/header_img/logo.png" alt="Bulbe Shop" class="logo"></a>
-            <div class="profile-photo">
-                <img src="images/header_img/perfil.png" alt="Perfil" style="width: 200%; height: 200%; border-radius: 200px;">
+            <div class="profile-photo" id="profileBtn">
+                <img src="images/header_img/perfil.png" alt="Perfil" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                
+                <ul class="dropdown-menu" id="profileDropdown">
+                    <li><a href="perfil.html">Meu Perfil</a></li>
+                    <li><a href="pedidos.html">Meus Pedidos</a></li>
+                    <li><a href="configuracoes.html">Configurações</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" class="logout">Sair</a></li>
+                </ul>
             </div>
         </nav>
         <div class="search-bar">
