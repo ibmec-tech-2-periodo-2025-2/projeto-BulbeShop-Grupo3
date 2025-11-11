@@ -339,7 +339,7 @@
 .cart-recommendations .product-card {
     flex: 0 0 auto;
     scroll-snap-align: start;
-    min-width: 160px;
+    min-width: 180px;
     background: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
