@@ -359,6 +359,33 @@
     display: block;
 }
 
+/* Skeleton de recomendações */
+.recommendations-skeleton {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    padding: 8px 0;
+}
+
+.recommendations-skeleton .skeleton-card {
+    flex: 0 0 auto;
+    min-width: 160px;
+    height: 230px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #F0F2F5 25%, #E6E8EB 37%, #F0F2F5 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
 .cart-recommendations .product-card {
     /* Responsivo base já definido em min-width: 160px */
 }
