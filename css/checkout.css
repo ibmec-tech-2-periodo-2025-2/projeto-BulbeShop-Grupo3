@@ -219,11 +219,11 @@ body{
 #feedback-positivo{
     background-color: #E9FBF2;
     color:#18814D;
-    display: inline;
+    display: none;
 }
 
 #feedback-negativo{
     background-color: #FEE4E2;
     color:#B42318;
-    display: inline;
+    display: none;
 }
