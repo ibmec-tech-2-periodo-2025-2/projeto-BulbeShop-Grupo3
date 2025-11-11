@@ -215,10 +215,22 @@ function limitRecommendationsByCategory(candidates, limitPerCategory = 10) {
     return limited;
 }
 
+function normalizeProductPrices(product) {
+    const normalized = { ...product };
+    if (normalized && normalized.price != null && !Number.isNaN(normalized.price)) {
+        normalized.price = Number(parseFloat(normalized.price).toFixed(2));
+    }
+    if (normalized && normalized.oldPrice != null && !Number.isNaN(normalized.oldPrice)) {
+        normalized.oldPrice = Number(parseFloat(normalized.oldPrice).toFixed(2));
+    }
+    return normalized;
+}
+
 function buildRecommendationCards(products) {
     if (!Array.isArray(products) || products.length === 0) return [];
     return products.map(product => {
-        const card = createProductCard(product);
+        const normalized = normalizeProductPrices(product);
+        const card = createProductCard(normalized);
         card.setAttribute('role', 'listitem');
         card.setAttribute('tabindex', '0');
         card.addEventListener('keydown', (e) => {
