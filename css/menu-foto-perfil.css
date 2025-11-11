@@ -1,73 +1,108 @@
-/* Arquivo: css/menu-perfil.css */
-
+/* Container da Foto (Gatilho) */
 .profile-photo {
     position: relative;
     cursor: pointer;
     z-index: 1001;
 
+    /* Estilos exatos do Figma para a foto */
+    display: flex;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    border: 2px solid #FFFFFF;
-    
-    padding: 0 !important;
-    background: none !important;
-    display: flex;               
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    
+    /* Borda e Arredondamento */
+    border-radius: 200px;
+    border: 2px solid #08068D;
+    
+    /* Limpeza de estilos antigos */
+    background: none !important;
+    padding: 0 !important;
 }
-
 
 .profile-photo img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    /* Pequeno ajuste para a imagem não encostar na borda se tiver fundo transparente */
     display: block;
 }
 
+/* O Menu (Fundo Branco Pop-up) */
 .dropdown-menu {
-    display: none; /* Oculto por padrão */
+    /* Comportamento inicial */
+    display: none;
     position: absolute;
-    top: 45px;    
-    right: -10px; 
-    background-color: #FFFFFF;
-    width: 160px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Dimensões exatas do Figma */
+    width: 306px;
+    height: 56px;
+    border-radius: 20px;
+    background: #FFF;
+    flex-shrink: 0;
+    
+    /* Sombra suave (opcional, mas recomendada para fundo branco sobre branco) */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    /* Posicionamento: Centraliza verticalmente em relação à foto e joga para a esquerda */
+    top: 50%;
+    transform: translateY(-50%); 
+    right: 45px; /* Distância da foto de perfil */
+
+    /* Organização dos itens internos */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly; /* Distribui os botões igualmente */
     list-style: none;
-    padding: 10px 0;
-    flex-direction: column;
+    padding: 0 10px; /* Margem interna de segurança */
     z-index: 2000;
 }
 
+/* Estado Ativo (JavaScript) */
 .dropdown-menu.active {
     display: flex;
+    animation: surgir 0.3s ease-out;
 }
 
+/* Estilo dos Links/Botões (Fundo Texto Pedido) */
 .dropdown-menu li a {
-    display: block;
-    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    color: #536679;
+
+    /* Dimensões e Fundo do Botão */
+    height: 24px;
+    border-radius: 8px;
+    background: #08068D;
+    
+    /* Padding lateral para o texto caber (substitui width fixa para caber nomes longos) */
+    padding: 0 12px; 
+    /* Se quiser forçar a largura fixa de 67px onde der, use min-width, mas cuidado com "Configurações" */
+    min-width: 67px; 
+
+    /* Tipografia Exata */
+    color: #FFF;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
-    font-weight: 400;
-    transition: background 0.2s, color 0.2s;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    
+    transition: opacity 0.2s;
 }
 
 .dropdown-menu li a:hover {
-    background-color: #F8F8FF;
-    color: #08068D;
+    opacity: 0.9; /* Efeito visual ao passar o mouse */
 }
 
-.dropdown-menu .divider {
-    height: 1px;
-    background-color: #E5E5E5;
-    margin: 5px 0;
-}
+/* Esconde divisores antigos se houver */
+.dropdown-menu .divider { display: none; }
 
-.dropdown-menu .logout {
-    color: #D32F2F;
-    font-weight: 500;
+/* Animação de entrada */
+@keyframes surgir {
+    from { opacity: 0; transform: translateY(-50%) translateX(10px); }
+    to { opacity: 1; transform: translateY(-50%) translateX(0); }
 }
