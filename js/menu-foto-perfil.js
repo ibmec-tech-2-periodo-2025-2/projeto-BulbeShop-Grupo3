@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const profileBtn = document.getElementById('profileBtn');
+    const profileBtn = document.getElementById('profileBtn'); // Isso é a DIV que contém a foto
     const profileDropdown = document.getElementById('profileDropdown');
 
-    // Função para alternar o menu
     if (profileBtn && profileDropdown) {
         profileBtn.addEventListener('click', (e) => {
-            // Impede que o clique na foto feche o menu imediatamente
             e.stopPropagation();
             profileDropdown.classList.toggle('active');
+            profileBtn.classList.toggle('active'); // Adiciona/remove a classe 'active' ao container da foto também
         });
 
-        // Fecha o menu ao clicar fora dele
         document.addEventListener('click', (e) => {
-            if (!profileBtn.contains(e.target)) {
+            if (!profileBtn.contains(e.target) && !profileDropdown.contains(e.target)) {
                 profileDropdown.classList.remove('active');
+                profileBtn.classList.remove('active'); // Remove a classe 'active' do container da foto
             }
         });
     }

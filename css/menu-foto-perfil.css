@@ -1,62 +1,60 @@
-/* Container da Foto (Gatilho) */
+/* Container da Foto que SEMPRE APARECE na Navbar (o gatilho) */
 .profile-photo {
     position: relative;
     cursor: pointer;
     z-index: 1001;
 
-    /* Estilos exatos do Figma para a foto */
+    /* Estilos exatos do Figma para a foto da navbar */
     display: flex;
     width: 30px;
     height: 30px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    
-    /* Borda e Arredondamento */
     border-radius: 200px;
     border: 2px solid #08068D;
     
-    /* Limpeza de estilos antigos */
-    background: none !important;
-    padding: 0 !important;
+    /* Importante para esconder a foto "principal" quando o menu abrir */
+    /* Isso garante que só a réplica dentro do menu fique visível */
+    transition: opacity 0.2s; 
 }
 
-.profile-photo img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    /* Pequeno ajuste para a imagem não encostar na borda se tiver fundo transparente */
-    display: block;
+/* Oculta a foto principal quando o menu está ativo */
+.profile-photo.active img {
+    opacity: 0;
+    pointer-events: none; /* Impede interações */
 }
+
 
 /* O Menu (Fundo Branco Pop-up) */
 .dropdown-menu {
-    /* Comportamento inicial */
-    display: none;
+    display: none; /* Começa oculto */
     position: absolute;
     
-    /* Dimensões exatas do Figma */
-    width: 306px;
+    /* Dimensões exatas do Figma para a barra branca com a foto dentro */
+    width: auto; /* A largura será automática, ajustando-se ao conteúdo */
+    min-width: 306px; /* Garante a largura mínima */
     height: 56px;
     border-radius: 20px;
     background: #FFF;
     flex-shrink: 0;
     
-    /* Sombra suave (opcional, mas recomendada para fundo branco sobre branco) */
+    /* Sombra suave */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-    /* Posicionamento: Centraliza verticalmente em relação à foto e joga para a esquerda */
+    /* Posicionamento: Ajustado para o menu se estender para a esquerda */
     top: 50%;
     transform: translateY(-50%); 
-    right: 45px; /* Distância da foto de perfil */
+    right: 0; /* Alinha o lado direito do menu com o lado direito da foto original */
 
-    /* Organização dos itens internos */
+    /* Organização dos itens internos (agora incluindo a foto replicada) */
+    display: flex; /* Mantido como flex, mas será ativado via JS */
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly; /* Distribui os botões igualmente */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
     list-style: none;
-    padding: 0 10px; /* Margem interna de segurança */
+    padding: 0 10px; /* Padding interno da barra branca */
+    gap: 10px; /* Espaçamento entre os botões/foto */
     z-index: 2000;
 }
 
@@ -66,24 +64,20 @@
     animation: surgir 0.3s ease-out;
 }
 
-/* Estilo dos Links/Botões (Fundo Texto Pedido) */
+/* Estilo dos Links/Botões */
 .dropdown-menu li a {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
 
-    /* Dimensões e Fundo do Botão */
     height: 24px;
     border-radius: 8px;
     background: #08068D;
     
-    /* Padding lateral para o texto caber (substitui width fixa para caber nomes longos) */
     padding: 0 12px; 
-    /* Se quiser forçar a largura fixa de 67px onde der, use min-width, mas cuidado com "Configurações" */
     min-width: 67px; 
 
-    /* Tipografia Exata */
     color: #FFF;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
@@ -95,11 +89,42 @@
 }
 
 .dropdown-menu li a:hover {
-    opacity: 0.9; /* Efeito visual ao passar o mouse */
+    opacity: 0.9;
 }
 
-/* Esconde divisores antigos se houver */
+/* Esconde divisores */
 .dropdown-menu .divider { display: none; }
+
+
+/* Estilo da FOTO REPLICADA DENTRO DO POP-UP */
+.dropdown-menu .profile-menu-item {
+    display: flex; /* Garante que o item se comporte como um item flex */
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px; /* Pequeno espaçamento à esquerda dos outros itens */
+    flex-shrink: 0; /* Impede que ele encolha */
+}
+
+.dropdown-menu .profile-menu-item .profile-link {
+    /* O link ao redor da foto não deve ter background azul */
+    background: none; 
+    padding: 0;
+    width: 30px; /* Tamanho da foto replicada */
+    height: 30px;
+    border-radius: 50%; /* Faz a borda da imagem */
+    border: 2px solid #08068D; /* Cor da borda da foto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-menu .profile-menu-item .profile-popup-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
 
 /* Animação de entrada */
 @keyframes surgir {
