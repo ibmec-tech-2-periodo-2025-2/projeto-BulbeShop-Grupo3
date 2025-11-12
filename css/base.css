@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: black;
+    background-color: #08068D; /* Preenche a quina de azul*/
     width: 100%;
     max-width: 393px;
     margin: 0 auto;
@@ -203,8 +203,4 @@ body {
     line-height: 20px;
     color: #536679;
     margin-bottom: 10px;
-}
-
-body{
-    background-color: #08068D; /* Preenche a quina de azul*/
 }
