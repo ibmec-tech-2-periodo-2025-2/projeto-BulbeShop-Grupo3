@@ -214,9 +214,9 @@
         - Bloqueios: Aprender a implementação em JS.
     
     - Felipe Cota:
-        - O que fez: Terminar tela de Carrinho em HTML e CSS.
+        - O que fez: Estudo de JS.
         - O que vai fazer: Iniciar implementação JS. 
-        - Bloqueios: Aprender a implementação em JS.
+        - Bloqueios: Nenhum.
 
     - Joshua Azze
         - O que fez: Terminar tela de Pedido Concluído em HTML e CSS.
@@ -237,3 +237,195 @@
         - O que fez: Terminar tela de Checkout em HTML e CSS.
         - O que vai fazer: Iniciar implementação JS. 
         - Bloqueios: Aprender a implementação em JS.
+
+#Daily X (06/11/2025):
+
+    - Tiago Lage:
+        - O que fez: Fez design das implementações no Figma.
+        - O que vai fazer: Adicionar a funcionalidade de cupons de desconto.
+        - Bloqueios: Nenhum.
+    
+    - Felipe Cota:
+        - O que fez: Terminar tela de Carrinho em HTML e CSS.
+        - O que vai fazer: Iniciar implementação JS. 
+        - Bloqueios: Nenhum. 
+
+    - Joshua Azze
+        - O que fez: Começou estudos do JS.
+        - O que vai fazer: Continuar aprendendo JS.
+        - Bloqueios: Nenhum.
+    
+    - Igor Conrado
+        - O que fez: Revisando JS e organizou o Jira. 
+        - O que vai fazer: Continuar revisando JS.
+        - Bloqueios: Nenhum.
+
+    - Marcelo Reis
+        - O que fez: Está proibido de dar novos commits.
+        - O que vai fazer: Continuará proibido de dar commits.
+        - Bloqueios: Nenhum.
+
+    - Augusto Gama
+        - O que fez: Nada.
+        - O que vai fazer: Nada.
+        - Bloqueios: Nenhum.
+
+#Daily X (07/11/2025):
+
+    - Tiago Lage:
+        - O que fez: Organizou rotina de acordo com tarefas designadas.
+        - O que vai fazer: Adicionar a funcionalidade de cupons de desconto.
+        - Bloqueios: Nenhum.
+    
+    - Felipe Cota:
+        - O que fez: Começou implementação de recomendações no carrinho.
+        - O que vai fazer: Prosseguir na implementação. 
+        - Bloqueios: Nenhum. 
+
+    - Joshua Azze
+        - O que fez: Continuou estudos do JS.
+        - O que vai fazer: Continuar aprendendo JS e ajustar o Figma de acordo com ajustes do Daniel.
+        - Bloqueios: Nenhum.
+    
+    - Igor Conrado
+        - O que fez: Continuou revisando o JS. 
+        - O que vai fazer: Continuar revisando JS e ajustar o Figma de acordo com ajustes do Daniel.
+        - Bloqueios: Nenhum.
+
+    - Marcelo Reis
+        - O que fez: Está proibido de dar novos commits.
+        - O que vai fazer: Continuará proibido de dar commits.
+        - Bloqueios: Nenhum.
+
+    - Augusto Gama
+        - O que fez: Nada.
+        - O que vai fazer: Nada.
+        - Bloqueios: Nenhum.
+
+#Daily X (08/11/2025):
+
+    - Tiago Lage:
+        - O que fez: Iniciou implementação da funcionalidade de cupons de desconto.
+        - O que vai fazer: Adaptar o estilo do input e iniciar JS.
+        - Bloqueios: Nenhum.
+    
+    - Felipe Cota:
+        - O que fez: Prosseguiu na implementação.
+        - O que vai fazer: Prosseguir na implementação.
+        - Bloqueios: Nenhum. 
+
+    - Joshua Azze
+        - O que fez: Continuou estudos do JS e iniciou ajustes do Figma de acordo com ajustes do Daniel.
+        - O que vai fazer: Continuar aprendendo JS e ajustando o Figma de acordo com recomendações do Daniel.
+        - Bloqueios: Nenhum.
+    
+    - Igor Conrado
+        - O que fez: Continuou revisão do JS e iniciou ajustes do Figma de acordo com ajustes do Daniel.
+        - O que vai fazer: Continuar revisando JS e ajustando o Figma de acordo com recomendações do Daniel.
+        - Bloqueios: Nenhum.
+
+    - Marcelo Reis
+        - O que fez: Está proibido de dar novos commits.
+        - O que vai fazer: Continuará proibido de dar commits.
+        - Bloqueios: Nenhum.
+
+    - Augusto Gama
+        - O que fez: Nada.
+        - O que vai fazer: Nada.
+        - Bloqueios: Nenhum.
+
+#Daily X (09/11/2025):
+
+    - Tiago Lage:
+        - O que fez: Adaptou o estilo do input e iniciei JS.
+        - O que vai fazer: Terminar JS.
+        - Bloqueios: Nenhum.
+    
+    - Felipe Cota:
+        - O que fez: Prosseguiu na implementação.
+        - O que vai fazer: Prosseguir na implementação.
+        - Bloqueios: Nenhum. 
+
+    - Joshua Azze
+        - O que fez: Continuou estudos do JS e iniciou ajustes do Figma de acordo com ajustes do Daniel.
+        - O que vai fazer: Continuar aprendendo JS e ajustando o Figma de acordo com recomendações do Daniel.
+        - Bloqueios: Nenhum.
+    
+    - Igor Conrado
+        - O que fez: Continuou revisão do JS e iniciou ajustes do Figma de acordo com ajustes do Daniel.
+        - O que vai fazer: Continuar revisando JS e ajustando o Figma de acordo com recomendações do Daniel.
+        - Bloqueios: Nenhum.
+
+    - Marcelo Reis
+        - O que fez: Está proibido de dar novos commits.
+        - O que vai fazer: Continuará proibido de dar commits.
+        - Bloqueios: Nenhum.
+
+    - Augusto Gama
+        - O que fez: Nada.
+        - O que vai fazer: Nada.
+        - Bloqueios: Nenhum.
+
+#Daily X (10/11/2025):
+
+    - Tiago Lage:
+        - O que fez: Prossegui com o JS.
+        - O que vai fazer: Terminar JS.
+        - Bloqueios: Teve que refazer parte do trabalho por estar editando uma branch desatualizada.
+    
+    - Felipe Cota:
+        - O que fez: Terminou tarefas designadas.
+        - O que vai fazer: Auxiliar qualquer demanda que aparecer.
+        - Bloqueios: Nenhum. 
+
+    - Joshua Azze
+        - O que fez: Tirou dúvidas com a Tamara e iniciou implementação do JS.
+        - O que vai fazer: Continuar aprendendo JS e finalizar menu de perfil JS.
+        - Bloqueios: Nenhum.
+    
+    - Igor Conrado
+        - O que fez: Finalizou ajustes do Figma de acordo com ajustes do Daniel.
+        - O que vai fazer: Continuar revisando JS e prosseguir com telas de Pedidos e Meus Pedidos.
+        - Bloqueios: Nenhum.
+
+    - Marcelo Reis
+        - O que fez: Está proibido de dar novos commits.
+        - O que vai fazer: Continuará proibido de dar commits.
+        - Bloqueios: Nenhum.
+
+    - Augusto Gama
+        - O que fez: Nada.
+        - O que vai fazer: Fazer a tarefa designada.
+        - Bloqueios: Nenhum.
+
+#Daily X (11/11/2025):
+
+    - Tiago Lage:
+        - O que fez: Prossegui com o JS.
+        - O que vai fazer: Terminar JS.
+        - Bloqueios: Teve que refazer parte do trabalho por estar editando uma branch desatualizada.
+    
+    - Felipe Cota:
+        - O que fez: Terminou tarefas designadas.
+        - O que vai fazer: Auxiliar qualquer demanda que aparecer.
+        - Bloqueios: Nenhum. 
+
+    - Joshua Azze
+        - O que fez: Tirou dúvidas com a Tamara e iniciou implementação do JS.
+        - O que vai fazer: Continuar aprendendo JS e finalizar menu de perfil JS.
+        - Bloqueios: Nenhum.
+    
+    - Igor Conrado
+        - O que fez: Continuou revisando JS e prosseguiu com telas de Pedidos e Meus Pedidos.
+        - O que vai fazer: Terminar telas e iniciar organização de apresentação.
+        - Bloqueios: Não consegui terminar as telas.
+
+    - Marcelo Reis
+        - O que fez: Está proibido de dar novos commits.
+        - O que vai fazer: Continuará proibido de dar commits.
+        - Bloqueios: Nenhum.
+
+    - Augusto Gama
+        - O que fez: Deu inicio a tarefa designada.
+        - O que vai fazer: Terminar tarefa.
+        - Bloqueios: Nenhum.
