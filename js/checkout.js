@@ -51,7 +51,7 @@ checkoutForm.addEventListener('submit', (e) => {
     if (validateForm()) {
          const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
 
-    // === NOVO: cria e persiste o pedido via OrderService ===
+    // cria e persiste o pedido via OrderService
     const order = OrderService.createOrder({
       paymentMethod,
       shipping: SHIPPING_COST,
