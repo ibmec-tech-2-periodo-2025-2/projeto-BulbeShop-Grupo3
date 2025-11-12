@@ -1,0 +1,129 @@
+/* Container da Foto Principal (Gatilho) */
+.profile-photo {
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 2px solid #08068D;
+    background: none !important;
+    padding: 0 !important;
+    transition: opacity 0.1s; 
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Esconde a foto principal quando ativa */
+.profile-photo.active img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* O Menu (Barra Branca) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    
+    /* Tamanhos Fixos do Figma */
+    width: 306px; 
+    height: 56px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    
+    /* Garante que o padding não estoure a largura de 306px */
+    box-sizing: border-box; 
+    padding: 0 8px; /* Espaço nas pontas */
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    /* Posicionamento */
+    top: 50%;
+    transform: translateY(-50%); 
+    right: 0; 
+
+    /* Layout Flex */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Distribui os itens */
+    list-style: none;
+    z-index: 2000;
+}
+
+.dropdown-menu.active {
+    display: flex;
+    animation: surgir 0.2s ease-out;
+}
+
+/* Botões Azuis */
+.dropdown-menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
+    height: 24px;
+    border-radius: 8px;
+    background: #08068D;
+    
+    /* Ajuste de preenchimento */
+    padding: 0 10px; 
+    
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap; /* Impede quebra de texto */
+    transition: opacity 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    opacity: 0.9;
+}
+
+/* --- ESTILOS DA FOTO RÉPLICA --- */
+.dropdown-menu .profile-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-replica-container {
+    /* Tamanho fixo e inegociável */
+    width: 30px;
+    height: 30px;
+    
+    /* CRUCIAL: Impede que a foto vire oval */
+    flex-shrink: 0; 
+    
+    border-radius: 50%;
+    border: 2px solid #08068D;
+    overflow: hidden; /* Garante o corte redondo */
+    cursor: pointer; /* Indica que fecha o menu */
+    display: flex;
+}
+
+.profile-popup-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante proporção da imagem */
+    display: block;
+}
+
+/* Esconde divisores antigos */
+.dropdown-menu .divider { display: none; }
+
+@keyframes surgir {
+    from { opacity: 0; width: 50px; } /* Efeito de expansão opcional */
+    to { opacity: 1; width: 306px; }
+}
