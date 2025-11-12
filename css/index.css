@@ -239,12 +239,19 @@
     height: 400px;
 }
 
+.cart-menu-box{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .sidebar-link1 {
     display: block;
     text-decoration: none;
-    color: #FFFFFF;
+    color: #070577;
     font-size: 2rem;
-    margin-bottom: 15px;
     transition: color 0.3s ease;
 }
 
