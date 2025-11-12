@@ -49,19 +49,23 @@ checkoutForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     if (validateForm()) {
-        const orderCode = generateOrderCode();
-        localStorage.setItem('orderCode', orderCode);
-        
-        const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
-        const { total } = calculateTotal();
-        const finalAmount = paymentMethod === 'pix' ? calculatePixDiscount() : total;
-        
-        localStorage.setItem('orderAmount', finalAmount.toFixed(2));
-        localStorage.setItem('orderPayment', paymentMethod);
-        
-        CartService.clearCart();
-        
-        window.location.href = 'confirmation.html';
+         const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+
+    // cria e persiste o pedido via OrderService
+    const order = OrderService.createOrder({
+      paymentMethod,
+      shipping: SHIPPING_COST,
+      pixDiscount: PIX_DISCOUNT
+    });
+
+    if (!order) {
+      alert('Seu carrinho está vazio.');
+      return;
+    }
+
+    // Limpa carrinho e redireciona
+    CartService.clearCart();
+    window.location.href = 'confirmation.html';
     }
 });
 
