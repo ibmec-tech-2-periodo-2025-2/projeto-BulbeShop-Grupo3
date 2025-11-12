@@ -21,7 +21,7 @@ const OrderService = {
     localStorage.setItem(this.ORDERS_KEY, JSON.stringify(list));
   },
   generateOrderCodeFromItems(items) {
-    // PD-AAAAmmdd-HHMMSS-1x2-5x1-...
+    // PD-AAAAmmdd-HHMMSS-1x2-5x1(padrao a ser gerado)
     const now = new Date();
     const pad = (n) => n.toString().padStart(2, '0');
     const stamp = [
@@ -60,6 +60,24 @@ const OrderService = {
 
     const all = this._readAll();
     all.unshift(order); // mais recente primeiro
-    this._writeAll(all);   
+    this._writeAll(all); 
+    
+        // Guarda o último pedido para página de confirmação
+    localStorage.setItem(this.LAST_ORDER_ID_KEY, order.id);
+    return order;
+  },
+
+  getOrders() {
+    return this._readAll();
+  },
+
+  getOrdersByCustomer(customerId) {
+    return this._readAll().filter(o => o.customerId === customerId);
+  },
+
+  getLastOrder() {
+    const id = localStorage.getItem(this.LAST_ORDER_ID_KEY);
+    if (!id) return null;
+    return this._readAll().find(o => o.id === id) || null;
     }
 };
