@@ -30,6 +30,22 @@
 
         <section class="cart-items">
         </section>
+
+        <section id="cart-recommendations" class="cart-recommendations" aria-label="Recomendações" role="region" aria-labelledby="recommendations-title" hidden>
+            <h2 class="recommendations-title" id="recommendations-title">Você também pode gostar</h2>
+            <div class="recommendations-skeleton" id="recommendations-skeleton" aria-hidden="true">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+            <div class="recommendations-carousel" role="group" aria-roledescription="carousel" aria-label="Carrossel de recomendações">
+                <div class="carousel-track" id="recommendations-track" role="list" aria-label="Lista de produtos recomendados">
+                </div>
+                <button class="carousel-btn prev" id="recommendations-prev" aria-label="Anterior" aria-controls="recommendations-track">‹</button>
+                <button class="carousel-btn next" id="recommendations-next" aria-label="Próximo" aria-controls="recommendations-track">›</button>
+            </div>
+        </section>
     </main>
 
     <div class="cart-footer">
@@ -60,6 +76,7 @@
 
     <script src="js/cart-utils.js"></script>
     <script src="js/search-common.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/cart.js"></script>
 </body>
 </html>
