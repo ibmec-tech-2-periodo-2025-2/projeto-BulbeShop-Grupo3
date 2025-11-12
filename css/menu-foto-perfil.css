@@ -1,124 +1,22 @@
-/* Container da Foto que SEMPRE APARECE na Navbar (o gatilho) */
+/* Container da Foto Principal (Gatilho) */
 .profile-photo {
     position: relative;
     cursor: pointer;
     z-index: 1001;
-
-    /* Estilos exatos do Figma para a foto da navbar */
     display: flex;
     width: 30px;
     height: 30px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    border-radius: 200px;
+    border-radius: 50%;
     border: 2px solid #08068D;
-    
-    /* Importante para esconder a foto "principal" quando o menu abrir */
-    /* Isso garante que só a réplica dentro do menu fique visível */
-    transition: opacity 0.2s; 
+    background: none !important;
+    padding: 0 !important;
+    transition: opacity 0.1s; 
 }
 
-/* Oculta a foto principal quando o menu está ativo */
-.profile-photo.active img {
-    opacity: 0;
-    pointer-events: none; /* Impede interações */
-}
-
-
-/* O Menu (Fundo Branco Pop-up) */
-.dropdown-menu {
-    display: none; /* Começa oculto */
-    position: absolute;
-    
-    /* Dimensões exatas do Figma para a barra branca com a foto dentro */
-    width: auto; /* A largura será automática, ajustando-se ao conteúdo */
-    min-width: 306px; /* Garante a largura mínima */
-    height: 56px;
-    border-radius: 20px;
-    background: #FFF;
-    flex-shrink: 0;
-    
-    /* Sombra suave */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-
-    /* Posicionamento: Ajustado para o menu se estender para a esquerda */
-    top: 50%;
-    transform: translateY(-50%); 
-    right: 0; /* Alinha o lado direito do menu com o lado direito da foto original */
-
-    /* Organização dos itens internos (agora incluindo a foto replicada) */
-    display: flex; /* Mantido como flex, mas será ativado via JS */
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    list-style: none;
-    padding: 0 10px; /* Padding interno da barra branca */
-    gap: 10px; /* Espaçamento entre os botões/foto */
-    z-index: 2000;
-}
-
-/* Estado Ativo (JavaScript) */
-.dropdown-menu.active {
-    display: flex;
-    animation: surgir 0.3s ease-out;
-}
-
-/* Estilo dos Links/Botões */
-.dropdown-menu li a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-
-    height: 24px;
-    border-radius: 8px;
-    background: #08068D;
-    
-    padding: 0 12px; 
-    min-width: 67px; 
-
-    color: #FFF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 20px;
-    
-    transition: opacity 0.2s;
-}
-
-.dropdown-menu li a:hover {
-    opacity: 0.9;
-}
-
-/* Esconde divisores */
-.dropdown-menu .divider { display: none; }
-
-
-/* Estilo da FOTO REPLICADA DENTRO DO POP-UP */
-.dropdown-menu .profile-menu-item {
-    display: flex; /* Garante que o item se comporte como um item flex */
-    justify-content: center;
-    align-items: center;
-    margin-left: 5px; /* Pequeno espaçamento à esquerda dos outros itens */
-    flex-shrink: 0; /* Impede que ele encolha */
-}
-
-.dropdown-menu .profile-menu-item .profile-link {
-    /* O link ao redor da foto não deve ter background azul */
-    background: none; 
-    padding: 0;
-    width: 30px; /* Tamanho da foto replicada */
-    height: 30px;
-    border-radius: 50%; /* Faz a borda da imagem */
-    border: 2px solid #08068D; /* Cor da borda da foto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.dropdown-menu .profile-menu-item .profile-popup-pic {
+.profile-photo img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -126,8 +24,106 @@
     display: block;
 }
 
-/* Animação de entrada */
+/* Esconde a foto principal quando ativa */
+.profile-photo.active img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* O Menu (Barra Branca) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    
+    /* Tamanhos Fixos do Figma */
+    width: 306px; 
+    height: 56px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    
+    /* Garante que o padding não estoure a largura de 306px */
+    box-sizing: border-box; 
+    padding: 0 8px; /* Espaço nas pontas */
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    /* Posicionamento */
+    top: 50%;
+    transform: translateY(-50%); 
+    right: 0; 
+
+    /* Layout Flex */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Distribui os itens */
+    list-style: none;
+    z-index: 2000;
+}
+
+.dropdown-menu.active {
+    display: flex;
+    animation: surgir 0.2s ease-out;
+}
+
+/* Botões Azuis */
+.dropdown-menu li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
+    height: 24px;
+    border-radius: 8px;
+    background: #08068D;
+    
+    /* Ajuste de preenchimento */
+    padding: 0 10px; 
+    
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap; /* Impede quebra de texto */
+    transition: opacity 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    opacity: 0.9;
+}
+
+/* --- ESTILOS DA FOTO RÉPLICA --- */
+.dropdown-menu .profile-menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-replica-container {
+    /* Tamanho fixo e inegociável */
+    width: 30px;
+    height: 30px;
+    
+    /* CRUCIAL: Impede que a foto vire oval */
+    flex-shrink: 0; 
+    
+    border-radius: 50%;
+    border: 2px solid #08068D;
+    overflow: hidden; /* Garante o corte redondo */
+    cursor: pointer; /* Indica que fecha o menu */
+    display: flex;
+}
+
+.profile-popup-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante proporção da imagem */
+    display: block;
+}
+
+/* Esconde divisores antigos */
+.dropdown-menu .divider { display: none; }
+
 @keyframes surgir {
-    from { opacity: 0; transform: translateY(-50%) translateX(10px); }
-    to { opacity: 1; transform: translateY(-50%) translateX(0); }
+    from { opacity: 0; width: 50px; } /* Efeito de expansão opcional */
+    to { opacity: 1; width: 306px; }
 }
