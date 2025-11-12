@@ -211,3 +211,12 @@
     flex-direction: column;
     padding: 20px;
 }
+
+.sidebar-menu .close-btn {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
