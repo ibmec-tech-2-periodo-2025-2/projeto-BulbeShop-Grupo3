@@ -10,6 +10,13 @@ const cupons = [
     { codigo: "BULBE10", valor: 0.1 },
     { codigo: "BULBE15", valor: 0.15 },
     { codigo: "BLACKFRIDAY", valor: 0.2 },
+    { codigo: "WELCOME5", valor: 0.05 },
+    { codigo: "PROMO25", valor: 0.25 },
+    { codigo: "SUPERPROMO", valor: 0.40},
+    { codigo: "SUPER30", valor: 0.30 },
+    { codigo: "CLIENTEVIP", valor: 0.12 },
+    { codigo: "BULBE20", valor: 0.20 },
+    { codigo: "MEGASALE", valor: 0.18 }
 ];
 
 let descontoCupom = 0;
