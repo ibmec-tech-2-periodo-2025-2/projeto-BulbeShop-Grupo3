@@ -228,3 +228,7 @@
     margin-bottom: 15px;
     transition: color 0.3s ease;
 }
+
+.sidebar-menu .sidebar-link:hover {
+    color: #007BFF;
+}
