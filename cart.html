@@ -50,6 +50,16 @@
         <section class="cart-items">
         </section>
 
+        <section class="cart-summary-inline" id="cart-summary-inline" hidden>
+            <div class="cart-summary-inline__details">
+                <span class="cart-summary-inline__label">Subtotal</span>
+                <strong class="cart-summary-inline__value" id="subtotal-value">R$ 0,00</strong>
+            </div>
+            <button class="checkout-fab" id="checkout-btn">
+                Fechar Pedido
+            </button>
+        </section>
+
         <section id="cart-recommendations" class="cart-recommendations" aria-label="Recomendações" role="region" aria-labelledby="recommendations-title" hidden>
             <h2 class="recommendations-title" id="recommendations-title">Você também pode gostar</h2>
             <div class="recommendations-skeleton" id="recommendations-skeleton" aria-hidden="true">
@@ -66,17 +76,6 @@
             </div>
         </section>
     </main>
-
-    <div class="cart-footer">
-        <div class="cart-summary">
-            <button class="btn btn-secondary subtotal-btn" id="subtotal-btn">
-                Subtotal R$: XX,XX
-            </button>
-            <button class="btn btn-primary checkout-btn" id="checkout-btn">
-                Fechar Pedido
-            </button>
-        </div>
-    </div>
 
     <nav class="bottom-nav">
         <a href="index.html" class="nav-item">

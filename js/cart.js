@@ -135,11 +135,17 @@ function updateItemPrice(itemId, unitPrice, quantity) {
 }
 
 function updateSubtotal() {
+    const summarySection = document.getElementById('cart-summary-inline');
+    const subtotalValue = document.getElementById('subtotal-value');
+    if (!summarySection || !subtotalValue) return;
+
     const subtotal = CartService.getTotal();
-    
-    const subtotalBtn = document.getElementById('subtotal-btn');
-    if (subtotalBtn) {
-        subtotalBtn.textContent = `Subtotal R$: ${subtotal.toFixed(2)}`;
+
+    if (subtotal <= 0) {
+        summarySection.hidden = true;
+    } else {
+        summarySection.hidden = false;
+        subtotalValue.textContent = `R$ ${subtotal.toFixed(2)}`;
     }
 }
 
