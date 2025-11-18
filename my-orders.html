@@ -12,10 +12,26 @@
 <body>
   <header class="site-header">
     <nav class="navbar-superior">
-      <button class="back-btn" aria-label="Voltar" onclick="history.back()">←</button>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu">
+        <img src="images/header_img/menu_sanduiche.png" alt="Menu">
+      </button>
+      <div class="sidebar-menu" id="sidebar-menu">
+        <div class="top-sidebar-menu">
+          <h2 class="menu-h2">Menu</h2>
+          <button class="close-btn" id="close-btn" aria-label="Fechar Menu">×</button>
+        </div>
+        <div class="container-links">
+          <div class="cart-menu-box">
+            <a href="cart.html" class="sidebar-link1">Carrinho</a>
+          </div>
+          <div class="catalog-menu-box">
+            <a href="catalog.html" class="sidebar-link2">Catálogo</a>
+          </div>
+        </div>
+      </div>
       <a href="index.html" class="bulbeshop"><img src="images/header_img/logo.png" alt="Bulbe Shop" class="logo"></a>
       <div class="profile-photo">
-        <img src="images/header_img/perfil.png" alt="Perfil" style="width: 40px; height: 40px; border-radius: 200px;">
+        <img src="images/header_img/perfil.png" alt="Perfil" style="width: 200%; height: 200%; border-radius: 200px;">
       </div>
     </nav>
     <div class="search-bar">
@@ -49,5 +65,6 @@
 
   <script src="js/order-service.js"></script>
   <script src="js/my-orders.js"></script>
+  <script src="js/sandwich-menu.js"></script>
 </body>
 </html>
