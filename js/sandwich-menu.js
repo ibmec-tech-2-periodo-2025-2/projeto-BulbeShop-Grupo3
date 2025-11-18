@@ -1,17 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.querySelector('.menu-btn');
     const sidebarMenu = document.getElementById('sidebar-menu');
-    const closeButton = document.getElementById('close-btn');
+    const overlay = document.getElementById('sidebar-overlay');
 
-    if (!menuButton || !sidebarMenu || !closeButton) {
+    if (!menuButton || !sidebarMenu || !overlay) {
         return;
     }
 
+    const openMenu = () => {
+        sidebarMenu.classList.add('active');
+        overlay.classList.add('active');
+    };
+
+    const closeMenu = () => {
+        sidebarMenu.classList.remove('active');
+        overlay.classList.remove('active');
+    };
+
     menuButton.addEventListener('click', () => {
-        sidebarMenu.classList.toggle('active');
+        if (sidebarMenu.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     });
 
-    closeButton.addEventListener('click', () => {
-        sidebarMenu.classList.remove('active');
+    overlay.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && sidebarMenu.classList.contains('active')) {
+            closeMenu();
+        }
     });
 });

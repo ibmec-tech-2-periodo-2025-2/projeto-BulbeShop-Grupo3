@@ -209,10 +209,11 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
+    width: 280px;
     height: 100vh;
     background-color: #070577;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 6px 0 20px rgba(0, 0, 0, 0.25);
     transform: translateX(-100%);
     opacity: 0;
     visibility: hidden;
@@ -221,65 +222,106 @@ body {
     z-index: 2000;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 24px 20px;
 }
 
 .top-sidebar-menu {
     order: -1;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .menu-h2 {
     order: -1;
     color: #FFFFFF;
-    font-size: 1.9rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
 }
 
-.sidebar-menu .close-btn {
-    align-self: flex-end;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.container-links {
-    margin-top: 110px;
-    height: 400px;
+.menu-links {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 12px;
 }
 
-.cart-menu-box,
-.catalog-menu-box {
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sidebar-link1,
-.sidebar-link2 {
+.menu-link-item {
     display: block;
+    padding: 12px 14px;
+    border-radius: 12px;
     text-decoration: none;
-    color: #070577;
-    font-size: 2rem;
-    transition: color 0.3s ease;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.sidebar-menu .sidebar-link:hover {
-    color: #007BFF;
+.menu-link-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(2px);
+}
+
+.menu-bottom-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-cta {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.menu-cta:hover {
+    opacity: 0.85;
+}
+
+.contact-link {
+    background: #FFFFFF;
+    color: #070577;
+}
+
+.settings-btn {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .sidebar-menu.active {
     transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(8, 6, 141, 0.35);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1500;
+}
+
+.sidebar-overlay.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
