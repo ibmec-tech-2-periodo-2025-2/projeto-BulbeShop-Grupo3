@@ -112,8 +112,12 @@ body {
     max-width: 393px;
     background: #F8F8FF;
     border-radius: 20px 20px 0 0;
-    padding: 12px 20px;
-    min-height: calc(100vh - 146px - 80px);
+    padding: 12px 20px 36px;
+    min-height: calc(100vh - 146px);
+}
+
+.has-bottom-nav .container {
+    padding-bottom: 140px;
 }
 
 .bottom-nav {
