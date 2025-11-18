@@ -102,7 +102,7 @@
                         <label for="card-name" class="form-label">
                             Nome no Cartão
                             <span class="help-icon" title="Ajuda">?</span>
-                        </labe>
+                        </label>
                         <input type="text" id="card-name" class="form-input" placeholder="Nome como está no cartão">
                     </div>
                 </div>
@@ -135,7 +135,7 @@
 
                         <div class="row-cupom">
                             <input type="text" id="cupom-desconto" class="form-input" placeholder="Insira seu Cupom">
-                            <button id="ok-cupom">Ok</button>
+                            <button id="ok-cupom" type="button">Ok</button>
                             <div class="feedback-cupom" id="feedback-positivo">Cupom aplicado com sucesso!</div>
                             <div class="feedback-cupom" id="feedback-negativo">Cupom inválido ou já utilizado!</div>                           
                         </div>
@@ -183,14 +183,15 @@
                         Número
                         <span class="help-icon" title="Ajuda">?</span>
                     </label>
-                    <input type="text" id="billing-complement" class="form-input" placeholder="XXX" required>
+                    <input type="text" id="billing-number" class="form-input" placeholder="XXX" required>
+                </div>
+
                 <div class="form-group">
                     <label for="billing-complement" class="form-label">
                         Complemento
                         <span class="help-icon" title="Ajuda">?</span>
                     </label>
                     <input type="text" id="billing-complement" class="form-input" placeholder="Apto, bloco, etc">
-                </div>
                 </div>
                 <div class="form-group">
                     <label class="checkbox-label">
@@ -244,13 +245,14 @@
                 </div>
 
                 <div class="form-group">
-                <div class="form-group">
                     <label for="delivery-notes" class="form-label">
                         Observações para entrega
                         <span class="help-icon" title="Ajuda">?</span>
                     </label>
                     <textarea id="delivery-notes" class="form-input" placeholder="Informações adicionais para o entregador" rows="3"></textarea>
                 </div>
+
+                <div class="form-group">
                     <label for="delivery-number" class="form-label">
                         Número
                         <span class="help-icon" title="Ajuda">?</span>
@@ -277,6 +279,7 @@
     <script src="js/order-service.js"></script>
     <script src="js/checkout.js"></script>
     <script src="js/cupom.js"></script>
+    <script src="js/search-common.js"></script>
     <script src="js/sandwich-menu.js"></script>
 </body>
 </html>

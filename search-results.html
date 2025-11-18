@@ -82,6 +82,94 @@
         </section>
     </main>
 
+    <div class="filter-modal" id="filter-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="filter-modal__content">
+            <header class="filter-modal__header">
+                <h2 class="filter-modal__title">Filtrar produtos</h2>
+                <button type="button" class="filter-modal__close" id="filter-modal-close" aria-label="Fechar filtros">×</button>
+            </header>
+            <form class="filter-modal__form" id="filter-form">
+                <div class="filter-modal__section">
+                    <h3 class="filter-modal__section-title">Categorias</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="casa">
+                            Casa
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="eletro">
+                            Eletro
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="category" value="conforto">
+                            Conforto
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-modal__section">
+                    <h3 class="filter-modal__section-title">Faixa de preço</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="price-range" value="all" checked>
+                            Todos
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price-range" value="0-100">
+                            Até R$100
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price-range" value="100-300">
+                            R$100 - R$300
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="price-range" value="300-999">
+                            Acima de R$300
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-modal__section">
+                    <h3 class="filter-modal__section-title">Avaliação mínima</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="rating" value="4">
+                            4★ ou mais
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rating" value="3">
+                            3★ ou mais
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="rating" value="2">
+                            2★ ou mais
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-modal__section">
+                    <h3 class="filter-modal__section-title">Ordenar por</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="sort" value="popularidade" checked>
+                            Popularidade
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="sort" value="menor-preco">
+                            Menor preço
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="sort" value="maior-preco">
+                            Maior preço
+                        </label>
+                    </div>
+                </div>
+            </form>
+            <div class="filter-modal__actions">
+                <button type="button" class="btn-secondary filter-clear-btn" id="filter-clear-btn">Limpar</button>
+                <button type="button" class="btn-primary filter-apply-btn" id="filter-apply-btn">Aplicar</button>
+            </div>
+        </div>
+    </div>
+    <div class="filter-modal-overlay" id="filter-modal-overlay" aria-hidden="true"></div>
+
     <nav class="bottom-nav">
         <a href="index.html" class="nav-item">
             <img src="images/footer_img/home-ativado.png" alt="Início" class="nav-icon active-icon">
@@ -102,6 +190,7 @@
 
     <script src="js/utils.js"></script>
     <script src="js/search-common.js"></script>
+    <script src="js/filter-modal.js"></script>
     <script src="js/search-results.js"></script>
     <script src="js/sandwich-menu.js"></script>
 </body>

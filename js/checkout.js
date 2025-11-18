@@ -1,84 +1,109 @@
 const SHIPPING_COST = 15.00;
 const PIX_DISCOUNT = 0.10;
+let checkoutForm;
 
-function loadCheckoutItems() {
-    const cart = CartService.getCart();
-    
-    if (cart.length === 0) {
-        window.location.href = 'cart.html';
+document.addEventListener('DOMContentLoaded', () => {
+    checkoutForm = document.getElementById('checkout-form');
+
+    if (!checkoutForm) {
         return;
     }
-}
 
-function calculateTotal() {
-    const subtotal = CartService.getTotal();
-    const total = subtotal + SHIPPING_COST;
-    
-    return { subtotal, total };
-}
+    initPaymentMethodToggle();
+    checkoutForm.addEventListener('submit', handleSubmit);
+    loadCheckoutItems();
+    applyMasks();
+});
 
-function calculatePixDiscount() {
-    const { total } = calculateTotal();
-    return total * (1 - PIX_DISCOUNT);
-}
+function initPaymentMethodToggle() {
+    const paymentMethods = checkoutForm.querySelectorAll('input[name="payment-method"]');
+    const cardFields = document.getElementById('card-fields');
+    const pixFields = document.getElementById('pix-fields');
+    const boletoFields = document.getElementById('boleto-fields');
 
-const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
-const cardFields = document.getElementById('card-fields');
-const pixFields = document.getElementById('pix-fields');
-const boletoFields = document.getElementById('boleto-fields');
+    if (!paymentMethods.length || !cardFields || !pixFields || !boletoFields) {
+        return;
+    }
 
-paymentMethods.forEach(method => {
-    method.addEventListener('change', (e) => {
+    const toggleFields = (method) => {
         cardFields.style.display = 'none';
         pixFields.style.display = 'none';
         boletoFields.style.display = 'none';
-        
-        if (e.target.value === 'credit-card') {
+
+        if (method === 'credit-card') {
             cardFields.style.display = 'flex';
-        } else if (e.target.value === 'pix') {
+        } else if (method === 'pix') {
             pixFields.style.display = 'flex';
-        } else if (e.target.value === 'boleto') {
+        } else if (method === 'boleto') {
             boletoFields.style.display = 'flex';
         }
+    };
+
+    paymentMethods.forEach((method) => {
+        method.addEventListener('change', (event) => {
+            toggleFields(event.target.value);
+        });
     });
-});
 
-const checkoutForm = document.getElementById('checkout-form');
+    const initialMethod = checkoutForm.querySelector('input[name="payment-method"]:checked')?.value || 'credit-card';
+    toggleFields(initialMethod);
+}
 
-checkoutForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    if (validateForm()) {
-         const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+function handleSubmit(event) {
+    event.preventDefault();
 
-    // cria e persiste o pedido via OrderService
+    if (!checkoutForm) {
+        return;
+    }
+
+    if (!validateForm()) {
+        return;
+    }
+
+    const paymentSelection = checkoutForm.querySelector('input[name="payment-method"]:checked');
+
+    if (!paymentSelection) {
+        alert('Por favor, selecione um método de pagamento');
+        return;
+    }
+
+    if (typeof CartService === 'undefined' || typeof OrderService === 'undefined') {
+        alert('Não foi possível processar seu pedido no momento. Tente novamente.');
+        return;
+    }
+
     const order = OrderService.createOrder({
-      paymentMethod,
-      shipping: SHIPPING_COST,
-      pixDiscount: PIX_DISCOUNT
+        paymentMethod: paymentSelection.value,
+        shipping: SHIPPING_COST,
+        pixDiscount: PIX_DISCOUNT
     });
 
     if (!order) {
-      alert('Seu carrinho está vazio.');
-      return;
+        alert('Seu carrinho está vazio.');
+        return;
     }
 
-    // Limpa carrinho e redireciona
     CartService.clearCart();
     window.location.href = 'confirmation.html';
-    }
-});
+}
 
-function generateOrderCode() {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    let code = '';
-    for (let i = 0; i < 10; i++) {
-        code += chars.charAt(Math.floor(Math.random() * chars.length));
+function loadCheckoutItems() {
+    if (typeof CartService === 'undefined') {
+        return;
     }
-    return code;
+
+    const cart = CartService.getCart();
+
+    if (!cart || cart.length === 0) {
+        window.location.href = 'cart.html';
+    }
 }
 
 function validateForm() {
+    if (!checkoutForm) {
+        return false;
+    }
+
     const requiredFields = checkoutForm.querySelectorAll('[required]');
     let isValid = true;
     
@@ -91,7 +116,7 @@ function validateForm() {
         }
     });
     
-    const paymentMethod = document.querySelector('input[name="payment-method"]:checked');
+    const paymentMethod = checkoutForm.querySelector('input[name="payment-method"]:checked');
     if (!paymentMethod) {
         alert('Por favor, selecione um método de pagamento');
         return false;
@@ -195,6 +220,3 @@ function applyMasks() {
         });
     }
 }
-
-loadCheckoutItems();
-applyMasks();

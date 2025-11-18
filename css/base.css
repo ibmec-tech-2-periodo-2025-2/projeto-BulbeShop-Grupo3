@@ -331,6 +331,121 @@ body {
     pointer-events: auto;
 }
 
+.filter-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 6, 141, 0.35);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1400;
+}
+
+.filter-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.filter-modal {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    width: 100%;
+    max-width: 393px;
+    background: #FFFFFF;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px 20px 28px;
+    z-index: 1500;
+    transition: transform 0.3s ease;
+}
+
+.filter-modal.active {
+    transform: translate(-50%, 0);
+}
+
+.filter-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.filter-modal__title {
+    font-size: 1.2rem;
+    color: #08068D;
+}
+
+.filter-modal__close {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    color: #08068D;
+}
+
+.filter-modal__section {
+    margin-bottom: 16px;
+}
+
+.filter-modal__section-title {
+    font-size: 0.95rem;
+    color: #536679;
+    margin-bottom: 8px;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: #F4F5FB;
+    font-size: 0.9rem;
+    color: #0A0A33;
+}
+
+.filter-modal__actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.filter-modal__actions .btn-primary,
+.filter-modal__actions .btn-secondary {
+    flex: 1;
+    border-radius: 18px;
+    padding: 14px 0;
+    font-size: 1rem;
+}
+
+body.filter-modal-open {
+    overflow: hidden;
+}
+
+.filter-clear-btn {
+    background: rgba(8, 6, 141, 0.08);
+    color: #08068D;
+    border: 1px solid rgba(8, 6, 141, 0.15);
+}
+
+.filter-apply-btn {
+    background: #08068D;
+    color: #FFFFFF;
+    border: none;
+}
+
 .page-title {
     font-family: 'Poppins';
     font-weight: 500;
