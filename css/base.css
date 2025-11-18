@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #08068D; /* Preenche a quina de azul*/
+    background-color: #08068D;
     width: 100%;
     max-width: 393px;
     margin: 0 auto;
@@ -149,7 +149,23 @@ body {
 .nav-icon {
     width: 20px;
     height: 20px;
- }
+}
+
+.nav-icon.active-icon {
+    display: none;
+}
+
+.nav-icon.inactive-icon {
+    display: block;
+}
+
+.nav-item.active .nav-icon.inactive-icon {
+    display: none;
+}
+
+.nav-item.active .nav-icon.active-icon {
+    display: block;
+}
 
 .nav-label {
     font-family: 'Poppins';
@@ -158,10 +174,6 @@ body {
     line-height: 18px;
     text-align: center;
     color: #C2CCD6;
-}
-
-.nav-item.active .nav-icon {
-    border-color: #08068D;
 }
 
 .nav-item.active .nav-label {
