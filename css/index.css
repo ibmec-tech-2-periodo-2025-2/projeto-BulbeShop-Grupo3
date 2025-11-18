@@ -1,7 +1,7 @@
 .hero-banner {
     width: 100%;
-    margin-top: 16px;
-    margin-bottom: 24px;
+    margin-top: 10px;
+    margin-bottom: 12px;
 }
 
 .hero-image {
@@ -12,14 +12,13 @@
 }
 
 .categories-section {
-    margin-bottom: 32px;
+    margin-bottom: 12px;
 }
 
 .category-list {
     display: flex;
     gap: 16px;
     overflow-x: auto;
-    padding-bottom: 10px;
     scrollbar-width: none;
 }
 
