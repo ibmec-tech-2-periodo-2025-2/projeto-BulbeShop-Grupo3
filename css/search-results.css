@@ -49,13 +49,6 @@
     cursor: pointer;
 }
 
-.product-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
 .discount-tag {
     position: absolute;
     top: 18px;

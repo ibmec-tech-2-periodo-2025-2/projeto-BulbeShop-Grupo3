@@ -112,12 +112,12 @@ body {
     max-width: 393px;
     background: #F8F8FF;
     border-radius: 20px 20px 0 0;
-    padding: 12px 20px 36px;
+    padding: 12px 20px 35px;
     min-height: calc(100vh - 146px);
 }
 
 .has-bottom-nav .container {
-    padding-bottom: 140px;
+    padding-bottom: 40px;
 }
 
 .bottom-nav {
@@ -432,6 +432,17 @@ body {
 
 body.filter-modal-open {
     overflow: hidden;
+}
+
+.product-card .product-image {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    background: #F4F5FB;
+    object-fit: contain;
+    padding: 8px;
+    display: block;
+    margin-bottom: 8px;
 }
 
 .filter-clear-btn {
