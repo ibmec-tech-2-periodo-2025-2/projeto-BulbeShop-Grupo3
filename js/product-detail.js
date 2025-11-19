@@ -29,6 +29,8 @@ function displayProduct(product) {
         img.src = product.image;
         img.alt = product.name;
     });
+    
+    updateBreadcrumb(product);
 }
 
 const quantityInput = document.getElementById('quantity-input');
@@ -76,5 +78,19 @@ document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
         document.getElementById('main-image').src = thumb.querySelector('img').src;
     });
 });
+
+function updateBreadcrumb(product) {
+    const breadcrumbCategoryLink = document.querySelector('[data-breadcrumb="category-link"]');
+    const breadcrumbCurrent = document.querySelector('[data-breadcrumb="current"]');
+    
+    if (breadcrumbCategoryLink) {
+        breadcrumbCategoryLink.textContent = product.category;
+        breadcrumbCategoryLink.href = `product-list.html?category=${encodeURIComponent(product.category)}`;
+    }
+    
+    if (breadcrumbCurrent) {
+        breadcrumbCurrent.textContent = product.name;
+    }
+}
 
 loadProductDetail();

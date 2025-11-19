@@ -27,9 +27,13 @@ function displayCategoryProducts(allProducts) {
 }
 
 function updateBreadcrumb(category) {
-    const breadcrumbSpan = document.querySelector('.breadcrumbs span');
-    if (breadcrumbSpan && category) {
+    const breadcrumbSpan = document.querySelector('[data-breadcrumb="current"]');
+    if (!breadcrumbSpan) return;
+    
+    if (category) {
         breadcrumbSpan.textContent = category;
+    } else {
+        breadcrumbSpan.textContent = 'Todos os produtos';
     }
 }
 
