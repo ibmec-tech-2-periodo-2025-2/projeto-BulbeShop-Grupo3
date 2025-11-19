@@ -7,11 +7,33 @@ const productsList = document.getElementById('products-list');
 const imageInput = document.getElementById('product-image');
 const imagePreview = document.getElementById('image-preview');
 const previewImg = document.getElementById('preview-img');
+const priceInput = document.getElementById('product-price');
+const oldPriceInput = document.getElementById('product-old-price');
+const discountInput = document.getElementById('product-discount');
+
+function calculateDiscount(price, oldPrice) {
+    const currentPrice = parseFloat(price);
+    const previousPrice = parseFloat(oldPrice);
+    if (isNaN(currentPrice) || isNaN(previousPrice) || previousPrice <= 0) {
+        return 0;
+    }
+    const discount = Math.round(((previousPrice - currentPrice) / previousPrice) * 100);
+    return Math.max(0, discount);
+}
+
+function updateDiscountField() {
+    const discount = calculateDiscount(priceInput.value, oldPriceInput.value);
+    discountInput.value = discount;
+}
 
 async function loadProducts() {
     try {
         const response = await fetch('/api/products');
-        products = await response.json();
+        const data = await response.json();
+        products = data.map(product => ({
+            ...product,
+            discount: calculateDiscount(product.price, product.oldPrice)
+        }));
         displayProducts();
     } catch (error) {
         console.error('Erro ao carregar produtos:', error);
@@ -23,13 +45,14 @@ function displayProducts() {
     productsList.innerHTML = '';
     
     products.forEach(product => {
+        const discount = calculateDiscount(product.price, product.oldPrice);
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${product.id}</td>
             <td>${product.name}</td>
             <td>${product.category}</td>
             <td>R$ ${product.price.toFixed(2)}</td>
-            <td>${product.discount}%</td>
+            <td>${discount}%</td>
             <td>
                 <div class="action-btns">
                     <button class="btn-small btn-edit" onclick="editProduct(${product.id})">Editar</button>
@@ -54,9 +77,9 @@ function editProduct(id) {
     document.getElementById('product-name').value = product.name;
     document.getElementById('product-description').value = product.description;
     document.getElementById('product-category').value = product.category;
-    document.getElementById('product-price').value = product.price;
-    document.getElementById('product-old-price').value = product.oldPrice;
-    document.getElementById('product-discount').value = product.discount;
+    priceInput.value = product.price;
+    oldPriceInput.value = product.oldPrice;
+    discountInput.value = calculateDiscount(product.price, product.oldPrice);
     document.getElementById('product-rating').value = product.rating;
     document.getElementById('product-rating-count').value = product.ratingCount;
     
@@ -86,6 +109,7 @@ function clearForm() {
     document.getElementById('current-image').style.display = 'none';
     imagePreview.style.display = 'none';
     previewImg.src = '';
+    updateDiscountField();
 }
 
 form.addEventListener('submit', async (e) => {
@@ -107,14 +131,19 @@ form.addEventListener('submit', async (e) => {
         return;
     }
     
+    const price = parseFloat(priceInput.value);
+    const oldPrice = parseFloat(oldPriceInput.value);
+    const discount = calculateDiscount(price, oldPrice);
+    discountInput.value = discount;
+    
     const productData = {
         id: editingId || Date.now(),
         name: document.getElementById('product-name').value,
         description: document.getElementById('product-description').value,
         category: document.getElementById('product-category').value,
-        price: parseFloat(document.getElementById('product-price').value),
-        oldPrice: parseFloat(document.getElementById('product-old-price').value),
-        discount: parseInt(document.getElementById('product-discount').value),
+        price,
+        oldPrice,
+        discount,
         rating: parseFloat(document.getElementById('product-rating').value),
         ratingCount: parseInt(document.getElementById('product-rating-count').value),
         image: imagePath
@@ -135,6 +164,9 @@ form.addEventListener('submit', async (e) => {
 });
 
 cancelBtn.addEventListener('click', clearForm);
+priceInput.addEventListener('input', updateDiscountField);
+oldPriceInput.addEventListener('input', updateDiscountField);
+updateDiscountField();
 
 imageInput.addEventListener('change', (e) => {
     const file = e.target.files[0];

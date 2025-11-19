@@ -21,6 +21,16 @@ const ProductService = {
     }
 };
 
+function getProductDiscount(product = {}) {
+    const price = Number(product.price);
+    const oldPrice = Number(product.oldPrice);
+    if (!Number.isFinite(price) || !Number.isFinite(oldPrice) || oldPrice <= 0) {
+        return 0;
+    }
+    const discount = Math.round(((oldPrice - price) / oldPrice) * 100);
+    return Math.max(0, discount);
+}
+
 function createProductCard(product) {
     const article = document.createElement('article');
     article.className = 'product-card';
@@ -30,9 +40,11 @@ function createProductCard(product) {
         article.classList.add('product-card--alexa');
     }
     
+    const discount = getProductDiscount(product);
+    
     article.innerHTML = `
         <img src="${product.image}" alt="${product.name}" class="product-image">
-        <div class="discount-tag">-${product.discount}%</div>
+        <div class="discount-tag">-${discount}%</div>
         <h3 class="product-title">${product.name}</h3>
         <div class="product-rating">
             <img src="images/avaliacao.png" alt="5 estrelas">
