@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Echo Dot 5 Geração",
     "description": "O Echo Dot com o melhor som já lançado Cor Preta.",
-    "category": "Tecnologia",
+    "category": "Tecnologia popular sustentavel",
     "price": 398.99,
     "oldPrice": 459,
     "discount": 21,
@@ -15,7 +15,7 @@
     "id": 2,
     "name": "Echo Pop 5 Geração",
     "description": "Smart speaker compacto com som envolvente e Alexa Cor Preta.",
-    "category": "Tecnologia",
+    "category": "Tecnologia popular sustentavel",
     "price": 341.99,
     "oldPrice": 350.00,
     "discount": 24,
@@ -33,7 +33,7 @@
     "ratingCount": 892,
     "image": "images/produtos/echoDotBranca.jpg",
     "description": "O Echo Dot com o melhor som já lançado Cor Branca.",
-    "category": "Tecnologia"
+    "category": "Tecnologia popular sustentavel"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "ratingCount": 215,
     "image": "images/produtos/echotDotAzul.jpg",
     "description": "O Echo Dot com o melhor som já lançado Cor Azul.",
-    "category": "Tecnologia"
+    "category": "Tecnologia popular sustentavel"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "ratingCount": 567,
     "image": "images/produtos/echoSpot.jpg",
     "description": "Despertador inteligente com som vibrante Cor Preta.",
-    "category": "Tecnologia"
+    "category": "Tecnologia popular sustentavel"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "ratingCount": 178,
     "image": "images/produtos/echoDotEchoMax.jpg",
     "description": "Smart speaker com Alexa, som envolvente e hub de casa inteligente integrado, ideal para sua sala de estar, Cor Grafite.",
-    "category": "Tecnologia"
+    "category": "Tecnologia popular sustentavel"
   },
   {
     "id": 7,
@@ -81,13 +81,13 @@
     "ratingCount": 142,
     "image": "images/produtos/suporteEchoDot.jpg",
     "description": "Splin Suporte Stand De Mesa para Alexa Smart Speaker Echo Dot 5 ou 4 -Amazon- Star Boy (preto).",
-    "category": "Casa"
+    "category": "Economia de energia em casa"
   },
   {
     "id": 8,
     "name": "Interruptor Touch Inteligente",
     "description": "Interruptor Touch Inteligente Compatível Com Alexa Com 3 Teclas EWS 1003 Preto Intelbras.",
-    "category": "Games",
+    "category": "Eletrodomesticos eficientes",
     "price": 119.97,
     "oldPrice": 127,
     "discount": 11,
@@ -105,7 +105,7 @@
     "ratingCount": 789,
     "image": "images/produtos/tomadaSmart.jpg",
     "description": "Tomada inteligente Wi-Fi TP-Link Tapo P110, Smart Plug, Bivolt, 10A/2400W - Compatível com Alexa.",
-    "category": "Games"
+    "category": "Eletrodomesticos eficientes"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
     "ratingCount": 623,
     "image": "images/produtos/cameraSmart.jpg",
     "description": "Câmera Inteligente Interna Compatível com Alexa Wi-fi Full HD iM3 C Branca Intelbras.",
-    "category": "Música"
+    "category": "Conforto e bem-estar no lar"
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
     "ratingCount": 451,
     "image": "images/produtos/controleSmart.jpg",
     "description": "EKAZA Controle Remoto Universal Infravermelho Wi-Fi, Compatível com Google Assistente e Alexa - EKNH-T304-M3.",
-    "category": "Música"
+    "category": "Conforto e bem-estar no lar"
   },
   {
     "id": 12,
@@ -141,7 +141,7 @@
     "ratingCount": 451,
     "image": "images/produtos/fitaSmart.jpg",
     "description": "Tramontina Smart Fita LED Inteligente Multitemperaturas luz amarela e branca 5 Metros Bivolt - Compatível com Alexa e Google Home - Wi-Fi.",
-    "category": "Vídeo"
+    "category": "Tecnologia popular sustentavel"
   },
   {
     "id": 13,
@@ -153,7 +153,7 @@
     "ratingCount": 451,
     "image": "images/produtos/suporteEchoDart.jpg",
     "description": "Suporte Para Echo Dot Alexa 4 e 5 Geração - Tema Geek.",
-    "category": "Vídeo"
+    "category": "Tecnologia popular sustentavel"
   },
   {
     "id": 14,
@@ -165,7 +165,7 @@
     "ratingCount": 451,
     "image": "images/produtos/lampadaSmartFilamento.jpg",
     "description": "Smart Lâmpada de Filamento Bulbo Dimerizável, Compatível com Alexa, Marca Gaya.",
-    "category": "Iluminação"
+    "category": "Dia a dia sustentável"
   },
   {
     "id": 15,
@@ -177,7 +177,7 @@
     "ratingCount": 451,
     "image": "images/produtos/suporteEchoYoda.jpg",
     "description": "Suporte Alexa Echo Dot 4 ou Echo Dot 5 Baby - Presente, decoração, miniatura criativa, música, Amazon.",
-    "category": "Iluminação"
+    "category": "Dia a dia sustentável"
   },
   {
     "id": 16,
@@ -189,7 +189,7 @@
     "ratingCount": 451,
     "image": "",
     "description": "A lâmpada de Led Alta Potência luz branca oferece iluminação intensa e eficiente, perfeita para ambientes que necessitam de claridade. Com tecnologia LED de última geração, proporciona economia de energia e longa durabilidade.",
-    "category": "Casa"
+    "category": "Economia de energia em casa"
   },
   {
     "id": 17,
@@ -201,7 +201,7 @@
     "ratingCount": 451,
     "image": "images/produtos/lampadaSmartPositivo.jpg",
     "description": "Smart Lâmpada Wi-Fi Lite Positivo Casa Inteligente, Iluminação Branca, 7W, 700 Lúmens, LED, Bivolt, Compatível com Alexa e Google Assistente.",
-    "category": "Casa"
+    "category": "Economia de energia em casa"
   },
   {
     "id": 18,
@@ -213,7 +213,7 @@
     "ratingCount": 451,
     "image": "images/produtos/bocalSmart.jpg",
     "description": "Smart Bocal Wi-Fi Positivo Casa Inteligente, Soquete E27, 100W, Branco, Bivolt - Compatível com Alexa.",
-    "category": "Games"
+    "category": "Eletrodomesticos eficientes"
   },
   {
     "id": 19,
@@ -225,6 +225,6 @@
     "ratingCount": 451,
     "image": "images/produtos/suporteEchoCapivara.jpg",
     "description": "Suporte De Mesa Para Alexa Echo Dot 4 Capivara.",
-    "category": "Games"
+    "category": "Eletrodomesticos eficientes"
   }
 ]
