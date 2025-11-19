@@ -4,6 +4,17 @@
     margin-bottom: 12px;
 }
 
+.hero-banner-link {
+    display: block;
+    text-decoration: none;
+}
+
+.hero-banner-link:focus-visible {
+    outline: 2px solid #FFC400;
+    outline-offset: 4px;
+    border-radius: 20px;
+}
+
 .hero-image {
     width: 100%;
     height: auto;

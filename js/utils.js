@@ -1,3 +1,5 @@
+const ALEXA_PRODUCT_IDS = [1, 2, 3, 4, 5, 6];
+
 const ProductService = {
     cache: null,
     
@@ -23,6 +25,10 @@ function createProductCard(product) {
     const article = document.createElement('article');
     article.className = 'product-card';
     article.dataset.id = product.id;
+    
+    if (isAlexaProduct(product)) {
+        article.classList.add('product-card--alexa');
+    }
     
     article.innerHTML = `
         <img src="${product.image}" alt="${product.name}" class="product-image">
@@ -69,4 +75,19 @@ function searchProducts(products, query) {
 function getURLParam(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
+}
+
+function isAlexaProduct(product) {
+    if (!product) return false;
+    
+    if (product.id && ALEXA_PRODUCT_IDS.includes(product.id)) {
+        return true;
+    }
+    
+    const name = (product.name || '').toLowerCase();
+    return name.includes('echo') || name.includes('alexa');
+}
+
+function getAlexaProducts(products = []) {
+    return products.filter(isAlexaProduct);
 }
